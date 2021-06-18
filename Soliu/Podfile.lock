@@ -1,0 +1,26 @@
+PODS:
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - IQKeyboardManagerSwift (6.5.6)
+  - lottie-ios (3.2.3)
+
+DEPENDENCIES:
+  - Charts
+  - IQKeyboardManagerSwift
+  - lottie-ios
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - IQKeyboardManagerSwift
+    - lottie-ios
+
+SPEC CHECKSUMS:
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
+
+PODFILE CHECKSUM: 2fbbffb2e476416fec1b98280734e88684b487ea
+
+COCOAPODS: 1.10.1

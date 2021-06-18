@@ -1,0 +1,6 @@
+framework module Pods_Soliu {
+  umbrella header "Pods-Soliu-umbrella.h"
+
+  export *
+  module * { export * }
+}
