@@ -45,8 +45,8 @@ class NotificationViewController: UIViewController {
         let category = UNNotificationCategory(identifier: "actionCategory", actions: [repeatAction, changeAction], intentIdentifiers: [], options: [.hiddenPreviewsShowSubtitle])
         notificationContent.categoryIdentifier = "actionCategory"
         
-        let timeInterval = Double(timerTextView.text) ?? 0.0
-        
+        let timeInterval = Double(timerTextView.text ?? "") ?? 0.0
+        print("timeSet: \(timeInterval)")
         // UNotificationRequest Current
         let timeIntervalNotificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
         let request = UNNotificationRequest(identifier: notificationID, content: notificationContent, trigger: timeIntervalNotificationTrigger)

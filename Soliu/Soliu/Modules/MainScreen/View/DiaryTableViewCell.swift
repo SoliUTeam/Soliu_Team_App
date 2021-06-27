@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DiaryTableViewCell: UITableViewCell {
+class DiaryTableViewCell: UITableViewCell, CellReusable {
     
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var moodLabel: UILabel!
@@ -18,9 +18,9 @@ class DiaryTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func configure(diary: Diary) {
+    func configure(diary: DiaryTableViewCellViewModelProtocol) {
         self.dateLabel.text = diary.date
-        self.moodLabel.text = diary.mood.rawValue
+        self.moodLabel.text = diary.mood
         self.noteLabel.text = diary.note
         
     }

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DiarySubviewDelegate: AnyObject {
-    func submitDiary(_ diary: Diary)
+    func submitDiary()
 }
 
 class DiarySubviewController: UIViewController {
@@ -19,35 +19,18 @@ class DiarySubviewController: UIViewController {
     @IBOutlet private weak var noteTextfield: UITextField!
     
     private weak var delegate: DiarySubviewDelegate?
+    lazy var diaryCellViewModel = DiarySubViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let date = Date()
+        currentTimeDate.text = date.getDateString(using: "MM-dd-yyyy HH:MM")
     }
     
     @IBAction private func saveButtonClicked() {
-        var mood: Mood = Mood.good
-        var date: String = ""
-        var note: String = ""
-        switch moodSegmentedControl.selectedSegmentIndex {
-        case 0:
-            mood = Mood.happy
-        case 1:
-            mood = Mood.good
-        case 2:
-            mood = Mood.meh
-        case 3:
-            mood = Mood.bad
-        case 4:
-            mood = Mood.awful
-        default:
-            print("segmentedControl")
-        }
-        
-        note = noteTextfield.text ?? ""
-        
-        let diary = Diary(name: "", note: note, date: date.getCurrentDate(), mood: mood)
-        self.delegate?.submitDiary(diary)
+        diaryCellViewModel.getData(label: currentTimeDate, segmentedControl: moodSegmentedControl, noteField: noteTextfield)
+        self.delegate?.submitDiary()
+        self.dismiss(animated: true, completion: nil)
     }
-    
 }
 
