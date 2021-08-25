@@ -9,5 +9,8 @@ target 'Soliu' do
 pod 'lottie-ios'
 pod 'IQKeyboardManagerSwift'
 pod 'Charts'
-
+pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
+pod 'RxSwift'
+pod 'RxCocoa'
 end

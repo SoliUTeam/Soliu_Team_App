@@ -20,8 +20,6 @@
 		D96441D7267FEA5F008406FE /* DiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441D5267FEA5F008406FE /* DiaryTableViewCell.swift */; };
 		D96441D8267FEA5F008406FE /* DiaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D96441D6267FEA5F008406FE /* DiaryTableViewCell.xib */; };
 		D96441DA267FF03E008406FE /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441D9267FF03E008406FE /* NotificationViewController.swift */; };
-		D96441DD268043AF008406FE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D96441DB268043AF008406FE /* logo.png */; };
-		D96441DE268043AF008406FE /* notification.wav in Resources */ = {isa = PBXBuildFile; fileRef = D96441DC268043AF008406FE /* notification.wav */; };
 		D96441E12680528F008406FE /* Soliu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D96441DF2680528F008406FE /* Soliu.xcdatamodeld */; };
 		D96441E4268057A9008406FE /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441E3268057A9008406FE /* UIViewController+Ext.swift */; };
 		D96441EE26823C72008406FE /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441ED26823C72008406FE /* CellReusable.swift */; };
@@ -49,8 +47,6 @@
 		D96441D5267FEA5F008406FE /* DiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCell.swift; sourceTree = "<group>"; };
 		D96441D6267FEA5F008406FE /* DiaryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryTableViewCell.xib; sourceTree = "<group>"; };
 		D96441D9267FF03E008406FE /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
-		D96441DB268043AF008406FE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		D96441DC268043AF008406FE /* notification.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = notification.wav; sourceTree = "<group>"; };
 		D96441E02680528F008406FE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		D96441E3268057A9008406FE /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		D96441ED26823C72008406FE /* CellReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReusable.swift; sourceTree = "<group>"; };
@@ -191,8 +187,6 @@
 		D96441EC26823BEB008406FE /* githubResource */ = {
 			isa = PBXGroup;
 			children = (
-				D96441DB268043AF008406FE /* logo.png */,
-				D96441DC268043AF008406FE /* notification.wav */,
 			);
 			path = githubResource;
 			sourceTree = "<group>";
@@ -337,9 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9AAA08B267C65B500135326 /* LaunchScreen.storyboard in Resources */,
-				D96441DD268043AF008406FE /* logo.png in Resources */,
 				D9AAA088267C65B500135326 /* Assets.xcassets in Resources */,
-				D96441DE268043AF008406FE /* notification.wav in Resources */,
 				D9AAA086267C65B100135326 /* Main.storyboard in Resources */,
 				D96441D8267FEA5F008406FE /* DiaryTableViewCell.xib in Resources */,
 			);
