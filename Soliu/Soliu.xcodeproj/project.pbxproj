@@ -8,16 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		5D8B0BA50B564F8ECF5226BA /* Pods_Soliu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A6B1447D37B39FAC5A2511 /* Pods_Soliu.framework */; };
+		D91A4DF62684E4350050E519 /* MainControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A4DF52684E4350050E519 /* MainControllerViewModel.swift */; };
+		D96441CD267FE035008406FE /* DiarySubviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441CC267FE035008406FE /* DiarySubviewController.swift */; };
+		D96441CF267FE116008406FE /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441CE267FE116008406FE /* Mood.swift */; };
+		D96441D4267FE740008406FE /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441D3267FE740008406FE /* String+Ext.swift */; };
+		D96441D7267FEA5F008406FE /* DiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441D5267FEA5F008406FE /* DiaryTableViewCell.swift */; };
+		D96441D8267FEA5F008406FE /* DiaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D96441D6267FEA5F008406FE /* DiaryTableViewCell.xib */; };
+		D96441DA267FF03E008406FE /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441D9267FF03E008406FE /* NotificationViewController.swift */; };
+		D96441DD268043AF008406FE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D96441DB268043AF008406FE /* logo.png */; };
+		D96441DE268043AF008406FE /* notification.wav in Resources */ = {isa = PBXBuildFile; fileRef = D96441DC268043AF008406FE /* notification.wav */; };
+		D96441E12680528F008406FE /* Soliu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D96441DF2680528F008406FE /* Soliu.xcdatamodeld */; };
+		D96441E4268057A9008406FE /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441E3268057A9008406FE /* UIViewController+Ext.swift */; };
+		D96441E726812C35008406FE /* LocalAuthenticationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441E626812C35008406FE /* LocalAuthenticationHandler.swift */; };
+		D96441EE26823C72008406FE /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441ED26823C72008406FE /* CellReusable.swift */; };
 		D9AAA07F267C65B100135326 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAA07E267C65B100135326 /* AppDelegate.swift */; };
 		D9AAA081267C65B100135326 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAA080267C65B100135326 /* SceneDelegate.swift */; };
 		D9AAA083267C65B100135326 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAA082267C65B100135326 /* MainViewController.swift */; };
 		D9AAA086267C65B100135326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9AAA084267C65B100135326 /* Main.storyboard */; };
 		D9AAA088267C65B500135326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9AAA087267C65B500135326 /* Assets.xcassets */; };
 		D9AAA08B267C65B500135326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9AAA089267C65B500135326 /* LaunchScreen.storyboard */; };
+		D9AAA36C2689134A00EDCDF1 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAA36B2689134A00EDCDF1 /* MainTableViewCell.swift */; };
+		D9AAA36E26891A5B00EDCDF1 /* DiarySubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAA36D26891A5B00EDCDF1 /* DiarySubViewModel.swift */; };
+		D9AAA370268925D000EDCDF1 /* AlertProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAA36F268925D000EDCDF1 /* AlertProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B077D1EDCDA0C371790EF9FA /* Pods-Soliu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soliu.release.xcconfig"; path = "Target Support Files/Pods-Soliu/Pods-Soliu.release.xcconfig"; sourceTree = "<group>"; };
+		D91A4DF52684E4350050E519 /* MainControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerViewModel.swift; sourceTree = "<group>"; };
+		D96441CC267FE035008406FE /* DiarySubviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiarySubviewController.swift; sourceTree = "<group>"; };
+		D96441CE267FE116008406FE /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		D96441D3267FE740008406FE /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		D96441D5267FEA5F008406FE /* DiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCell.swift; sourceTree = "<group>"; };
+		D96441D6267FEA5F008406FE /* DiaryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryTableViewCell.xib; sourceTree = "<group>"; };
+		D96441D9267FF03E008406FE /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		D96441DB268043AF008406FE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		D96441DC268043AF008406FE /* notification.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = notification.wav; sourceTree = "<group>"; };
+		D96441E02680528F008406FE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		D96441E3268057A9008406FE /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		D96441E626812C35008406FE /* LocalAuthenticationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthenticationHandler.swift; sourceTree = "<group>"; };
+		D96441ED26823C72008406FE /* CellReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReusable.swift; sourceTree = "<group>"; };
 		D9AAA07B267C65B100135326 /* Soliu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soliu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AAA07E267C65B100135326 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9AAA080267C65B100135326 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +55,9 @@
 		D9AAA087267C65B500135326 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9AAA08A267C65B500135326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9AAA08C267C65B500135326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9AAA36B2689134A00EDCDF1 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		D9AAA36D26891A5B00EDCDF1 /* DiarySubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiarySubViewModel.swift; sourceTree = "<group>"; };
+		D9AAA36F268925D000EDCDF1 /* AlertProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertProtocol.swift; sourceTree = "<group>"; };
 		E1A6B1447D37B39FAC5A2511 /* Pods_Soliu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soliu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BF02A940375DCFAA3B2439 /* Pods-Soliu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soliu.debug.xcconfig"; path = "Target Support Files/Pods-Soliu/Pods-Soliu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +91,85 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D90C4457267CFDBC00A149D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D90C4458267CFDC300A149D1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D90C4459267CFE4100A149D1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D96441C8267FD36A008406FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D96441D5267FEA5F008406FE /* DiaryTableViewCell.swift */,
+				D96441D6267FEA5F008406FE /* DiaryTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D96441C9267FD370008406FE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D9AAA082267C65B100135326 /* MainViewController.swift */,
+				D96441CC267FE035008406FE /* DiarySubviewController.swift */,
+				D96441D9267FF03E008406FE /* NotificationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D96441CA267FD377008406FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D91A4DF52684E4350050E519 /* MainControllerViewModel.swift */,
+				D9AAA36B2689134A00EDCDF1 /* MainTableViewCell.swift */,
+				D9AAA36D26891A5B00EDCDF1 /* DiarySubViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D96441CB267FD3A8008406FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D96441CE267FE116008406FE /* Mood.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D96441D2267FE71F008406FE /* ResusableComponents */ = {
+			isa = PBXGroup;
+			children = (
+				D96441D3267FE740008406FE /* String+Ext.swift */,
+				D96441E3268057A9008406FE /* UIViewController+Ext.swift */,
+				D96441E626812C35008406FE /* LocalAuthenticationHandler.swift */,
+				D96441ED26823C72008406FE /* CellReusable.swift */,
+				D9AAA36F268925D000EDCDF1 /* AlertProtocol.swift */,
+			);
+			path = ResusableComponents;
+			sourceTree = "<group>";
+		};
+		D96441EC26823BEB008406FE /* githubResource */ = {
+			isa = PBXGroup;
+			children = (
+				D96441DB268043AF008406FE /* logo.png */,
+				D96441DC268043AF008406FE /* notification.wav */,
+			);
+			path = githubResource;
+			sourceTree = "<group>";
+		};
 		D9AAA072267C65B100135326 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +195,7 @@
 				D9AAA094267C65E000135326 /* Storyboard */,
 				D9AAA093267C65CB00135326 /* Modules */,
 				D9AAA092267C65C500135326 /* Common */,
+				D96441DF2680528F008406FE /* Soliu.xcdatamodeld */,
 			);
 			path = Soliu;
 			sourceTree = "<group>";
@@ -101,6 +213,7 @@
 		D9AAA093267C65CB00135326 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D96441D2267FE71F008406FE /* ResusableComponents */,
 				D9AAA098267C6CCA00135326 /* ProfileScreen */,
 				D9AAA097267C6CC000135326 /* TestScreen */,
 				D9AAA096267C6CB500135326 /* MainScreen */,
@@ -120,6 +233,7 @@
 		D9AAA095267C65F600135326 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D96441EC26823BEB008406FE /* githubResource */,
 				D9AAA087267C65B500135326 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -128,7 +242,10 @@
 		D9AAA096267C6CB500135326 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				D9AAA082267C65B100135326 /* MainViewController.swift */,
+				D96441CB267FD3A8008406FE /* Model */,
+				D96441CA267FD377008406FE /* ViewModel */,
+				D96441C9267FD370008406FE /* Controller */,
+				D96441C8267FD36A008406FE /* View */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -136,6 +253,9 @@
 		D9AAA097267C6CC000135326 /* TestScreen */ = {
 			isa = PBXGroup;
 			children = (
+				D90C4459267CFE4100A149D1 /* ViewModel */,
+				D90C4458267CFDC300A149D1 /* ViewController */,
+				D90C4457267CFDBC00A149D1 /* View */,
 			);
 			path = TestScreen;
 			sourceTree = "<group>";
@@ -208,8 +328,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9AAA08B267C65B500135326 /* LaunchScreen.storyboard in Resources */,
+				D96441DD268043AF008406FE /* logo.png in Resources */,
 				D9AAA088267C65B500135326 /* Assets.xcassets in Resources */,
+				D96441DE268043AF008406FE /* notification.wav in Resources */,
 				D9AAA086267C65B100135326 /* Main.storyboard in Resources */,
+				D96441D8267FEA5F008406FE /* DiaryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +393,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# if which swiftlint >/dev/null; then\n#  swiftlint\n# else\n#  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n# fi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -279,9 +402,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D96441CF267FE116008406FE /* Mood.swift in Sources */,
+				D91A4DF62684E4350050E519 /* MainControllerViewModel.swift in Sources */,
 				D9AAA083267C65B100135326 /* MainViewController.swift in Sources */,
+				D96441CD267FE035008406FE /* DiarySubviewController.swift in Sources */,
+				D96441E726812C35008406FE /* LocalAuthenticationHandler.swift in Sources */,
+				D96441E4268057A9008406FE /* UIViewController+Ext.swift in Sources */,
 				D9AAA07F267C65B100135326 /* AppDelegate.swift in Sources */,
+				D96441D4267FE740008406FE /* String+Ext.swift in Sources */,
+				D9AAA370268925D000EDCDF1 /* AlertProtocol.swift in Sources */,
+				D96441DA267FF03E008406FE /* NotificationViewController.swift in Sources */,
+				D96441EE26823C72008406FE /* CellReusable.swift in Sources */,
+				D9AAA36E26891A5B00EDCDF1 /* DiarySubViewModel.swift in Sources */,
+				D9AAA36C2689134A00EDCDF1 /* MainTableViewCell.swift in Sources */,
 				D9AAA081267C65B100135326 /* SceneDelegate.swift in Sources */,
+				D96441E12680528F008406FE /* Soliu.xcdatamodeld in Sources */,
+				D96441D7267FEA5F008406FE /* DiaryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -413,7 +549,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -485,6 +621,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D96441DF2680528F008406FE /* Soliu.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D96441E02680528F008406FE /* Model.xcdatamodel */,
+			);
+			currentVersion = D96441E02680528F008406FE /* Model.xcdatamodel */;
+			path = Soliu.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D9AAA073267C65B100135326 /* Project object */;
 }
