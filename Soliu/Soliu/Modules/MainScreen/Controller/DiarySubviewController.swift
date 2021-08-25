@@ -19,7 +19,7 @@ class DiarySubviewController: UIViewController {
     @IBOutlet private weak var noteTextfield: UITextField!
     
     private weak var delegate: DiarySubviewDelegate?
-    lazy var diaryCellViewModel = DiarySubViewModel()
+    lazy var diaryCellViewModel = DiarySubviewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +27,13 @@ class DiarySubviewController: UIViewController {
         currentTimeDate.text = date.getDateString(using: "MM-dd-yyyy HH:MM")
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
     @IBAction private func saveButtonClicked() {
-        diaryCellViewModel.getData(label: currentTimeDate, segmentedControl: moodSegmentedControl, noteField: noteTextfield)
+        diaryCellViewModel.getData(label: currentTimeDate, segmentedControl: moodSegmentedControl, note: noteTextfield)
         self.delegate?.submitDiary()
         self.dismiss(animated: true, completion: nil)
     }
