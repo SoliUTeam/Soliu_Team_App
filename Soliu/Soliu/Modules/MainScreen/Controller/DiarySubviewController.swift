@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DiarySubviewDelegate: AnyObject {
-    func submitDiary()
+    func reloadData()
 }
 
 class DiarySubviewController: UIViewController {
@@ -18,8 +18,8 @@ class DiarySubviewController: UIViewController {
     @IBOutlet private weak var moodSegmentedControl: UISegmentedControl!
     @IBOutlet private weak var noteTextfield: UITextField!
     
-    private weak var delegate: DiarySubviewDelegate?
     lazy var diaryCellViewModel = DiarySubviewModel()
+    weak var delegate: DiarySubviewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +33,13 @@ class DiarySubviewController: UIViewController {
     }
     
     @IBAction private func saveButtonClicked() {
-        diaryCellViewModel.getData(label: currentTimeDate, segmentedControl: moodSegmentedControl, note: noteTextfield)
-        self.delegate?.submitDiary()
+        // Read noteData
+        let name = ""
+        let currentTime = currentTimeDate.text ?? ""
+        let selectedMood = moodSegmentedControl.selectedSegmentIndex
+        let note = noteTextfield.text ?? ""
+        diaryCellViewModel.saveDiaryData(name: name, mood: selectedMood, date: currentTime, note: note)
+        self.delegate?.reloadData()
         self.dismiss(animated: true, completion: nil)
     }
 }

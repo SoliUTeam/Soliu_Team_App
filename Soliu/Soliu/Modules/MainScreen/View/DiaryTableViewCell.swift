@@ -22,7 +22,5 @@ class DiaryTableViewCell: UITableViewCell, CellReusable {
         self.dateLabel.text = diary.date
         self.moodLabel.text = diary.mood
         self.noteLabel.text = diary.note
-        
     }
-    
 }

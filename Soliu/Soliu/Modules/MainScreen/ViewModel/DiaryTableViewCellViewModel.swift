@@ -21,10 +21,6 @@ class DiaryTableViewCellViewModel: DiaryTableViewCellViewModelProtocol {
         self.diary = diary
     }
     
-    var note: String {
-        diary?.note ?? ""
-    }
-    
     var name: String {
         diary?.name ?? ""
     }
@@ -37,4 +33,7 @@ class DiaryTableViewCellViewModel: DiaryTableViewCellViewModelProtocol {
         diary?.date ?? ""
     }
     
+    var note: String {
+        diary?.note ?? ""
+    }
 }

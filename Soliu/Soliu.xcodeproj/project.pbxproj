@@ -31,7 +31,7 @@
 		D9AAA086267C65B100135326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9AAA084267C65B100135326 /* Main.storyboard */; };
 		D9AAA088267C65B500135326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9AAA087267C65B500135326 /* Assets.xcassets */; };
 		D9AAA08B267C65B500135326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9AAA089267C65B500135326 /* LaunchScreen.storyboard */; };
-		D9AAA36C2689134A00EDCDF1 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAA36B2689134A00EDCDF1 /* MainTableViewCell.swift */; };
+		D9AAA36C2689134A00EDCDF1 /* DiaryTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAA36B2689134A00EDCDF1 /* DiaryTableViewCellViewModel.swift */; };
 		D9AAA370268925D000EDCDF1 /* AlertProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAA36F268925D000EDCDF1 /* AlertProtocol.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +62,7 @@
 		D9AAA087267C65B500135326 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9AAA08A267C65B500135326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9AAA08C267C65B500135326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D9AAA36B2689134A00EDCDF1 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		D9AAA36B2689134A00EDCDF1 /* DiaryTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		D9AAA36F268925D000EDCDF1 /* AlertProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertProtocol.swift; sourceTree = "<group>"; };
 		E1A6B1447D37B39FAC5A2511 /* Pods_Soliu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soliu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BF02A940375DCFAA3B2439 /* Pods-Soliu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soliu.debug.xcconfig"; path = "Target Support Files/Pods-Soliu/Pods-Soliu.debug.xcconfig"; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				D91A4DF52684E4350050E519 /* MainControllerViewModel.swift */,
-				D9AAA36B2689134A00EDCDF1 /* MainTableViewCell.swift */,
+				D9AAA36B2689134A00EDCDF1 /* DiaryTableViewCellViewModel.swift */,
 				D9033F4626D5E301007756C3 /* DiarySubviewModel.swift */,
 			);
 			path = ViewModel;
@@ -424,7 +424,7 @@
 				95BA861926D5E90E00238B9F /* TestScreenViewController.swift in Sources */,
 				D96441DA267FF03E008406FE /* NotificationViewController.swift in Sources */,
 				D96441EE26823C72008406FE /* CellReusable.swift in Sources */,
-				D9AAA36C2689134A00EDCDF1 /* MainTableViewCell.swift in Sources */,
+				D9AAA36C2689134A00EDCDF1 /* DiaryTableViewCellViewModel.swift in Sources */,
 				D9AAA081267C65B100135326 /* SceneDelegate.swift in Sources */,
 				D96441E12680528F008406FE /* Soliu.xcdatamodeld in Sources */,
 				D9033F4726D5E301007756C3 /* DiarySubviewModel.swift in Sources */,

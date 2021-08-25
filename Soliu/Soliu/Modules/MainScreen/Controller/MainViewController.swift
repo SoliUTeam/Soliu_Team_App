@@ -25,9 +25,11 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainViewModel.getAllItem()
         openDiarySubView()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        mainViewModel.getAllItem()
     }
     
     func openDiarySubView() {
@@ -35,6 +37,7 @@ class MainViewController: UIViewController {
         print("openDiarySubView")
     }
 }
+
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         mainViewModel.numberOfRowsInSection()
@@ -45,23 +48,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(diary: mainViewModel.dataForDiary(at: indexPath.row))
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-//               let commit = commits[indexPath.row]
-//               container.viewContext.delete(commit)
-//               commits.remove(at: indexPath.row)
-//               tableView.deleteRows(at: [indexPath], with: .fade)
-//               saveContext()
-           }
-    }
-    
-    
 }
 
 extension MainViewController: DiarySubviewDelegate {
-    func submitDiary() {
-        self.tableView.reloadData()
+    func reloadData() {
         mainViewModel.getAllItem()
+        self.tableView.reloadData()
     }
 }
+

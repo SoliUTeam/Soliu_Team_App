@@ -10,8 +10,20 @@ import UIKit
 
 class DiarySubviewModel {
     
-    func getData(label: UILabel, segmentedControl: UISegmentedControl, note: UITextField) {
-        
-    }
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    // CoreData
+    func saveDiaryData(name: String, mood: Int, date: String, note: String) {
+        let diary = Diary(context: self.context)
+        diary.name = name
+        diary.mood = String(mood)
+        diary.date = date
+        diary.note = note
+        
+        do {
+            try self.context.save()
+        } catch {
+            print("Save Data failed")
+        }
+    }
 }
