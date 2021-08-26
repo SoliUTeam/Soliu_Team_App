@@ -32,6 +32,13 @@ class MainViewController: UIViewController {
         mainViewModel.getAllItem()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "openDiarySubView" {
+            guard let destination = segue.destination as? DiarySubviewController else { return }
+            destination.delegate = self
+        }
+    }
+    
     func openDiarySubView() {
         self.performSegue(withIdentifier: "openDiarySubView", sender: nil)
         print("openDiarySubView")
