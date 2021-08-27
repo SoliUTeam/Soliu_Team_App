@@ -1,0 +1,19 @@
+{
+    "testData": [
+        {
+            "thumbImage": "thumbImage1",
+            "title": "Empty Title",
+            "color": "#000000"
+        },
+        {
+            "thumbImage": "thumbImage2",
+            "title": "Empty Title2",
+            "color": "#FFFFFF"
+        },
+        {
+            "thumbImage": "thumbImage3",
+            "title": "Empty Title3",
+            "color": "#1F1F1F"
+        }
+    ]
+}

@@ -13,8 +13,9 @@ class TestScreenTableViewCell: UITableViewCell {
     @IBOutlet private weak var thumbImage: UIImageView!
     @IBOutlet private weak var title: UILabel!
     
-    func configure(thumbImage: UIImage, title: UILabel) {
-        self.thumbImage.image = thumbImage
-        self.title = title
+    func configure(thumbImage: String, title: String, color: String) {
+        self.thumbImage.image = UIImage(named: thumbImage)
+        self.title.text = title
+        self.backgroundColor = UIColor(hexaRGB: color)
     }
 }

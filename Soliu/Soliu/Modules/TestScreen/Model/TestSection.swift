@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct TestSection {
-
-    var thumbImage: UIImage!
-    var title: UILabel!
+    var thumbImage: String
+    var title: String
+    var color: String
 }
