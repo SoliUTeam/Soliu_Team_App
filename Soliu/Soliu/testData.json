@@ -2,20 +2,20 @@
     "testData": [
         {
             "thumbImage": "thumbImage1",
-            "title": "Empty Title",
-            "color": "#347149",
+            "title": "Voices of depression",
+            "color": "#64a4da",
             "test_number": 1
         },
         {
             "thumbImage": "thumbImage1",
-            "title": "Empty Title2",
-            "color": "#FFFFFF",
+            "title": "What have we learned",
+            "color": "#fd817f",
             "test_number": 2
         },
         {
             "thumbImage": "thumbImage1",
-            "title": "Empty Title3",
-            "color": "#1F1F1F",
+            "title": "Do a positive activity",
+            "color": "#8e99fd",
             "test_number": 3
         }
     ]
