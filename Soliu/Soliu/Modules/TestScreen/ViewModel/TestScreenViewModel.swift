@@ -17,15 +17,20 @@ class TestScreenViewModel {
     init(delegate: TestScreenViewModelDelegate) {
         self.delegate = delegate
     }
+    
     weak var delegate: TestScreenViewModelDelegate?
     
+    // testDataSource : contain tableview cell information e.g color, thumb image
     private var testDataSource = [TestSection]()
+    
+    // testQuestion : contain test question data in testQuestion json file
+    private var testQuestion = [TestQuestion]()
     
     func numberOfRow() -> Int {
         testDataSource.count
     }
     
-    func populateDataFromJson() {
+    func populateTestDataFromJson() {
         if let path = Bundle.main.path(forResource: "testData", ofType: "json") {
             do {
                 let dataJson = try Data(contentsOf: URL(fileURLWithPath: path))
@@ -33,7 +38,7 @@ class TestScreenViewModel {
                 if let jsonResults = jsonDict as? [String: Any],
                    let results = jsonResults["testData"] as? [[String: Any]] {
                     results.forEach { dict in
-                        self.testDataSource.append(TestSection(thumbImage: dict["thumbImage"] as? String ?? "", title: dict["title"] as? String ?? "", color: dict["color"] as? String ?? ""))
+                        self.testDataSource.append(TestSection(thumbImage: dict["thumbImage"] as? String ?? "", title: dict["title"] as? String ?? "", color: dict["color"] as? String ?? "", testNumber: dict["testNumber"] as? Int ?? -1))
                     }
                 }
             } catch {
@@ -48,5 +53,14 @@ class TestScreenViewModel {
         let test = testDataSource[indexPath.row]
         cell.configure(thumbImage: test.thumbImage, title: test.title, color: test.color)
         return cell
+    }
+    
+    func pushToDetail(viewController: UIViewController, index: Int) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let detailTestScreen = storyboard.instantiateViewController(identifier: "TestDetailViewController") as? TestDetailViewController else {
+            return
+        }
+        detailTestScreen.questionDataSource = testDataSource[index]
+        viewController.navigationController?.pushViewController(detailTestScreen, animated: true)
     }
 }

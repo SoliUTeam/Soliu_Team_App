@@ -3,17 +3,20 @@
         {
             "thumbImage": "thumbImage1",
             "title": "Empty Title",
-            "color": "#000000"
+            "color": "#347149",
+            "test_number": 1
         },
         {
             "thumbImage": "thumbImage1",
             "title": "Empty Title2",
-            "color": "#FFFFFF"
+            "color": "#FFFFFF",
+            "test_number": 2
         },
         {
             "thumbImage": "thumbImage1",
             "title": "Empty Title3",
-            "color": "#1F1F1F"
+            "color": "#1F1F1F",
+            "test_number": 3
         }
     ]
 }

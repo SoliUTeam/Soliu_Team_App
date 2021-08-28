@@ -209,36 +209,31 @@
             </objects>
             <point key="canvasLocation" x="2686" y="-818"/>
         </scene>
-        <!--View Controller-->
+        <!--Test Detail View Controller-->
         <scene sceneID="wbJ-gm-Rjb">
             <objects>
-                <viewController id="fi6-Lr-yFz" sceneMemberID="viewController">
+                <viewController id="fi6-Lr-yFz" customClass="TestDetailViewController" customModule="Soliu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SVX-hR-3do">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeM-nK-swh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="2VO-Ms-g3v">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="D34-jL-vdZ"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="aiU-p5-Juf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0u-Vr-qPd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3610" y="631"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="Qxl-qj-7ft">
-            <objects>
-                <viewController id="qCr-0e-eh2" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="S34-ES-fWy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="4lI-Nf-mls"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="S0X-1E-kYx"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G0y-GL-zrj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1810.144927536232" y="631.47321428571422"/>
+            <point key="canvasLocation" x="2686" y="631"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zMO-Eo-V5e">
@@ -342,10 +337,6 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="j2h-XV-OgJ" secondAttribute="trailing" constant="10" id="phT-wx-LWh"/>
                                                 <constraint firstItem="U9g-UB-ydH" firstAttribute="leading" secondItem="QCs-cs-ivf" secondAttribute="leadingMargin" constant="10" id="wLo-Tr-0ci"/>
                                             </constraints>
-                                            <connections>
-                                                <outlet property="thumbImage" destination="U9g-UB-ydH" id="JiW-1g-7JO"/>
-                                                <outlet property="title" destination="j2h-XV-OgJ" id="wsE-xT-BE1"/>
-                                            </connections>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="thumbImage" destination="U9g-UB-ydH" id="vXk-kC-oSl"/>
@@ -433,6 +424,7 @@
     </scenes>
     <resources>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="face.smiling.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

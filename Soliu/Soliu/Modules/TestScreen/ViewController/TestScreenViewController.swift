@@ -20,9 +20,10 @@ class TestScreenViewController: UIViewController {
     }
     
     lazy var viewModel = TestScreenViewModel(delegate: self)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.populateDataFromJson()
+        viewModel.populateTestDataFromJson()
     }
 }
 
@@ -39,7 +40,7 @@ extension TestScreenViewController: UITableViewDataSource {
 extension TestScreenViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+        viewModel.pushToDetail(viewController: self, index: indexPath.row)
     }
 }
 
