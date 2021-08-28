@@ -22,6 +22,7 @@ class TestScreenViewController: UIViewController {
     lazy var viewModel = TestScreenViewModel(delegate: self)
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.populateDataFromJson()
     }
 }
 
