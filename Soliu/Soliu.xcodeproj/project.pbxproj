@@ -18,6 +18,7 @@
 		95E6A45426DADF88007A2C9B /* TestQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E6A45326DADF88007A2C9B /* TestQuestion.swift */; };
 		95E6A45726DADFFF007A2C9B /* testQuestion1.json in Resources */ = {isa = PBXBuildFile; fileRef = 95E6A45626DADFFF007A2C9B /* testQuestion1.json */; };
 		95E6A45B26DAE960007A2C9B /* ReusableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E6A45A26DAE960007A2C9B /* ReusableComponent.swift */; };
+		95E6A45E26DB061F007A2C9B /* TestDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E6A45D26DB061F007A2C9B /* TestDetailViewModel.swift */; };
 		D9033F4726D5E301007756C3 /* DiarySubviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9033F4626D5E301007756C3 /* DiarySubviewModel.swift */; };
 		D91A4DF62684E4350050E519 /* MainControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A4DF52684E4350050E519 /* MainControllerViewModel.swift */; };
 		D96441CD267FE035008406FE /* DiarySubviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441CC267FE035008406FE /* DiarySubviewController.swift */; };
@@ -50,6 +51,7 @@
 		95E6A45326DADF88007A2C9B /* TestQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestQuestion.swift; sourceTree = "<group>"; };
 		95E6A45626DADFFF007A2C9B /* testQuestion1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testQuestion1.json; sourceTree = "<group>"; };
 		95E6A45A26DAE960007A2C9B /* ReusableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableComponent.swift; sourceTree = "<group>"; };
+		95E6A45D26DB061F007A2C9B /* TestDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDetailViewModel.swift; sourceTree = "<group>"; };
 		B077D1EDCDA0C371790EF9FA /* Pods-Soliu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soliu.release.xcconfig"; path = "Target Support Files/Pods-Soliu/Pods-Soliu.release.xcconfig"; sourceTree = "<group>"; };
 		D9033F4626D5E301007756C3 /* DiarySubviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiarySubviewModel.swift; sourceTree = "<group>"; };
 		D91A4DF52684E4350050E519 /* MainControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerViewModel.swift; sourceTree = "<group>"; };
@@ -109,8 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				95BA862326D5EA5900238B9F /* Model */,
-				95BA861E26D5E92300238B9F /* ViewModel */,
 				95BA861D26D5E91F00238B9F /* View */,
+				95BA861E26D5E92300238B9F /* ViewModel */,
 				95BA861B26D5E91400238B9F /* ViewController */,
 			);
 			path = TestScreen;
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				95BA861F26D5E93300238B9F /* TestScreenViewModel.swift */,
+				95E6A45D26DB061F007A2C9B /* TestDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				95BA862026D5E93300238B9F /* TestScreenViewModel.swift in Sources */,
 				D96441CF267FE116008406FE /* Mood.swift in Sources */,
 				D91A4DF62684E4350050E519 /* MainControllerViewModel.swift in Sources */,
+				95E6A45E26DB061F007A2C9B /* TestDetailViewModel.swift in Sources */,
 				D9AAA083267C65B100135326 /* MainViewController.swift in Sources */,
 				95BA862826D5ED1500238B9F /* TestScreenTableViewCell.swift in Sources */,
 				D96441CD267FE035008406FE /* DiarySubviewController.swift in Sources */,
