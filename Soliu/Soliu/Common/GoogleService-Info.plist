@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1033753600224-4vbpacahuv0gjda8ed7llmrmq690htfi.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1033753600224-4vbpacahuv0gjda8ed7llmrmq690htfi</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD1mqndO1qjK6Q8dZN11m3d6WSB3Yvm7IQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1033753600224</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.kim-yoonha.Soliu</string>
+	<key>PROJECT_ID</key>
+	<string>soliu-69a78</string>
+	<key>STORAGE_BUCKET</key>
+	<string>soliu-69a78.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1033753600224:ios:c6bfca0d283e902004f085</string>
+	<key>DATABASE_URL</key>
+	<string>https://soliu-69a78.firebaseio.com</string>
+</dict>
+</plist>

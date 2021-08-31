@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                    // Handle Error
                })
         // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
         return true
     }
 
