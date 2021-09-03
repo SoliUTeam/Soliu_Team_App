@@ -352,6 +352,7 @@
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="login" destination="Qv1-m2-lu8" eventType="touchUpInside" id="pAK-RH-Bva"/>
+                                    <segue destination="SId-yW-67U" kind="push" identifier="openProfileView" id="ZMN-uA-r4c"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dn1-Ch-cd3">
@@ -392,6 +393,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGl-vT-77N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1810.144927536232" y="1345.9821428571429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZDL-3s-Kby">
+            <objects>
+                <viewController id="SId-yW-67U" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IpN-Ba-QUD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xuf-Tr-Pm5">
+                                <rect key="frame" x="16" y="118" width="382" height="46.5"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h9u-3U-gDd">
+                                <rect key="frame" x="0.0" y="164.5" width="414" height="648.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pri-5t-DoC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xuf-Tr-Pm5" firstAttribute="leading" secondItem="Pri-5t-DoC" secondAttribute="leading" constant="16" id="PZg-Bh-Aql"/>
+                            <constraint firstItem="Pri-5t-DoC" firstAttribute="trailing" secondItem="h9u-3U-gDd" secondAttribute="trailing" id="U0b-jL-xq5"/>
+                            <constraint firstItem="Pri-5t-DoC" firstAttribute="bottom" secondItem="h9u-3U-gDd" secondAttribute="bottom" id="XzK-ug-wIB"/>
+                            <constraint firstItem="Pri-5t-DoC" firstAttribute="trailing" secondItem="Xuf-Tr-Pm5" secondAttribute="trailing" constant="16" id="ZaJ-U9-oCY"/>
+                            <constraint firstItem="h9u-3U-gDd" firstAttribute="top" secondItem="Xuf-Tr-Pm5" secondAttribute="bottom" id="ath-76-dSn"/>
+                            <constraint firstItem="h9u-3U-gDd" firstAttribute="leading" secondItem="Pri-5t-DoC" secondAttribute="leading" id="pR2-RA-8WL"/>
+                            <constraint firstItem="Xuf-Tr-Pm5" firstAttribute="top" secondItem="Pri-5t-DoC" secondAttribute="top" constant="30" id="w17-fK-72t"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Jw-zx-SSS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jCk-td-UpK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1810" y="2060"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="S0b-lE-8wQ">
@@ -583,7 +621,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybc-oK-nUF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2611.594202898551" y="1345.9821428571429"/>
+            <point key="canvasLocation" x="2713" y="1346"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="MpZ-WX-9WC">

@@ -21,15 +21,34 @@ class LoginViewController: UIViewController {
         
         guard let id = idTextField.text,
               let password = passwordTextField.text else { return }
-        Auth.auth().signIn(withEmail: id, password: password) { result, error in
-            if error != nil {
-                print("Error nil")
+        
+        Auth.auth().signIn(withEmail: id, password: password) { (result, error) in
+            if let error = error as NSError? {
+                switch AuthErrorCode(rawValue: error.code) {
+                    case .operationNotAllowed:
+                        self.displayMessage(with: "Server Issue", message: "Currently, our server has issues.\nPlease try again later.")
+                    case .userDisabled:
+                        self.displayMessage(with: "Email Issue", message: "We can't find your email.\nPlease check your email")
+                    case .wrongPassword:
+                        self.displayMessage(with: "Wrong Password", message: "Your password word is incorrect\nPlease try another password")
+                    case .invalidEmail:
+                        self.displayMessage(with: "Email Issue", message: "We can't find your email.\nPlease check your email")
+
+                   default:
+                       print("Error: \(error.localizedDescription)")
+                   }
+            }
+            //
+            else {
             }
         }
     }
     
+    @IBAction private func openProfileView() {
+        self.performSegue(withIdentifier: "openProfileView", sender: nil)
+    }
+    
     @IBAction private func openRegisterView() {
             self.performSegue(withIdentifier: "openRegisterView", sender: nil)
-            print("openRegisterView")
         }
 }
