@@ -13,4 +13,6 @@ class TestDetailViewModel {
     func uploadData() {
         print("uploaded successful!!")
     }
+    
+    
 }
