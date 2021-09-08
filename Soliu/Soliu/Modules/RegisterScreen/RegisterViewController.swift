@@ -11,13 +11,25 @@ class RegisterViewController: UIViewController, AlertProtocol {
     
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var genderSegmentedControl: UISegmentedControl!
+    @IBOutlet private weak var gradeSegmentedControl: UISegmentedControl!
+    
+    let database = Firestore.firestore()
+    
     
     private var isRegisterReady: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//        let docRef = database.document("userInfo")
+//        docRef.getDocument { snapShot, error in
+//            guard let data = snapShot?.data(), error == nil else { return }
+//            print(data)
+//        }
+    }
+    
+    // Write Function
+    func writeData() {
     }
     
     @IBAction private func register() {
@@ -39,8 +51,9 @@ class RegisterViewController: UIViewController, AlertProtocol {
                 self.displayMessage(with: "System Error", message: "\(error.localizedDescription)\nPlease contact our customer service")
             }
           } else {
-            // Register is successfully.
+            // Register is successfully. // Getting data using gender
             self.displayMessage(with: "Register Successful", message: "Your sign-up confirms successfully.")
+            self.database.collection("userInfo").document(authResult?.user.uid ?? "").setData(["gender": "male"], merge: true)
             self.dismiss(animated: true, completion: nil)
           }
         }
