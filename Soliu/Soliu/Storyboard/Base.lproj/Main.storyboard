@@ -574,13 +574,17 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVD-sT-dQ5">
-                                        <rect key="frame" x="178.5" y="660" width="57" height="30"/>
-                                        <state key="normal" title="Register"/>
+                                        <rect key="frame" x="176" y="660" width="62" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Register">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="register" destination="cME-xr-sGU" eventType="touchUpInside" id="oUe-w7-mSr"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
                                     <constraint firstItem="RJV-AB-J6u" firstAttribute="top" secondItem="4PV-E2-bFB" secondAttribute="bottom" constant="30" id="1dJ-YH-PD2"/>
                                     <constraint firstItem="GdQ-Il-XcV" firstAttribute="top" secondItem="RJV-AB-J6u" secondAttribute="bottom" constant="30" id="7SQ-gf-BmN"/>
@@ -616,6 +620,9 @@
                     <navigationItem key="navigationItem" id="hNW-bd-S8U"/>
                     <connections>
                         <outlet property="emailTextField" destination="Yxp-85-JxQ" id="PTo-7v-0XX"/>
+                        <outlet property="genderSegmentedControl" destination="Qa5-Jw-2RG" id="l1b-Ks-aU6"/>
+                        <outlet property="gradeSegmentedControl" destination="Qa5-Jw-2RG" id="svE-oF-Bip"/>
+                        <outlet property="majorTextField" destination="6RB-52-ldw" id="077-yL-f4x"/>
                         <outlet property="passwordTextField" destination="F3e-Vu-OMx" id="fir-kK-JDV"/>
                     </connections>
                 </viewController>
@@ -792,6 +799,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

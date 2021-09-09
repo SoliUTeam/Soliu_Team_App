@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet private weak var idTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -38,17 +38,18 @@ class LoginViewController: UIViewController {
                        print("Error: \(error.localizedDescription)")
                    }
             }
-            //
             else {
+                self.openProfileView()
             }
         }
     }
-    
-    @IBAction private func openProfileView() {
-        self.performSegue(withIdentifier: "openProfileView", sender: nil)
-    }
-    
+
     @IBAction private func openRegisterView() {
             self.performSegue(withIdentifier: "openRegisterView", sender: nil)
         }
+    
+    private func openProfileView() {
+        self.performSegue(withIdentifier: "openProfileView", sender: nil)
+    }
+    
 }
