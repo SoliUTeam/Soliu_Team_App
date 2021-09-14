@@ -22,13 +22,14 @@ class TestDetailViewController: UIViewController {
     
     
     var questionDataSource: TestSection?
-    var currentQuestionNumber = 1
-    
+    var currentCount = 1
     lazy var viewModel = TestDetailViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentQuestionNumber = 1
+        viewModel.populateTestQuestionDataFromJson(number: questionDataSource?.testNumber ?? 0)
+        question.text = viewModel.getQuestionText()
+        totalQuestion.text = viewModel.getTotalQuestion()
     }
     
     // upload data to firebase
@@ -58,8 +59,10 @@ class TestDetailViewController: UIViewController {
     }
     
     private func increaseProgress() {
-        progressView.progress = Float(currentQuestionNumber / questionDataSource!.testNumber)
-        currentQuestionNumber += 1
+        currentCount += 1
+        progressView.progress = viewModel.getProgress()
+        viewModel.nextQuestion()
+        question.text = viewModel.getQuestionText()
+        currentQuestion.text = "\(currentCount)"
     }
-    
 }

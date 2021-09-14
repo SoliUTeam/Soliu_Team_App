@@ -19,6 +19,9 @@
 		95E6A45726DADFFF007A2C9B /* testQuestion1.json in Resources */ = {isa = PBXBuildFile; fileRef = 95E6A45626DADFFF007A2C9B /* testQuestion1.json */; };
 		95E6A45B26DAE960007A2C9B /* ReusableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E6A45A26DAE960007A2C9B /* ReusableComponent.swift */; };
 		95E6A45E26DB061F007A2C9B /* TestDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E6A45D26DB061F007A2C9B /* TestDetailViewModel.swift */; };
+		95E6A47D26F04CC3007A2C9B /* testQuestion2.json in Resources */ = {isa = PBXBuildFile; fileRef = 95E6A47C26F04CC3007A2C9B /* testQuestion2.json */; };
+		95E6A48026F055EF007A2C9B /* testQuestion0.json in Resources */ = {isa = PBXBuildFile; fileRef = 95E6A47F26F055EF007A2C9B /* testQuestion0.json */; };
+		95E6A48326F06DB6007A2C9B /* testQuestion3.json in Resources */ = {isa = PBXBuildFile; fileRef = 95E6A48226F06DB6007A2C9B /* testQuestion3.json */; };
 		D9033F4726D5E301007756C3 /* DiarySubviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9033F4626D5E301007756C3 /* DiarySubviewModel.swift */; };
 		D9033F7E26DDC45C007756C3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9033F7D26DDC45C007756C3 /* LoginViewController.swift */; };
 		D9033F8026DDC95E007756C3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9033F7F26DDC95E007756C3 /* RegisterViewController.swift */; };
@@ -57,6 +60,9 @@
 		95E6A45626DADFFF007A2C9B /* testQuestion1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testQuestion1.json; sourceTree = "<group>"; };
 		95E6A45A26DAE960007A2C9B /* ReusableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableComponent.swift; sourceTree = "<group>"; };
 		95E6A45D26DB061F007A2C9B /* TestDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDetailViewModel.swift; sourceTree = "<group>"; };
+		95E6A47C26F04CC3007A2C9B /* testQuestion2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testQuestion2.json; sourceTree = "<group>"; };
+		95E6A47F26F055EF007A2C9B /* testQuestion0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testQuestion0.json; sourceTree = "<group>"; };
+		95E6A48226F06DB6007A2C9B /* testQuestion3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testQuestion3.json; sourceTree = "<group>"; };
 		B077D1EDCDA0C371790EF9FA /* Pods-Soliu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soliu.release.xcconfig"; path = "Target Support Files/Pods-Soliu/Pods-Soliu.release.xcconfig"; sourceTree = "<group>"; };
 		D9033F4626D5E301007756C3 /* DiarySubviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiarySubviewModel.swift; sourceTree = "<group>"; };
 		D9033F7D26DDC45C007756C3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -272,7 +278,10 @@
 				D9AAA092267C65C500135326 /* Common */,
 				D96441DF2680528F008406FE /* Soliu.xcdatamodeld */,
 				95E6A44726D8A743007A2C9B /* testData.json */,
+				95E6A47C26F04CC3007A2C9B /* testQuestion2.json */,
+				95E6A48226F06DB6007A2C9B /* testQuestion3.json */,
 				95E6A45626DADFFF007A2C9B /* testQuestion1.json */,
+				95E6A47F26F055EF007A2C9B /* testQuestion0.json */,
 			);
 			path = Soliu;
 			sourceTree = "<group>";
@@ -394,9 +403,12 @@
 				D9AAA088267C65B500135326 /* Assets.xcassets in Resources */,
 				95E6A44826D8A743007A2C9B /* testData.json in Resources */,
 				95E6A45726DADFFF007A2C9B /* testQuestion1.json in Resources */,
+				95E6A47D26F04CC3007A2C9B /* testQuestion2.json in Resources */,
 				D9AAA086267C65B100135326 /* Main.storyboard in Resources */,
+				95E6A48026F055EF007A2C9B /* testQuestion0.json in Resources */,
 				D96441D8267FEA5F008406FE /* DiaryTableViewCell.xib in Resources */,
 				D9033F8426DDCE5E007756C3 /* GoogleService-Info.plist in Resources */,
+				95E6A48326F06DB6007A2C9B /* testQuestion3.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,10 +9,5 @@ import Foundation
 
 struct TestQuestion {
     var question: String
-    var questionNumber: Int
-    
-    enum CodingKeys: String, CodingKey {
-        case question
-        case questionNumber = "question_number"
-    }
+    var totalQuestionNumber: Int
 }

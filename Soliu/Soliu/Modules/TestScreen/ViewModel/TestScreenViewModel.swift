@@ -23,8 +23,7 @@ class TestScreenViewModel {
     // testDataSource : contain tableview cell information e.g color, thumb image
     private var testDataSource = [TestSection]()
     
-    // testQuestion : contain test question data in testQuestion json file
-    private var testQuestion = [TestQuestion]()
+
     
     func numberOfRow() -> Int {
         testDataSource.count
@@ -38,7 +37,7 @@ class TestScreenViewModel {
                 if let jsonResults = jsonDict as? [String: Any],
                    let results = jsonResults["testData"] as? [[String: Any]] {
                     results.forEach { dict in
-                        self.testDataSource.append(TestSection(thumbImage: dict["thumbImage"] as? String ?? "", title: dict["title"] as? String ?? "", color: dict["color"] as? String ?? "", testNumber: dict["testNumber"] as? Int ?? -1))
+                        self.testDataSource.append(TestSection(thumbImage: dict["thumbImage"] as? String ?? "", title: dict["title"] as? String ?? "", color: dict["color"] as? String ?? "", testNumber: dict["testNumber"] as? Int ?? 0))
                     }
                 }
             } catch {

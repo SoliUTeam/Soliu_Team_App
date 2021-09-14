@@ -13,9 +13,4 @@ struct TestSection {
     var title: String
     var color: String
     var testNumber: Int
-    
-    enum CodingKeys: String, CodingKey {
-        case thumbImage, title, color
-        case test_number = "testNumber"
-    }
 }

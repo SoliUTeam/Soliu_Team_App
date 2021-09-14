@@ -4,19 +4,19 @@
             "thumbImage": "thumbImage1",
             "title": "Voices of depression",
             "color": "#64a4da",
-            "test_number": 1
+            "testNumber": 1
         },
         {
             "thumbImage": "thumbImage1",
             "title": "What have we learned",
             "color": "#fd817f",
-            "test_number": 2
+            "testNumber": 2
         },
         {
             "thumbImage": "thumbImage1",
             "title": "Do a positive activity",
             "color": "#8e99fd",
-            "test_number": 3
+            "testNumber": 3
         }
     ]
 }
