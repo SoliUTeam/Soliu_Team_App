@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol TestDetailViewControllable {
+    func increaseProgress()
+}
+
 class TestDetailViewController: UIViewController {
     
     @IBOutlet private weak var question: UILabel!
@@ -32,7 +36,12 @@ class TestDetailViewController: UIViewController {
         totalQuestion.text = viewModel.getTotalQuestion()
     }
     
-    // upload data to firebase
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        navigationController?.isNavigationBarHidden = true
+//    }
+    
+    // upload data to firebase 
     @IBAction private func touchAnswer1() {
         increaseProgress()
         viewModel.uploadData()
@@ -57,8 +66,10 @@ class TestDetailViewController: UIViewController {
         increaseProgress()
         viewModel.uploadData()
     }
-    
-    private func increaseProgress() {
+}
+
+extension TestDetailViewController: TestDetailViewControllable {
+    func increaseProgress() {
         currentCount += 1
         progressView.progress = viewModel.getProgress()
         viewModel.nextQuestion()

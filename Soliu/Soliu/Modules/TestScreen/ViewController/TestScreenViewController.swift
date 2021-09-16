@@ -6,11 +6,16 @@
 //
 
 import Foundation
+import Firebase
 import UIKit
 
 
+protocol TestScreenControllable {
+    func isLoggedIn()
+    func isLoggedIn(completionHandler: (Bool) -> ())
+}
+
 class TestScreenViewController: UIViewController {
-    
     
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
@@ -24,6 +29,34 @@ class TestScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.populateTestDataFromJson()
+        isLoggedIn()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+        isLoggedIn()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
+}
+
+extension TestScreenViewController: TestScreenControllable {
+    
+    func isLoggedIn() {
+        if Auth.auth().currentUser == nil {
+            self.performSegue(withIdentifier: "testLoginScreen", sender: nil)
+        }
+    }
+    
+    func isLoggedIn(completionHandler: (Bool) -> ()) {
+        if Auth.auth().currentUser == nil {
+            self.performSegue(withIdentifier: "testLoginScreen", sender: nil)
+        }
+        completionHandler(Auth.auth().currentUser != nil)
     }
 }
 
@@ -40,7 +73,15 @@ extension TestScreenViewController: UITableViewDataSource {
 extension TestScreenViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        viewModel.pushToDetail(viewController: self, index: indexPath.row)
+        isLoggedIn(completionHandler: { success in
+            if success {
+                viewModel.pushToDetail(viewController: self, index: indexPath.row)
+            }
+            else {
+                print("try register")
+            }
+        })
+        
     }
 }
 

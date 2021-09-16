@@ -22,6 +22,8 @@
 		95E6A47D26F04CC3007A2C9B /* testQuestion2.json in Resources */ = {isa = PBXBuildFile; fileRef = 95E6A47C26F04CC3007A2C9B /* testQuestion2.json */; };
 		95E6A48026F055EF007A2C9B /* testQuestion0.json in Resources */ = {isa = PBXBuildFile; fileRef = 95E6A47F26F055EF007A2C9B /* testQuestion0.json */; };
 		95E6A48326F06DB6007A2C9B /* testQuestion3.json in Resources */ = {isa = PBXBuildFile; fileRef = 95E6A48226F06DB6007A2C9B /* testQuestion3.json */; };
+		95E6A48626F2ED2B007A2C9B /* PopupLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E6A48526F2ED2B007A2C9B /* PopupLoginViewController.swift */; };
+		95E6A48926F2EE9D007A2C9B /* TestScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E6A48826F2EE9D007A2C9B /* TestScreenCoordinator.swift */; };
 		D9033F4726D5E301007756C3 /* DiarySubviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9033F4626D5E301007756C3 /* DiarySubviewModel.swift */; };
 		D9033F7E26DDC45C007756C3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9033F7D26DDC45C007756C3 /* LoginViewController.swift */; };
 		D9033F8026DDC95E007756C3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9033F7F26DDC95E007756C3 /* RegisterViewController.swift */; };
@@ -63,6 +65,9 @@
 		95E6A47C26F04CC3007A2C9B /* testQuestion2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testQuestion2.json; sourceTree = "<group>"; };
 		95E6A47F26F055EF007A2C9B /* testQuestion0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testQuestion0.json; sourceTree = "<group>"; };
 		95E6A48226F06DB6007A2C9B /* testQuestion3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testQuestion3.json; sourceTree = "<group>"; };
+		95E6A48526F2ED2B007A2C9B /* PopupLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupLoginViewController.swift; sourceTree = "<group>"; };
+		95E6A48826F2EE9D007A2C9B /* TestScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreenCoordinator.swift; sourceTree = "<group>"; };
+		95E6A48C26F2FA65007A2C9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		B077D1EDCDA0C371790EF9FA /* Pods-Soliu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soliu.release.xcconfig"; path = "Target Support Files/Pods-Soliu/Pods-Soliu.release.xcconfig"; sourceTree = "<group>"; };
 		D9033F4626D5E301007756C3 /* DiarySubviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiarySubviewModel.swift; sourceTree = "<group>"; };
 		D9033F7D26DDC45C007756C3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +135,7 @@
 				95BA861D26D5E91F00238B9F /* View */,
 				95BA861E26D5E92300238B9F /* ViewModel */,
 				95BA861B26D5E91400238B9F /* ViewController */,
+				95E6A48826F2EE9D007A2C9B /* TestScreenCoordinator.swift */,
 			);
 			path = TestScreen;
 			sourceTree = "<group>";
@@ -181,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				D9033F7D26DDC45C007756C3 /* LoginViewController.swift */,
+				95E6A48526F2ED2B007A2C9B /* PopupLoginViewController.swift */,
 			);
 			path = LoginScreen;
 			sourceTree = "<group>";
@@ -504,6 +511,8 @@
 				95E6A44B26D8A9FC007A2C9B /* UIColor+Ext.swift in Sources */,
 				D96441D7267FEA5F008406FE /* DiaryTableViewCell.swift in Sources */,
 				D9033F8026DDC95E007756C3 /* RegisterViewController.swift in Sources */,
+				95E6A48926F2EE9D007A2C9B /* TestScreenCoordinator.swift in Sources */,
+				95E6A48626F2ED2B007A2C9B /* PopupLoginViewController.swift in Sources */,
 				95BA862526D5EA6500238B9F /* TestSection.swift in Sources */,
 				95E6A45126DADB8F007A2C9B /* TestDetailViewController.swift in Sources */,
 			);
@@ -516,6 +525,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D9AAA085267C65B100135326 /* Base */,
+				95E6A48C26F2FA65007A2C9B /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
