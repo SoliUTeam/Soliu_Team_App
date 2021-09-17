@@ -9,11 +9,14 @@ import Foundation
 
 
 extension Date {
-    static let dateFormatter = DateFormatter()
-
+    
     func getDateString(using format: String) -> String {
-        type(of: self).dateFormatter.dateFormat = format
-        return type(of: self).dateFormatter.string(from: self)
+        let currentDateTime = Date()
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeZone = TimeZone.current
+        formatter.locale = Locale.current
+        return formatter.string(from: currentDateTime)
     }
 }
 

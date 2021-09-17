@@ -20,7 +20,22 @@ class DiaryTableViewCell: UITableViewCell, CellReusable {
     
     func configure(diary: DiaryTableViewCellViewModelProtocol) {
         self.dateLabel.text = diary.date
-        self.moodLabel.text = diary.mood
         self.noteLabel.text = diary.note
+        
+        switch diary.mood {
+        case "0":
+            emotionImageView.image = UIImage(named: "happy")
+        case "1":
+            emotionImageView.image = UIImage(named: "awful")
+        case "2":
+            emotionImageView.image = UIImage(named: "happy")
+        case "3":
+            emotionImageView.image = UIImage(named: "happy")
+        case "4":
+            emotionImageView.image = UIImage(named: "awful")
+
+        default:
+            print("It can't happen")
+    }
     }
 }
