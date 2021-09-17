@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5D8B0BA50B564F8ECF5226BA /* Pods_Soliu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A6B1447D37B39FAC5A2511 /* Pods_Soliu.framework */; };
+		95B4A39726F440200088B69E /* LoadingSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B4A39626F440200088B69E /* LoadingSpinner.swift */; };
+		95B4A39A26F4D7940088B69E /* loadingSpinner.json in Resources */ = {isa = PBXBuildFile; fileRef = 95B4A39926F4D7940088B69E /* loadingSpinner.json */; };
 		95BA861926D5E90E00238B9F /* TestScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BA861826D5E90E00238B9F /* TestScreenViewController.swift */; };
 		95BA862026D5E93300238B9F /* TestScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BA861F26D5E93300238B9F /* TestScreenViewModel.swift */; };
 		95BA862526D5EA6500238B9F /* TestSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BA862426D5EA6500238B9F /* TestSection.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95B4A39626F440200088B69E /* LoadingSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSpinner.swift; sourceTree = "<group>"; };
+		95B4A39926F4D7940088B69E /* loadingSpinner.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loadingSpinner.json; sourceTree = "<group>"; };
 		95BA861826D5E90E00238B9F /* TestScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreenViewController.swift; sourceTree = "<group>"; };
 		95BA861F26D5E93300238B9F /* TestScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreenViewModel.swift; sourceTree = "<group>"; };
 		95BA862426D5EA6500238B9F /* TestSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSection.swift; sourceTree = "<group>"; };
@@ -253,6 +257,7 @@
 				D9AAA36F268925D000EDCDF1 /* AlertProtocol.swift */,
 				95E6A44A26D8A9FC007A2C9B /* UIColor+Ext.swift */,
 				95E6A45A26DAE960007A2C9B /* ReusableComponent.swift */,
+				95B4A39626F440200088B69E /* LoadingSpinner.swift */,
 			);
 			path = ResusableComponents;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				95E6A48226F06DB6007A2C9B /* testQuestion3.json */,
 				95E6A45626DADFFF007A2C9B /* testQuestion1.json */,
 				95E6A47F26F055EF007A2C9B /* testQuestion0.json */,
+				95B4A39926F4D7940088B69E /* loadingSpinner.json */,
 			);
 			path = Soliu;
 			sourceTree = "<group>";
@@ -413,6 +419,7 @@
 				D9AAA086267C65B100135326 /* Main.storyboard in Resources */,
 				95E6A48026F055EF007A2C9B /* testQuestion0.json in Resources */,
 				D96441D8267FEA5F008406FE /* DiaryTableViewCell.xib in Resources */,
+				95B4A39A26F4D7940088B69E /* loadingSpinner.json in Resources */,
 				D9033F8426DDCE5E007756C3 /* GoogleService-Info.plist in Resources */,
 				95E6A48326F06DB6007A2C9B /* testQuestion3.json in Resources */,
 			);
@@ -489,6 +496,7 @@
 				D91A4DF62684E4350050E519 /* MainControllerViewModel.swift in Sources */,
 				95E6A45E26DB061F007A2C9B /* TestDetailViewModel.swift in Sources */,
 				D9AAA083267C65B100135326 /* MainViewController.swift in Sources */,
+				95B4A39726F440200088B69E /* LoadingSpinner.swift in Sources */,
 				95BA862826D5ED1500238B9F /* TestScreenTableViewCell.swift in Sources */,
 				D9033F8726E1C636007756C3 /* ProfileViewController.swift in Sources */,
 				D96441CD267FE035008406FE /* DiarySubviewController.swift in Sources */,
