@@ -32,13 +32,32 @@ class DiarySubviewController: UIViewController {
         
     }
     
+    @IBAction private func moodSegmentedControlChanged() {
+        switch moodSegmentedControl.selectedSegmentIndex {
+        case 0:
+            moodImageView.image = UIImage(named: "happy")
+        case 1:
+            moodImageView.image = UIImage(named: "awful")
+        case 2:
+            moodImageView.image = UIImage(named: "happy")
+        case 3:
+            moodImageView.image = UIImage(named: "happy")
+        case 4:
+            moodImageView.image = UIImage(named: "awful")
+
+        default:
+            print("It can't happen")
+        }
+        
+    }
     @IBAction private func saveButtonClicked() {
+        let date = Date()
         // Read noteData
         let name = ""
-        let currentTime = currentTimeDate.text ?? ""
+        let currentTime = Date()
         let selectedMood = moodSegmentedControl.selectedSegmentIndex
         let note = noteTextfield.text ?? ""
-        diaryCellViewModel.saveDiaryData(name: name, mood: selectedMood, date: currentTime, note: note)
+        diaryCellViewModel.saveDiaryData(name: name, mood: selectedMood, date: date.getDateString(using: "MM-DD-yyy HH:MM"), note: note)
         self.delegate?.reloadData()
         self.dismiss(animated: true, completion: nil)
     }

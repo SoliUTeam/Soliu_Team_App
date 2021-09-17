@@ -7,10 +7,10 @@
 
 import Foundation
 
-enum Mood: Int {
-    case happy = 0
-    case good = 1
-    case meh = 2
-    case bad = 3
-    case awful = 4
+enum Mood: String {
+    case happy
+    case good
+    case meh
+    case bad
+    case awful
 }

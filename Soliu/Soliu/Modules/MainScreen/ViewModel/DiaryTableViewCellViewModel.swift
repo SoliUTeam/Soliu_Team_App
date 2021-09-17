@@ -26,7 +26,7 @@ class DiaryTableViewCellViewModel: DiaryTableViewCellViewModelProtocol {
     }
     
     var mood: String {
-        diary?.name ?? ""
+        diary?.mood ?? "happy"
     }
     
     var date: String {

@@ -11,42 +11,45 @@ import FirebaseAuth
 class LoginViewController: UIViewController {
     
     @IBOutlet private weak var idTextField: UITextField!
-    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField! {
+        didSet {
+            self.passwordTextField.isSecureTextEntry = true
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction private func login() {
-        
+    @IBAction func signIn() {
         guard let id = idTextField.text,
               let password = passwordTextField.text else { return }
-        
+        print("Login Button Clicked")
         Auth.auth().signIn(withEmail: id, password: password) { (result, error) in
             if let error = error as NSError? {
                 switch AuthErrorCode(rawValue: error.code) {
-                    case .operationNotAllowed:
-                        self.displayMessage(with: "Server Issue", message: "Currently, our server has issues.\nPlease try again later.")
-                    case .userDisabled:
-                        self.displayMessage(with: "Email Issue", message: "We can't find your email.\nPlease check your email")
-                    case .wrongPassword:
-                        self.displayMessage(with: "Wrong Password", message: "Your password word is incorrect\nPlease try another password")
-                    case .invalidEmail:
-                        self.displayMessage(with: "Email Issue", message: "We can't find your email.\nPlease check your email")
-
-                   default:
-                       print("Error: \(error.localizedDescription)")
-                   }
+                case .operationNotAllowed:
+                    self.displayMessage(with: "Server Issue", message: "Currently, our server has issues.\nPlease try again later.")
+                case .userDisabled:
+                    self.displayMessage(with: "Email Issue", message: "We can't find your email.\nPlease check your email")
+                case .wrongPassword:
+                    self.displayMessage(with: "Wrong Password", message: "Your password word is incorrect\nPlease try another password")
+                case .invalidEmail:
+                    self.displayMessage(with: "Email Issue", message: "We can't find your email.\nPlease check your email")
+                    
+                default:
+                    print("Error: \(error.localizedDescription)")
+                }
             }
             else {
                 self.openProfileView()
             }
         }
     }
-
+    
     @IBAction private func openRegisterView() {
-            self.performSegue(withIdentifier: "openRegisterView", sender: nil)
-        }
+        self.performSegue(withIdentifier: "openRegisterView", sender: nil)
+    }
     
     private func openProfileView() {
         self.performSegue(withIdentifier: "openProfileView", sender: nil)

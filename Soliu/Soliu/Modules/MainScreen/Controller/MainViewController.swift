@@ -55,6 +55,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(diary: mainViewModel.dataForDiary(at: indexPath.row))
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+//             //ToDo deletes
+//                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+    }
 }
 
 extension MainViewController: DiarySubviewDelegate {

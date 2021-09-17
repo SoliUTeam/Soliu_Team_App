@@ -43,12 +43,12 @@ class RegisterViewController: UIViewController, AlertProtocol {
                     self.displayMessage(with: "System Error", message: "\(error.localizedDescription)\nPlease contact our customer service")
                 }
             } else {
-                // Register is successfully. // Getting data using gender
                 self.writeData(uid: authResult?.user.uid ?? "")
                 self.registerAlertViewController()
             }
         }
     }
+    
     func writeData(uid: String) {
         let userInfo = "userInfo"
         guard let genderInfo = genderSegmentedControl.titleForSegment(at: genderSegmentedControl.selectedSegmentIndex),
@@ -62,9 +62,11 @@ class RegisterViewController: UIViewController, AlertProtocol {
     
     func registerAlertViewController() {
         let alert = UIAlertController(title: "Register Successfully", message: "Your sign-up confirms successfully.", preferredStyle: .alert)
-        let registerAction = UIAlertAction(title: "", style: .default) { _ in
+        let registerAction = UIAlertAction(title: "Okay", style: .default) { _ in
             self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popToRootViewController(animated: true)
         }
         alert.addAction(registerAction)
+        self.present(alert, animated: true)
     }
 }
