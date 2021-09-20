@@ -26,4 +26,7 @@ class DiarySubviewModel {
             print("Save Data failed")
         }
     }
+    
+    
+
 }

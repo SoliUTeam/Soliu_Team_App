@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Happy.png",
+      "filename" : "IMG-0442@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "IMG-0442@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "IMG-0442@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

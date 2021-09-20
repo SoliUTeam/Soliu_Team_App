@@ -26,11 +26,11 @@ class DiaryTableViewCell: UITableViewCell, CellReusable {
         case "0":
             emotionImageView.image = UIImage(named: "happy")
         case "1":
-            emotionImageView.image = UIImage(named: "awful")
+            emotionImageView.image = UIImage(named: "good")
         case "2":
-            emotionImageView.image = UIImage(named: "happy")
+            emotionImageView.image = UIImage(named: "meh")
         case "3":
-            emotionImageView.image = UIImage(named: "happy")
+            emotionImageView.image = UIImage(named: "bad")
         case "4":
             emotionImageView.image = UIImage(named: "awful")
 

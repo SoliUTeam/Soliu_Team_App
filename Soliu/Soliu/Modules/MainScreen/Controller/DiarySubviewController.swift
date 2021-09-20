@@ -24,12 +24,11 @@ class DiarySubviewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let date = Date()
-        currentTimeDate.text = date.getDateString(using: "MM-dd-yyyy HH:MM")
+        currentTimeDate.text = date.getDateString(using: "MM-dd HH:MM")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
     }
     
     @IBAction private func moodSegmentedControlChanged() {
@@ -37,11 +36,11 @@ class DiarySubviewController: UIViewController {
         case 0:
             moodImageView.image = UIImage(named: "happy")
         case 1:
-            moodImageView.image = UIImage(named: "awful")
+            moodImageView.image = UIImage(named: "good")
         case 2:
-            moodImageView.image = UIImage(named: "happy")
+            moodImageView.image = UIImage(named: "meh")
         case 3:
-            moodImageView.image = UIImage(named: "happy")
+            moodImageView.image = UIImage(named: "bad")
         case 4:
             moodImageView.image = UIImage(named: "awful")
 

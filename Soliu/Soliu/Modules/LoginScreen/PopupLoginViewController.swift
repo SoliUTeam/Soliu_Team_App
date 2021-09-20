@@ -24,7 +24,7 @@ class PopupLoginViewController: UIViewController {
        }
        @IBOutlet private weak var passwordTextField: UITextField! {
            didSet {
-               //StringColor.changeColor(textField: passwordTextField, text: "Password", color: .gray)
+                self.passwordTextField.isSecureTextEntry = true
            }
        }
        @IBOutlet private weak var pressedJoin: UIButton!

@@ -58,8 +58,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-//             //ToDo deletes
-//                tableView.deleteRows(at: [indexPath], with: .fade)
+            mainViewModel.deleteContext(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.reloadData()
             }
     }
 }
