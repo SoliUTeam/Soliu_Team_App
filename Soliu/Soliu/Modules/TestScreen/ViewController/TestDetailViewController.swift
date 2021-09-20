@@ -36,6 +36,11 @@ class TestDetailViewController: UIViewController {
         totalQuestion.text = viewModel.getTotalQuestion()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //loadingSpinner()
+    }
+    
 //    override func viewWillAppear(_ animated: Bool) {
 //        super.viewWillAppear(animated)
 //        navigationController?.isNavigationBarHidden = true
@@ -65,6 +70,14 @@ class TestDetailViewController: UIViewController {
     @IBAction private func touchAnswer5() {
         increaseProgress()
         viewModel.uploadData()
+        loadingSpinner()
+    }
+    
+    func loadingSpinner() {
+//        if currentCount == viewModel.getTotalQuestion() {
+//
+//        }
+        self.performSegue(withIdentifier: "loadingSpinner", sender: nil)
     }
 }
 

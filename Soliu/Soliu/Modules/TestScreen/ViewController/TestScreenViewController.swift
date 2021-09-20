@@ -29,13 +29,13 @@ class TestScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.populateTestDataFromJson()
-        isLoggedIn()
+        //isLoggedIn()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
-        isLoggedIn()
+        // isLoggedIn()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -47,15 +47,13 @@ class TestScreenViewController: UIViewController {
 extension TestScreenViewController: TestScreenControllable {
     
     func isLoggedIn() {
-        if Auth.auth().currentUser == nil {
+        if Auth.auth().currentUser != nil {
             self.performSegue(withIdentifier: "testLoginScreen", sender: nil)
         }
     }
     
     func isLoggedIn(completionHandler: (Bool) -> ()) {
-        if Auth.auth().currentUser == nil {
-            self.performSegue(withIdentifier: "testLoginScreen", sender: nil)
-        }
+        isLoggedIn()
         completionHandler(Auth.auth().currentUser != nil)
     }
 }
@@ -74,12 +72,12 @@ extension TestScreenViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         isLoggedIn(completionHandler: { success in
-            if success {
+//            if !success {
                 viewModel.pushToDetail(viewController: self, index: indexPath.row)
-            }
-            else {
-                print("try register")
-            }
+//            }
+//            else {
+//                print("try register")
+//            }
         })
         
     }

@@ -55,4 +55,8 @@ class TestDetailViewModel {
     func getTotalQuestion() -> String {
         "\(testQuestion[0].totalQuestionNumber)"
     }
+    
+    func getTotalQuestion() -> Int {
+        testQuestion[0].totalQuestionNumber
+    }
 }

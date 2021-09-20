@@ -148,6 +148,7 @@
 			children = (
 				95BA861826D5E90E00238B9F /* TestScreenViewController.swift */,
 				95E6A45026DADB8F007A2C9B /* TestDetailViewController.swift */,
+				95B4A39626F440200088B69E /* LoadingSpinner.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -257,7 +258,6 @@
 				D9AAA36F268925D000EDCDF1 /* AlertProtocol.swift */,
 				95E6A44A26D8A9FC007A2C9B /* UIColor+Ext.swift */,
 				95E6A45A26DAE960007A2C9B /* ReusableComponent.swift */,
-				95B4A39626F440200088B69E /* LoadingSpinner.swift */,
 			);
 			path = ResusableComponents;
 			sourceTree = "<group>";
