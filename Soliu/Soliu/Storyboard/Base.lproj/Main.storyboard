@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6rt-ha-cVo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6rt-ha-cVo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -31,13 +31,7 @@
                             <constraint firstItem="Yya-Q5-Xnj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hcr-ay-Aqs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qP5-12-ITf">
-                        <barButtonItem key="rightBarButtonItem" title="Setup" id="N4A-a9-H2V">
-                            <connections>
-                                <segue destination="CU3-z7-kXV" kind="push" id="5D3-1u-DN5"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="qP5-12-ITf"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="Yya-Q5-Xnj" id="JpK-e8-jVa"/>
@@ -391,7 +385,6 @@
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="signIn" destination="Qv1-m2-lu8" eventType="touchUpInside" id="hGD-1h-DUE"/>
-                                    <segue destination="SId-yW-67U" kind="show" identifier="openProfileView" id="1fI-P2-M9d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNK-TK-v6w">
@@ -433,54 +426,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGl-vT-77N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1810.144927536232" y="1345.9821428571429"/>
+            <point key="canvasLocation" x="2636" y="1346"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="ZDL-3s-Kby">
             <objects>
-                <viewController id="SId-yW-67U" sceneMemberID="viewController">
+                <viewController id="SId-yW-67U" customClass="ProfileViewController" customModule="Soliu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IpN-Ba-QUD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xuf-Tr-Pm5">
-                                <rect key="frame" x="16" y="118" width="382" height="46.5"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h9u-3U-gDd">
-                                <rect key="frame" x="0.0" y="164.5" width="414" height="648.5"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pri-5t-DoC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Xuf-Tr-Pm5" firstAttribute="leading" secondItem="Pri-5t-DoC" secondAttribute="leading" constant="16" id="PZg-Bh-Aql"/>
+                            <constraint firstItem="h9u-3U-gDd" firstAttribute="trailing" secondItem="Pri-5t-DoC" secondAttribute="trailing" id="3sb-cL-bYY"/>
+                            <constraint firstItem="h9u-3U-gDd" firstAttribute="bottom" secondItem="Pri-5t-DoC" secondAttribute="bottom" id="Am1-DN-qv7"/>
+                            <constraint firstItem="h9u-3U-gDd" firstAttribute="leading" secondItem="Pri-5t-DoC" secondAttribute="leading" id="BlQ-Od-Fv5"/>
                             <constraint firstItem="Pri-5t-DoC" firstAttribute="trailing" secondItem="h9u-3U-gDd" secondAttribute="trailing" id="U0b-jL-xq5"/>
                             <constraint firstItem="Pri-5t-DoC" firstAttribute="bottom" secondItem="h9u-3U-gDd" secondAttribute="bottom" id="XzK-ug-wIB"/>
-                            <constraint firstItem="Pri-5t-DoC" firstAttribute="trailing" secondItem="Xuf-Tr-Pm5" secondAttribute="trailing" constant="16" id="ZaJ-U9-oCY"/>
-                            <constraint firstItem="h9u-3U-gDd" firstAttribute="top" secondItem="Xuf-Tr-Pm5" secondAttribute="bottom" id="ath-76-dSn"/>
+                            <constraint firstItem="h9u-3U-gDd" firstAttribute="top" secondItem="Pri-5t-DoC" secondAttribute="top" id="e9p-zV-IIm"/>
                             <constraint firstItem="h9u-3U-gDd" firstAttribute="leading" secondItem="Pri-5t-DoC" secondAttribute="leading" id="pR2-RA-8WL"/>
-                            <constraint firstItem="Xuf-Tr-Pm5" firstAttribute="top" secondItem="Pri-5t-DoC" secondAttribute="top" constant="30" id="w17-fK-72t"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0Jw-zx-SSS"/>
+                    <connections>
+                        <outlet property="tableView" destination="h9u-3U-gDd" id="NBc-kV-YaT"/>
+                        <segue destination="Qv1-m2-lu8" kind="show" identifier="openSignInVC" id="Dft-hX-5Od"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCk-td-UpK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1810" y="2060"/>
+            <point key="canvasLocation" x="1810" y="1346"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="S0b-lE-8wQ">
             <objects>
                 <viewController storyboardIdentifier="RegisterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cME-xr-sGU" customClass="RegisterViewController" customModule="Soliu" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rTa-bY-cQy">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="rTa-bY-cQy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXu-7a-sKp">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hXu-7a-sKp">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teN-oD-Tej">
@@ -671,7 +662,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybc-oK-nUF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2713" y="1346"/>
+            <point key="canvasLocation" x="3497" y="1346"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="MpZ-WX-9WC">
@@ -706,7 +697,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TestScreenTableViewCell" rowHeight="123" id="0dA-g3-388" customClass="TestScreenTableViewCell" customModule="Soliu" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="123"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="123"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0dA-g3-388" id="QCs-cs-ivf">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="123"/>
@@ -827,7 +818,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Qv1-m2-lu8" kind="relationship" relationship="rootViewController" id="Gjv-lB-voe"/>
+                        <segue destination="SId-yW-67U" kind="relationship" relationship="rootViewController" id="T6N-Y7-cZV"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQ1-WL-d83" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

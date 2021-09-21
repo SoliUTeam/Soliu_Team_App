@@ -36,7 +36,6 @@ class LoginViewController: UIViewController {
                     self.displayMessage(with: "Wrong Password", message: "Your password word is incorrect\nPlease try another password")
                 case .invalidEmail:
                     self.displayMessage(with: "Email Issue", message: "We can't find your email.\nPlease check your email")
-                    
                 default:
                     print("Error: \(error.localizedDescription)")
                 }
