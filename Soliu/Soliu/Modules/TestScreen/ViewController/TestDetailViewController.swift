@@ -31,7 +31,9 @@ class TestDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.populateTestQuestionDataFromJson(number: questionDataSource?.testNumber ?? 0)
+        
+        // set test number 1 as default
+        viewModel.populateTestQuestionDataFromJson(number: 1)
         question.text = viewModel.getQuestionText()
         totalQuestion.text = viewModel.getTotalQuestion()
     }
@@ -41,12 +43,12 @@ class TestDetailViewController: UIViewController {
         //loadingSpinner()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        navigationController?.isNavigationBarHidden = true
-//    }
+    //    override func viewWillAppear(_ animated: Bool) {
+    //        super.viewWillAppear(animated)
+    //        navigationController?.isNavigationBarHidden = true
+    //    }
     
-    // upload data to firebase 
+    // upload data to firebase
     @IBAction private func touchAnswer1() {
         increaseProgress()
         viewModel.uploadData()
@@ -70,23 +72,27 @@ class TestDetailViewController: UIViewController {
     @IBAction private func touchAnswer5() {
         increaseProgress()
         viewModel.uploadData()
-        loadingSpinner()
     }
     
     func loadingSpinner() {
-//        if currentCount == viewModel.getTotalQuestion() {
-//
-//        }
+        //        if currentCount == viewModel.getTotalQuestion() {
+        //
+        //        }
         self.performSegue(withIdentifier: "loadingSpinner", sender: nil)
     }
 }
 
 extension TestDetailViewController: TestDetailViewControllable {
     func increaseProgress() {
-        currentCount += 1
-        progressView.progress = viewModel.getProgress()
-        viewModel.nextQuestion()
-        question.text = viewModel.getQuestionText()
-        currentQuestion.text = "\(currentCount)"
+        
+        if currentCount != viewModel.getTotalQuestion() {
+            currentCount += 1
+            progressView.progress = viewModel.getProgress()
+            viewModel.nextQuestion()
+            question.text = viewModel.getQuestionText()
+            currentQuestion.text = "\(currentCount)"
+        } else {
+            loadingSpinner()
+        }
     }
 }

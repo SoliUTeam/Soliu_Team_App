@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5D8B0BA50B564F8ECF5226BA /* Pods_Soliu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A6B1447D37B39FAC5A2511 /* Pods_Soliu.framework */; };
+		954370452704233B007D3223 /* NewStartTestScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954370442704233B007D3223 /* NewStartTestScreenViewController.swift */; };
+		9543704727042B9F007D3223 /* TestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9543704627042B9F007D3223 /* TestResultViewController.swift */; };
 		95B4A39726F440200088B69E /* LoadingSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B4A39626F440200088B69E /* LoadingSpinner.swift */; };
 		95B4A39A26F4D7940088B69E /* loadingSpinner.json in Resources */ = {isa = PBXBuildFile; fileRef = 95B4A39926F4D7940088B69E /* loadingSpinner.json */; };
 		95BA861926D5E90E00238B9F /* TestScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BA861826D5E90E00238B9F /* TestScreenViewController.swift */; };
@@ -56,6 +58,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		954370442704233B007D3223 /* NewStartTestScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStartTestScreenViewController.swift; sourceTree = "<group>"; };
+		9543704627042B9F007D3223 /* TestResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultViewController.swift; sourceTree = "<group>"; };
 		95B4A39626F440200088B69E /* LoadingSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSpinner.swift; sourceTree = "<group>"; };
 		95B4A39926F4D7940088B69E /* loadingSpinner.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loadingSpinner.json; sourceTree = "<group>"; };
 		95BA861826D5E90E00238B9F /* TestScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreenViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 				95BA861826D5E90E00238B9F /* TestScreenViewController.swift */,
 				95E6A45026DADB8F007A2C9B /* TestDetailViewController.swift */,
 				95B4A39626F440200088B69E /* LoadingSpinner.swift */,
+				954370442704233B007D3223 /* NewStartTestScreenViewController.swift */,
+				9543704627042B9F007D3223 /* TestResultViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -516,6 +522,7 @@
 				D96441D4267FE740008406FE /* String+Ext.swift in Sources */,
 				95E6A45426DADF88007A2C9B /* TestQuestion.swift in Sources */,
 				D9AAA370268925D000EDCDF1 /* AlertProtocol.swift in Sources */,
+				954370452704233B007D3223 /* NewStartTestScreenViewController.swift in Sources */,
 				95BA861926D5E90E00238B9F /* TestScreenViewController.swift in Sources */,
 				D9033F7E26DDC45C007756C3 /* LoginViewController.swift in Sources */,
 				D96441DA267FF03E008406FE /* NotificationViewController.swift in Sources */,
@@ -531,6 +538,7 @@
 				95E6A48926F2EE9D007A2C9B /* TestScreenCoordinator.swift in Sources */,
 				D92F3AD626F9761B00EB7449 /* SupportFirebase.swift in Sources */,
 				95E6A48626F2ED2B007A2C9B /* PopupLoginViewController.swift in Sources */,
+				9543704727042B9F007D3223 /* TestResultViewController.swift in Sources */,
 				95BA862526D5EA6500238B9F /* TestSection.swift in Sources */,
 				95E6A45126DADB8F007A2C9B /* TestDetailViewController.swift in Sources */,
 				D92F3AD926F97AC900EB7449 /* ProfileChartTableViewCell.swift in Sources */,
