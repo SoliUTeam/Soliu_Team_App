@@ -30,7 +30,6 @@ class ProfileChartTableViewCell: UITableViewCell, CellReusable {
     }
     
     func setChart(month: [String], data: [Int]) {
-        
         // 데이터 생성
         var dataEntries: [BarChartDataEntry] = []
         for i in 0..<data.count {
@@ -38,7 +37,7 @@ class ProfileChartTableViewCell: UITableViewCell, CellReusable {
             dataEntries.append(dataEntry)
         }
 
-        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "판매량")
+        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Score")
 
         // 차트 컬러
         chartDataSet.colors = [.systemBlue]

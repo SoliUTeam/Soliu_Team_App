@@ -7,6 +7,8 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
+
 class RegisterViewController: UIViewController, AlertProtocol {
     
     @IBOutlet private weak var emailTextField: UITextField!
