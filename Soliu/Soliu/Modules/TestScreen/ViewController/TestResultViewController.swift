@@ -17,18 +17,12 @@ class TestResultViewController: UIViewController {
     }
     
     
+    
     @IBAction private func gotoTestScreen(_ sender: UIButton) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        guard let newTestScreen = storyboard.instantiateViewController(identifier: "NewStartTestScreenViewController") as? NewStartTestScreenViewController else {
-//            return
-//        }
-//        self.navigationController?.pushViewController(newTestScreen, animated: true)
-        
-        
-        
-        
-        
-        //perform segue to Main screen
-        //self.performSegue(withIdentifier: "fromResultScreenToMainScreen", sender: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let newTestScreen = storyboard.instantiateViewController(identifier: "NewStartTestScreenViewController") as? NewStartTestScreenViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(newTestScreen, animated: false)
     }
 }

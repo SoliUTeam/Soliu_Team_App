@@ -21,27 +21,26 @@ class SupportFirebase {
     }
     
     static func readData() {
-        db.collection("userInfo").document(currentUser).getDocument { document, error in
-            if error != nil {
-                print(error ?? "error")
-            }
-            if let documentData = document?.data() {
-                let documentData = documentData["testResult"]
-                print(documentData)
-            } else { print("Failed to get Data") }
-        }
+//        db.collection("userInfo").document(currentUser).getDocument { document, error in
+//            if error != nil {
+//                print(error ?? "error")
+//            }
+//            if let documentData = document?.data() {
+//                let documentData = documentData["testResult"]
+//            } else { print("Failed to get Data") }
+//        }
     }
     
     static func writeData(testDate: String, testScore: [Int]) {
-        db.collection("userInfo").document(currentUser).getDocument { document, error in
-            if error != nil {
-                print(error ?? "error")
-            }
-            if let documentData = document?.data() {
-                self.testResultArray = documentData["testResult"] as? [[String: Any]] ?? [[:]]
-                
-            }
-        }
+//        db.collection("userInfo").document(currentUser).getDocument { document, error in
+//            if error != nil {
+//                print(error ?? "error")
+//            }
+//            if let documentData = document?.data() {
+//                self.testResultArray = documentData["testResult"] as? [[String: Any]] ?? [[:]]
+//
+//            }
+//        }
         
 //        db.collection("userInfo").document(currentUser).updateData(["t" : Any])
 //        db.collection("userInfo").document(currentUser).setData(["testResult" : extendedArray], merge: true)

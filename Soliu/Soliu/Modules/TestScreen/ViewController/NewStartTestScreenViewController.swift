@@ -20,10 +20,18 @@ class NewStartTestScreenViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.isLoggedIn()
+        navigationController?.isNavigationBarHidden = true
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         self.dismiss(animated: animated, completion: nil)
+
+    }
+    
+    @IBAction private func togoTest(_ sender: UIButton) {
+        guard let testDetailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TestDetailViewController") as? TestDetailViewController else { return }
+        
+        self.navigationController?.pushViewController(testDetailViewController, animated: false)
     }
 }
     

@@ -40,13 +40,11 @@ class TestDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //loadingSpinner()
+        navigationController?.isNavigationBarHidden = true
     }
-    
-    //    override func viewWillAppear(_ animated: Bool) {
-    //        super.viewWillAppear(animated)
-    //        navigationController?.isNavigationBarHidden = true
-    //    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
     
     // upload data to firebase
     @IBAction private func touchAnswer1() {
@@ -78,7 +76,11 @@ class TestDetailViewController: UIViewController {
         //        if currentCount == viewModel.getTotalQuestion() {
         //
         //        }
-        self.performSegue(withIdentifier: "loadingSpinner", sender: nil)
+//        self.performSegue(withIdentifier: "loadingSpinner", sender: nil)
+        
+        guard let loadingSpinner = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoadingSpinner") as? LoadingSpinner else { return }
+        
+        self.navigationController?.pushViewController(loadingSpinner, animated: false)
     }
 }
 
