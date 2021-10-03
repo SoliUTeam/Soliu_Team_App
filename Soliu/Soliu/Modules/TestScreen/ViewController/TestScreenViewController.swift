@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 import UIKit
 
+// MARK: - this file has deprecated
 
 protocol TestScreenControllable {
     func isLoggedIn()

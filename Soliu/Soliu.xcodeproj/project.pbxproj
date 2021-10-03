@@ -10,6 +10,7 @@
 		5D8B0BA50B564F8ECF5226BA /* Pods_Soliu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A6B1447D37B39FAC5A2511 /* Pods_Soliu.framework */; };
 		954370452704233B007D3223 /* NewStartTestScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954370442704233B007D3223 /* NewStartTestScreenViewController.swift */; };
 		9543704727042B9F007D3223 /* TestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9543704627042B9F007D3223 /* TestResultViewController.swift */; };
+		954370492709247E007D3223 /* TestResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954370482709247E007D3223 /* TestResultViewModel.swift */; };
 		95B4A39726F440200088B69E /* LoadingSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B4A39626F440200088B69E /* LoadingSpinner.swift */; };
 		95B4A39A26F4D7940088B69E /* loadingSpinner.json in Resources */ = {isa = PBXBuildFile; fileRef = 95B4A39926F4D7940088B69E /* loadingSpinner.json */; };
 		95BA861926D5E90E00238B9F /* TestScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BA861826D5E90E00238B9F /* TestScreenViewController.swift */; };
@@ -60,6 +61,7 @@
 /* Begin PBXFileReference section */
 		954370442704233B007D3223 /* NewStartTestScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStartTestScreenViewController.swift; sourceTree = "<group>"; };
 		9543704627042B9F007D3223 /* TestResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultViewController.swift; sourceTree = "<group>"; };
+		954370482709247E007D3223 /* TestResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultViewModel.swift; sourceTree = "<group>"; };
 		95B4A39626F440200088B69E /* LoadingSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSpinner.swift; sourceTree = "<group>"; };
 		95B4A39926F4D7940088B69E /* loadingSpinner.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loadingSpinner.json; sourceTree = "<group>"; };
 		95BA861826D5E90E00238B9F /* TestScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreenViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			children = (
 				95BA861F26D5E93300238B9F /* TestScreenViewModel.swift */,
 				95E6A45D26DB061F007A2C9B /* TestDetailViewModel.swift */,
+				954370482709247E007D3223 /* TestResultViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				D9033F4726D5E301007756C3 /* DiarySubviewModel.swift in Sources */,
 				95E6A44B26D8A9FC007A2C9B /* UIColor+Ext.swift in Sources */,
 				D96441D7267FEA5F008406FE /* DiaryTableViewCell.swift in Sources */,
+				954370492709247E007D3223 /* TestResultViewModel.swift in Sources */,
 				D9033F8026DDC95E007756C3 /* RegisterViewController.swift in Sources */,
 				95E6A48926F2EE9D007A2C9B /* TestScreenCoordinator.swift in Sources */,
 				D92F3AD626F9761B00EB7449 /* SupportFirebase.swift in Sources */,
