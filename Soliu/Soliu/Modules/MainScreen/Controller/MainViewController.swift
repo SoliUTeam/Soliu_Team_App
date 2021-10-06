@@ -29,8 +29,11 @@ class MainViewController: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
         openDiarySubView()
+        
+        if SupportFirebase.isLoggedIn() {
         SupportFirebase.readData()
         SupportFirebase.writeData(testDate: "09/23/2021", testScore: [1,2,3,4,5,1,2,3,4,5,1,2,3,4,5])
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

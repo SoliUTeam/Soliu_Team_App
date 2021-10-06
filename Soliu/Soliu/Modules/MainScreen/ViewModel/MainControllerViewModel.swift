@@ -14,10 +14,10 @@ class MainControllerViewModel {
     var tableView: UITableView
     var dataSource: [Diary] = [] {
         didSet {
-        self.tableView.reloadData()
+            self.tableView.reloadData()
         }
     }
-
+    
     init(tableView: UITableView) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.tableView = tableView
@@ -41,10 +41,10 @@ class MainControllerViewModel {
     func deleteContext(at index: Int) {
         do {
             guard let items = try container.viewContext.fetch(Diary.fetchRequest()) as? [Diary] else { return }
-
+            
             for item in items {
                 if dataSource[index] == item {
-                container.viewContext.delete(item)
+                    container.viewContext.delete(item)
                 }
             }
             try container.viewContext.save()

@@ -9,57 +9,42 @@ import Foundation
 import Firebase
 import FirebaseFirestore
 
+
+
 class SupportFirebase {
     
     static let userInfo = "userInfo"
     static let db = Firestore.firestore()
     static let currentUser = Auth.auth().currentUser?.uid ?? ""
-    static var testResultArray: [[String: Any]] = [[:]]
-    
+    static var testInformation: TestInformation?
+
     static func isLoggedIn() -> Bool {
         return Auth.auth().currentUser != nil
     }
     
-    static func readData() {
-//        db.collection("userInfo").document(currentUser).getDocument { document, error in
-//            if error != nil {
-//                print(error ?? "error")
-//            }
-//            if let documentData = document?.data() {
-//                let documentData = documentData["testResult"]
-//            } else { print("Failed to get Data") }
-//        }
+    static func readData() -> TestInformation? {
+
+        db.collection("userInfo").document(currentUser).addSnapshotListener { document, error in
+            if error != nil {
+                print("reading error")
+            }
+            if let document = document {
+                do {
+                    testInformation = try JSONDecoder().decode(TestInformation.self, from: JSONSerialization.data(withJSONObject: document.data())
+                    )
+                }
+                catch {
+                    print("Read error") }
+            }
+        }
+            
+        return testInformation
     }
     
     static func writeData(testDate: String, testScore: [Int]) {
-//        db.collection("userInfo").document(currentUser).getDocument { document, error in
-//            if error != nil {
-//                print(error ?? "error")
-//            }
-//            if let documentData = document?.data() {
-//                self.testResultArray = documentData["testResult"] as? [[String: Any]] ?? [[:]]
-//
-//            }
-//        }
-        
-//        db.collection("userInfo").document(currentUser).updateData(["t" : Any])
-//        db.collection("userInfo").document(currentUser).setData(["testResult" : extendedArray], merge: true)
+        var userTestInformation = readData()
+        let testResult = TestResult(testDate: testDate, testScore: testScore)
+        userTestInformation?.testResult.append(testResult)
+        db.collection("userInfo").document(currentUser).setData(["testResult" : testResult])
     }
-    
-//    static func writeData(with date: String, scoreArray: [Int]) {
-//        let userInfo = "userInfo"
-//        let database = Firestore.firestore()
-//        database.document("userInfo/\(currentUser)").collection("testResult").getDocuments { data, error in
-//            if error != nil {
-//                print(error?.localizedDescription)
-//            }
-//            guard let documentData = data?.documents else {
-//                "Faild to read Data"
-//                return
-//            }
-//            print(documentData)
-//            print(data)
-//        }
-//        database.collection(userInfo).document(currentUser).collection("testResult").setValuesForKeys(["date" : date, "score" : scoreArray])
-//    }
 }

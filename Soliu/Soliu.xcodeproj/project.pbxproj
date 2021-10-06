@@ -29,6 +29,7 @@
 		95E6A48326F06DB6007A2C9B /* testQuestion3.json in Resources */ = {isa = PBXBuildFile; fileRef = 95E6A48226F06DB6007A2C9B /* testQuestion3.json */; };
 		95E6A48626F2ED2B007A2C9B /* PopupLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E6A48526F2ED2B007A2C9B /* PopupLoginViewController.swift */; };
 		95E6A48926F2EE9D007A2C9B /* TestScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E6A48826F2EE9D007A2C9B /* TestScreenCoordinator.swift */; };
+		D900505C270D3A2D00BF5802 /* TestInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D900505B270D3A2D00BF5802 /* TestInformation.swift */; };
 		D9033F4726D5E301007756C3 /* DiarySubviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9033F4626D5E301007756C3 /* DiarySubviewModel.swift */; };
 		D9033F7E26DDC45C007756C3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9033F7D26DDC45C007756C3 /* LoginViewController.swift */; };
 		D9033F8026DDC95E007756C3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9033F7F26DDC95E007756C3 /* RegisterViewController.swift */; };
@@ -81,6 +82,7 @@
 		95E6A48526F2ED2B007A2C9B /* PopupLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupLoginViewController.swift; sourceTree = "<group>"; };
 		95E6A48826F2EE9D007A2C9B /* TestScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreenCoordinator.swift; sourceTree = "<group>"; };
 		B077D1EDCDA0C371790EF9FA /* Pods-Soliu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soliu.release.xcconfig"; path = "Target Support Files/Pods-Soliu/Pods-Soliu.release.xcconfig"; sourceTree = "<group>"; };
+		D900505B270D3A2D00BF5802 /* TestInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInformation.swift; sourceTree = "<group>"; };
 		D9033F4626D5E301007756C3 /* DiarySubviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiarySubviewModel.swift; sourceTree = "<group>"; };
 		D9033F7D26DDC45C007756C3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D9033F7F26DDC95E007756C3 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D900505A270D3A0F00BF5802 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D900505B270D3A2D00BF5802 /* TestInformation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D9033F7A26DDB9D0007756C3 /* RegisterScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +234,7 @@
 		D9033F8826E9A2F8007756C3 /* Extension + */ = {
 			isa = PBXGroup;
 			children = (
+				D900505A270D3A0F00BF5802 /* Model */,
 				D9033F8926E9A312007756C3 /* String+Extension.swift */,
 				D92F3AD526F9761B00EB7449 /* SupportFirebase.swift */,
 			);
@@ -534,6 +545,7 @@
 				D9AAA081267C65B100135326 /* SceneDelegate.swift in Sources */,
 				D96441E12680528F008406FE /* Soliu.xcdatamodeld in Sources */,
 				95E6A45B26DAE960007A2C9B /* ReusableComponent.swift in Sources */,
+				D900505C270D3A2D00BF5802 /* TestInformation.swift in Sources */,
 				D9033F4726D5E301007756C3 /* DiarySubviewModel.swift in Sources */,
 				95E6A44B26D8A9FC007A2C9B /* UIColor+Ext.swift in Sources */,
 				D96441D7267FEA5F008406FE /* DiaryTableViewCell.swift in Sources */,

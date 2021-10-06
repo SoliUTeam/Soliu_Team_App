@@ -13,4 +13,5 @@ pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'RxSwift'
 pod 'RxCocoa'
+pod ‘FirebaseFirestoreSwift’
 end
