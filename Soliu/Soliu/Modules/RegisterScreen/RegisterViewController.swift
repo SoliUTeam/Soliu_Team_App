@@ -56,10 +56,13 @@ class RegisterViewController: UIViewController, AlertProtocol {
         guard let genderInfo = genderSegmentedControl.titleForSegment(at: genderSegmentedControl.selectedSegmentIndex),
               let gradeInfo = gradeSegmentedControl.titleForSegment(at: gradeSegmentedControl.selectedSegmentIndex),
               let majorInfo = majorTextField.text else { return }
-        
+        let emptyTestResult = ["testScore" : [], "testDate" : ""] as [String : Any]
         self.database.collection(userInfo).document(uid).setData([SupportString.gender: genderInfo,
                                                                   SupportString.grade: gradeInfo,
-                                                                  SupportString.major: majorInfo], merge: false)
+                                                                  SupportString.major: majorInfo,
+                                                                  SupportString.testResult: [emptyTestResult]
+                                                                  ],
+                                                    merge: false)
     }
     
     func registerAlertViewController() {

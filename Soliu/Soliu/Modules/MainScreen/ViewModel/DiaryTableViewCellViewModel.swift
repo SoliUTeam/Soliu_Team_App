@@ -10,7 +10,7 @@ import Foundation
 protocol DiaryTableViewCellViewModelProtocol {
     var note: String { get }
     var name: String { get }
-    var mood: String { get }
+    var mood: Int { get }
     var date: String { get }
 }
 class DiaryTableViewCellViewModel: DiaryTableViewCellViewModelProtocol {
@@ -25,8 +25,8 @@ class DiaryTableViewCellViewModel: DiaryTableViewCellViewModelProtocol {
         diary?.name ?? ""
     }
     
-    var mood: String {
-        diary?.mood ?? "happy"
+    var mood: Int {
+        Int(diary?.mood ?? 0)
     }
     
     var date: String {

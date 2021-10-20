@@ -10,18 +10,10 @@ import CoreData
 
 class MainViewController: UIViewController {
     
+    // Container for CoreData parts
     var container: NSPersistentContainer!
-    
-    // TableView for emotion diary
-    @IBOutlet private weak var tableView: UITableView! {
-        didSet {
-            self.tableView.delegate = self
-            self.tableView.dataSource = self
-            self.tableView.register(UINib(nibName: DiaryTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: DiaryTableViewCell.reuseIdentifier)
-        }
-    }
-    
     lazy var mainViewModel = MainControllerViewModel(tableView: tableView)
+    @IBOutlet var signInButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +21,25 @@ class MainViewController: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
         openDiarySubView()
-        
-        if SupportFirebase.isLoggedIn() {
-        SupportFirebase.readData()
-        SupportFirebase.writeData(testDate: "09/23/2021", testScore: [1,2,3,4,5,1,2,3,4,5,1,2,3,4,5])
+        if SupportFirebase.supportFirebase.isLoggedIn() {
+            SupportFirebase.supportFirebase.updateTestScore(testScore: [1,1,1,1,1,2,2,2,2,2,3,3,3,3,3], testDate: "2021-09-16")
+        }
+    }
+    
+    func setupUI() {
+        if SupportFirebase.supportFirebase.isLoggedIn() {
+            signInButton.title = "Sign Out"
+        } else {
+            signInButton.title = "Sign In"
+        }
+    }
+    
+    // TableView for emotion diary
+    @IBOutlet private weak var tableView: UITableView! {
+        didSet {
+            self.tableView.delegate = self
+            self.tableView.dataSource = self
+            self.tableView.register(UINib(nibName: DiaryTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: DiaryTableViewCell.reuseIdentifier)
         }
     }
     
@@ -45,6 +52,12 @@ class MainViewController: UIViewController {
             guard let destination = segue.destination as? DiarySubviewController else { return }
             destination.delegate = self
         }
+    }
+    
+    @IBAction private func signOut() {
+        SupportFirebase.supportFirebase.signOut()
+        setupUI()
+
     }
     
     func openDiarySubView() {
@@ -69,7 +82,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             mainViewModel.deleteContext(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.reloadData()
-            }
+        }
     }
 }
 

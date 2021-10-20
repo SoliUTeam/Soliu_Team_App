@@ -35,7 +35,6 @@ class MainControllerViewModel {
         dataSource.sort { date1, date2 in
             "".checkTheDate(firstDate: date1.date ?? "", secondDate: date2.date ?? "")
         }
-        print(dataSource)
     }
     
     func deleteContext(at index: Int) {

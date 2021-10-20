@@ -13,10 +13,10 @@ class DiarySubviewModel {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     // CoreData
-    func saveDiaryData(name: String, mood: Int, date: String, note: String) {
+    func saveDiaryData(name: String, mood: Int32, date: String, note: String) {
         let diary = Diary(context: self.context)
         diary.name = name
-        diary.mood = String(mood)
+        diary.mood = mood
         diary.date = date
         diary.note = note
         
@@ -26,7 +26,4 @@ class DiarySubviewModel {
             print("Save Data failed")
         }
     }
-    
-    
-
 }

@@ -1,10 +1,3 @@
-//
-//  LoginViewController.swift
-//  Soliu
-//
-//  Created by Yoonha Kim on 8/30/21.
-//
-
 import UIKit
 import FirebaseAuth
 
@@ -24,7 +17,6 @@ class LoginViewController: UIViewController {
     @IBAction func signIn() {
         guard let id = idTextField.text,
               let password = passwordTextField.text else { return }
-        print("Login Button Clicked")
         Auth.auth().signIn(withEmail: id, password: password) { (result, error) in
             if let error = error as NSError? {
                 switch AuthErrorCode(rawValue: error.code) {
@@ -37,15 +29,14 @@ class LoginViewController: UIViewController {
                 case .invalidEmail:
                     self.displayMessage(with: "Email Issue", message: "We can't find your email.\nPlease check your email")
                 default:
-                    print("Error: \(error.localizedDescription)")
+                    self.displayMessage(with: "Error", message: "\(error.localizedDescription)")
                 }
             }
             else {
-                self.openProfileView()
+                self.dismiss(animated: true, completion: nil)
             }
         }
     }
-    
     @IBAction private func openRegisterView() {
         self.performSegue(withIdentifier: "openRegisterView", sender: nil)
     }

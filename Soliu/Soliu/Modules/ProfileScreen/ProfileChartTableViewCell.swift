@@ -30,7 +30,6 @@ class ProfileChartTableViewCell: UITableViewCell, CellReusable {
     }
     
     func setChart(month: [String], data: [Int]) {
-        // 데이터 생성
         var dataEntries: [BarChartDataEntry] = []
         for i in 0..<data.count {
             let dataEntry = BarChartDataEntry(x: Double(i), y: Double(data[i]))

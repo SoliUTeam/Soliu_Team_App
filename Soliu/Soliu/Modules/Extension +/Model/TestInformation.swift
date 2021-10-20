@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct TestInformation: Decodable {
+struct TestInformation: Codable {
     var gender: String
     var grade: String
     var major: String
     var testResult: [TestResult]
 }
 
-struct TestResult:  Decodable {
+struct TestResult:  Codable {
     var testDate: String
     var testScore: [Int]
 }

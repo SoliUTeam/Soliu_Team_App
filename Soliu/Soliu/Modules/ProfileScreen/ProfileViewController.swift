@@ -17,19 +17,24 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if !SupportFirebase.isLoggedIn() {
-            print("User Login fails")
-            self.performSegue(withIdentifier: "openSignInVC", sender: nil)
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Profile"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let alert = UIAlertController(title: "You are not logged in", message: "Please sign in your account", preferredStyle: .alert)
+        let loginAction = UIAlertAction(title: "Sign-In", style: .default) { _ in
+            self.performSegue(withIdentifier: "openLoginViewController", sender: nil)
+        }
+        
+        alert.addAction(loginAction)
+        if !SupportFirebase.supportFirebase.isLoggedIn() {
+            self.present(alert, animated: true)
+        }
     }
 }
 extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {

@@ -14,15 +14,6 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        // Request User Notification
-        UNUserNotificationCenter.current().requestAuthorization(options:
-                   [[.alert, .sound, .badge]],
-                       completionHandler: { (granted, error) in
-                   // Handle Error
-               })
-        // Override point for customization after application launch.
-        
         FirebaseApp.configure()
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false

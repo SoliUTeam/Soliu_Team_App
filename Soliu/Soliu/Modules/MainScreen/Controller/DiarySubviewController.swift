@@ -34,15 +34,15 @@ class DiarySubviewController: UIViewController {
     @IBAction private func moodSegmentedControlChanged() {
         switch moodSegmentedControl.selectedSegmentIndex {
         case 0:
-            moodImageView.image = UIImage(named: "happy")
+            moodImageView.image = UIImage(named: "Great")
         case 1:
-            moodImageView.image = UIImage(named: "good")
+            moodImageView.image = UIImage(named: "Good")
         case 2:
-            moodImageView.image = UIImage(named: "meh")
+            moodImageView.image = UIImage(named: "Fair")
         case 3:
-            moodImageView.image = UIImage(named: "bad")
+            moodImageView.image = UIImage(named: "Poor")
         case 4:
-            moodImageView.image = UIImage(named: "awful")
+            moodImageView.image = UIImage(named: "Bad")
 
         default:
             print("It can't happen")
@@ -56,7 +56,7 @@ class DiarySubviewController: UIViewController {
         let currentTime = Date()
         let selectedMood = moodSegmentedControl.selectedSegmentIndex
         let note = noteTextfield.text ?? ""
-        diaryCellViewModel.saveDiaryData(name: name, mood: selectedMood, date: date.getDateString(using: "MM-DD-yyy HH:MM"), note: note)
+        diaryCellViewModel.saveDiaryData(name: name, mood: Int32(selectedMood), date: date.getDateString(using: "MM-DD-yyy HH:MM"), note: note)
         self.delegate?.reloadData()
         self.dismiss(animated: true, completion: nil)
     }

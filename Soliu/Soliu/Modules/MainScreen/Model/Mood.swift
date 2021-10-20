@@ -8,9 +8,9 @@
 import Foundation
 
 enum Mood: String {
-    case happy
-    case good
-    case meh
-    case bad
-    case awful
+    case Great
+    case Good
+    case Fair
+    case Poor
+    case Bad
 }
