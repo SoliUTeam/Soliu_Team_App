@@ -15,11 +15,11 @@ class NewStartTestScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.isLoggedIn()
+       // self.isLoggedIn()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.isLoggedIn()
+        // self.isLoggedIn()
         navigationController?.isNavigationBarHidden = true
     }
     
@@ -38,7 +38,7 @@ class NewStartTestScreenViewController: UIViewController {
 extension NewStartTestScreenViewController: TestScreenControllable {
     
     func isLoggedIn() {
-        if Auth.auth().currentUser != nil {
+        if Auth.auth().currentUser == nil {
             self.performSegue(withIdentifier: "testLoginScreen", sender: nil)
         }
     }

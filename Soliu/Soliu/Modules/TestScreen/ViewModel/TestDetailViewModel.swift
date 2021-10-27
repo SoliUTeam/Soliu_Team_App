@@ -14,7 +14,9 @@ class TestDetailViewModel {
     private var currentQuestionCount = 1
     
     // upload data to firebase
-    func uploadData() {
+    func uploadData(testScore: [Int]) {
+        let date = Date()
+        SupportFirebase.supportFirebase.updateTestScore(testScore: testScore, testDate: date.getDateString(using: "MM-dd HH:MM"))
         print("uploaded successful!!")
     }
     

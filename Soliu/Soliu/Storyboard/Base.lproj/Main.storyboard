@@ -398,14 +398,14 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdD-f5-n27">
-                                <rect key="frame" x="30" y="644" width="354" height="30"/>
+                                <rect key="frame" x="30" y="693" width="354" height="30"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="signIn" destination="Qv1-m2-lu8" eventType="touchUpInside" id="hGD-1h-DUE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNK-TK-v6w">
-                                <rect key="frame" x="30" y="704" width="354" height="30"/>
+                                <rect key="frame" x="30" y="753" width="354" height="30"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="openRegisterView" destination="Qv1-m2-lu8" eventType="touchUpInside" id="kUP-lF-lV6"/>
@@ -1066,6 +1066,7 @@
                     <navigationItem key="navigationItem" id="p9z-Pz-Dg7"/>
                     <connections>
                         <outlet property="nextButton" destination="e5O-UD-igd" id="fuy-BD-UX3"/>
+                        <segue destination="Qv1-m2-lu8" kind="presentation" identifier="testLoginScreen" modalPresentationStyle="fullScreen" id="NJ8-lL-jve"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m4V-Dz-hQF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1073,9 +1074,9 @@
             <point key="canvasLocation" x="1810" y="631"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="oYM-K6-wwA"/>
-    </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="NJ8-lL-jve"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Great" width="42" height="42"/>
         <image name="book" catalog="system" width="128" height="99"/>

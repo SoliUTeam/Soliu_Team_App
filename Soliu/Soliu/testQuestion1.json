@@ -1,15 +1,51 @@
 {
     "testQuestion1": [
         {
-            "question": "this is the basic question D"
+            "question": "I felt downhearted and blue"
         },
         {
-            "question": "this is the basic question S"
+            "question": "I felt that I had nothing to look forward to"
         },
         {
-            "question": "this is the basic question A"
+            "question": "I felt that life was meaningless"
+        },
+        {
+            "question": "I felt I wasn’t worth much as a person"
+        },
+        {
+            "question": "I was unable to become enthusiastic about anything"
+        },
+        {
+            "question": "I was aware of dryness of my mouth"
+        },
+        {
+            "question": "I experienced trembling (e.g., in the hands)"
+        },
+        {
+            "question": "I was worried about situations in which I might panic and make a fool of myself"
+        },
+        {
+            "question": "I felt I was close to panic"
+        },
+        {
+            "question": "I felt scared without any good reason"
+        },
+        {
+            "question": "I found it hard to wind down"
+        },
+        {
+            "question": "I felt that I was using a lot of nervous energy"
+        },
+        {
+            "question": "I found myself getting agitated"
+        },
+        {
+            "question": "I tended to over-react to situations"
+        },
+        {
+            "question": "I was intolerant of anything that kept me from getting on with what I was doing"
         }
     ],
-    "totalQuestionNumber" : 3
+    "totalQuestionNumber" : 15
 }
 

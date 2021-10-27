@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 import UIKit
 
 protocol TestDetailViewControllable {
@@ -24,12 +25,14 @@ class TestDetailViewController: UIViewController {
     @IBOutlet private weak var currentQuestion: UILabel!
     @IBOutlet private weak var totalQuestion: UILabel!
     
-    
+    // Deprecated
     var questionDataSource: TestSection?
     var currentCount = 1
     lazy var viewModel = TestDetailViewModel()
+    private var testScore: [Int] = []
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         // set test number 1 as default
@@ -48,39 +51,40 @@ class TestDetailViewController: UIViewController {
     
     // upload data to firebase
     @IBAction private func touchAnswer1() {
+        testScore.append(1)
         increaseProgress()
-        viewModel.uploadData()
+        uploadScore()
     }
     
     @IBAction private func touchAnswer2() {
+        testScore.append(2)
         increaseProgress()
-        viewModel.uploadData()
+        uploadScore()
     }
     
     @IBAction private func touchAnswer3() {
+        testScore.append(3)
         increaseProgress()
-        viewModel.uploadData()
+        uploadScore()
     }
     
     @IBAction private func touchAnswer4() {
+        testScore.append(4)
         increaseProgress()
-        viewModel.uploadData()
+        uploadScore()
     }
     
     @IBAction private func touchAnswer5() {
+        testScore.append(5)
         increaseProgress()
-        viewModel.uploadData()
+        uploadScore()
     }
     
-    func loadingSpinner() {
-        //        if currentCount == viewModel.getTotalQuestion() {
-        //
-        //        }
-//        self.performSegue(withIdentifier: "loadingSpinner", sender: nil)
-        
-        guard let loadingSpinner = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoadingSpinner") as? LoadingSpinner else { return }
-        
-        self.navigationController?.pushViewController(loadingSpinner, animated: false)
+    private func uploadScore() {
+        if testScore.count == viewModel.getTotalQuestion() {
+            viewModel.uploadData(testScore: testScore)
+            testScore = []
+        }
     }
 }
 
@@ -96,5 +100,12 @@ extension TestDetailViewController: TestDetailViewControllable {
         } else {
             loadingSpinner()
         }
+    }
+    
+    private func loadingSpinner() {
+   
+        guard let loadingSpinner = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoadingSpinner") as? LoadingSpinner else { return }
+        
+        self.navigationController?.pushViewController(loadingSpinner, animated: false)
     }
 }
