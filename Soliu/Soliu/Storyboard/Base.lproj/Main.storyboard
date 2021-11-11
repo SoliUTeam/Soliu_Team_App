@@ -54,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1810.144927536232" y="-43.526785714285715"/>
+            <point key="canvasLocation" x="1868" y="-706"/>
         </scene>
         <!--Diary Subview Controller-->
         <scene sceneID="1MN-Ox-Obc">
@@ -169,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mGd-iS-D90" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2712" y="-44"/>
+            <point key="canvasLocation" x="2770" y="-706"/>
         </scene>
         <!--Test Detail View Controller-->
         <scene sceneID="wbJ-gm-Rjb">
@@ -346,7 +346,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQL-rF-Rt1">
                                 <rect key="frame" x="30" y="802" width="354" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Go Back"/>
                                 <connections>
                                     <action selector="gotoTestScreen:" destination="gFL-5l-NRT" eventType="touchUpInside" id="uXX-kF-65c"/>
                                 </connections>
@@ -398,14 +398,14 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdD-f5-n27">
-                                <rect key="frame" x="30" y="693" width="354" height="30"/>
+                                <rect key="frame" x="30" y="644" width="354" height="30"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="signIn" destination="Qv1-m2-lu8" eventType="touchUpInside" id="hGD-1h-DUE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNK-TK-v6w">
-                                <rect key="frame" x="30" y="753" width="354" height="30"/>
+                                <rect key="frame" x="30" y="704" width="354" height="30"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="openRegisterView" destination="Qv1-m2-lu8" eventType="touchUpInside" id="kUP-lF-lV6"/>
@@ -490,11 +490,11 @@
         <scene sceneID="S0b-lE-8wQ">
             <objects>
                 <viewController storyboardIdentifier="RegisterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cME-xr-sGU" customClass="RegisterViewController" customModule="Soliu" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rTa-bY-cQy">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="rTa-bY-cQy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXu-7a-sKp">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hXu-7a-sKp">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teN-oD-Tej">
@@ -784,7 +784,6 @@
                     <navigationItem key="navigationItem" id="0jM-KQ-kSE"/>
                     <connections>
                         <outlet property="tableView" destination="g2k-yc-nbk" id="mzM-Wq-1H0"/>
-                        <segue destination="LNx-tg-SgB" kind="presentation" identifier="testLoginScreen" id="fBB-K5-OcJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKj-7d-gUy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -809,7 +808,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T5I-RR-JVa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900.00000000000011" y="-43.526785714285715"/>
+            <point key="canvasLocation" x="958" y="-706"/>
         </scene>
         <!--Test-->
         <scene sceneID="5OT-v8-6R1">
@@ -1017,7 +1016,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qcT-2Y-Kam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6793" y="-301"/>
+            <point key="canvasLocation" x="2770" y="-33"/>
         </scene>
         <!--New Start Test Screen View Controller-->
         <scene sceneID="e0E-3b-ove">
@@ -1067,7 +1066,7 @@
                     <navigationItem key="navigationItem" id="p9z-Pz-Dg7"/>
                     <connections>
                         <outlet property="nextButton" destination="e5O-UD-igd" id="fuy-BD-UX3"/>
-                        <segue destination="Qv1-m2-lu8" kind="presentation" identifier="testLoginScreen" modalPresentationStyle="fullScreen" id="NJ8-lL-jve"/>
+                        <segue destination="LNx-tg-SgB" kind="presentation" identifier="testLoginScreen" id="dgt-VB-9fB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m4V-Dz-hQF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1075,9 +1074,9 @@
             <point key="canvasLocation" x="1810" y="631"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="NJ8-lL-jve"/>
-    </inferredMetricsTieBreakers>
+    <designables>
+        <designable name="oYM-K6-wwA"/>
+    </designables>
     <resources>
         <image name="Great" width="42" height="42"/>
         <image name="book" catalog="system" width="128" height="99"/>
