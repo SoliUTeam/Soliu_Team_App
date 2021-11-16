@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D8B0BA50B564F8ECF5226BA /* Pods_Soliu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A6B1447D37B39FAC5A2511 /* Pods_Soliu.framework */; };
 		954370452704233B007D3223 /* NewStartTestScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954370442704233B007D3223 /* NewStartTestScreenViewController.swift */; };
 		9543704727042B9F007D3223 /* TestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9543704627042B9F007D3223 /* TestResultViewController.swift */; };
 		954370492709247E007D3223 /* TestResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954370482709247E007D3223 /* TestResultViewModel.swift */; };
@@ -59,9 +58,12 @@
 		D9AAA370268925D000EDCDF1 /* AlertProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAA36F268925D000EDCDF1 /* AlertProtocol.swift */; };
 		D9E68CF82718FF88002CA1CC /* AddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E68CF62718FF88002CA1CC /* AddTableViewCell.swift */; };
 		D9E68CF92718FF88002CA1CC /* AddTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E68CF72718FF88002CA1CC /* AddTableViewCell.xib */; };
+		E22DA1D0093E9F7F42E8E3C0 /* Pods_Soliu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EE2F80F051A9EEB7279A4B /* Pods_Soliu.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A91D5A4F7F5B3DDE4ED4F8A /* Pods-Soliu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soliu.release.xcconfig"; path = "Target Support Files/Pods-Soliu/Pods-Soliu.release.xcconfig"; sourceTree = "<group>"; };
+		70EE2F80F051A9EEB7279A4B /* Pods_Soliu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soliu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		954370442704233B007D3223 /* NewStartTestScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStartTestScreenViewController.swift; sourceTree = "<group>"; };
 		9543704627042B9F007D3223 /* TestResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultViewController.swift; sourceTree = "<group>"; };
 		954370482709247E007D3223 /* TestResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultViewModel.swift; sourceTree = "<group>"; };
@@ -83,7 +85,6 @@
 		95E6A48226F06DB6007A2C9B /* testQuestion3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testQuestion3.json; sourceTree = "<group>"; };
 		95E6A48526F2ED2B007A2C9B /* PopupLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupLoginViewController.swift; sourceTree = "<group>"; };
 		95E6A48826F2EE9D007A2C9B /* TestScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreenCoordinator.swift; sourceTree = "<group>"; };
-		B077D1EDCDA0C371790EF9FA /* Pods-Soliu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soliu.release.xcconfig"; path = "Target Support Files/Pods-Soliu/Pods-Soliu.release.xcconfig"; sourceTree = "<group>"; };
 		D900505B270D3A2D00BF5802 /* TestInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInformation.swift; sourceTree = "<group>"; };
 		D9033F4626D5E301007756C3 /* DiarySubviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiarySubviewModel.swift; sourceTree = "<group>"; };
 		D9033F7D26DDC45C007756C3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -116,8 +117,7 @@
 		D9AAA36F268925D000EDCDF1 /* AlertProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertProtocol.swift; sourceTree = "<group>"; };
 		D9E68CF62718FF88002CA1CC /* AddTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewCell.swift; sourceTree = "<group>"; };
 		D9E68CF72718FF88002CA1CC /* AddTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTableViewCell.xib; sourceTree = "<group>"; };
-		E1A6B1447D37B39FAC5A2511 /* Pods_Soliu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soliu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8BF02A940375DCFAA3B2439 /* Pods-Soliu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soliu.debug.xcconfig"; path = "Target Support Files/Pods-Soliu/Pods-Soliu.debug.xcconfig"; sourceTree = "<group>"; };
+		DE910C510281786EF09BD496 /* Pods-Soliu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soliu.debug.xcconfig"; path = "Target Support Files/Pods-Soliu/Pods-Soliu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D8B0BA50B564F8ECF5226BA /* Pods_Soliu.framework in Frameworks */,
+				E22DA1D0093E9F7F42E8E3C0 /* Pods_Soliu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,18 +135,10 @@
 		13B4F1A3C613E9F8C8510495 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F8BF02A940375DCFAA3B2439 /* Pods-Soliu.debug.xcconfig */,
-				B077D1EDCDA0C371790EF9FA /* Pods-Soliu.release.xcconfig */,
+				DE910C510281786EF09BD496 /* Pods-Soliu.debug.xcconfig */,
+				0A91D5A4F7F5B3DDE4ED4F8A /* Pods-Soliu.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		8AC10F80A929D30FABA85620 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E1A6B1447D37B39FAC5A2511 /* Pods_Soliu.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		95BA861726D5E8EF00238B9F /* TestScreen */ = {
@@ -198,6 +190,14 @@
 				95E6A45326DADF88007A2C9B /* TestQuestion.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AE749BF1AF69A66984AB5119 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70EE2F80F051A9EEB7279A4B /* Pods_Soliu.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D900505A270D3A0F00BF5802 /* Model */ = {
@@ -301,7 +301,7 @@
 				D9AAA07D267C65B100135326 /* Soliu */,
 				D9AAA07C267C65B100135326 /* Products */,
 				13B4F1A3C613E9F8C8510495 /* Pods */,
-				8AC10F80A929D30FABA85620 /* Frameworks */,
+				AE749BF1AF69A66984AB5119 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -409,12 +409,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9AAA08F267C65B500135326 /* Build configuration list for PBXNativeTarget "Soliu" */;
 			buildPhases = (
-				8F7CDE489E51773EF6732FAF /* [CP] Check Pods Manifest.lock */,
+				AFDC92603448559CE7B93CCF /* [CP] Check Pods Manifest.lock */,
 				D9AAA077267C65B100135326 /* Sources */,
 				D9AAA078267C65B100135326 /* Frameworks */,
 				D9AAA079267C65B100135326 /* Resources */,
-				4245E22C16932F99BF61C94B /* [CP] Embed Pods Frameworks */,
 				D9532EB1267C7604009047CE /* ShellScript */,
+				D389ECCC4B53EDFE4355224D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -481,24 +481,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4245E22C16932F99BF61C94B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Soliu/Pods-Soliu-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Soliu/Pods-Soliu-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Soliu/Pods-Soliu-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8F7CDE489E51773EF6732FAF /* [CP] Check Pods Manifest.lock */ = {
+		AFDC92603448559CE7B93CCF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -518,6 +501,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D389ECCC4B53EDFE4355224D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Soliu/Pods-Soliu-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Soliu/Pods-Soliu-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Soliu/Pods-Soliu-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D9532EB1267C7604009047CE /* ShellScript */ = {
@@ -725,12 +725,13 @@
 		};
 		D9AAA090267C65B500135326 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8BF02A940375DCFAA3B2439 /* Pods-Soliu.debug.xcconfig */;
+			baseConfigurationReference = DE910C510281786EF09BD496 /* Pods-Soliu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8DZ32VLKR;
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = Soliu/Common/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -745,12 +746,13 @@
 		};
 		D9AAA091267C65B500135326 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B077D1EDCDA0C371790EF9FA /* Pods-Soliu.release.xcconfig */;
+			baseConfigurationReference = 0A91D5A4F7F5B3DDE4ED4F8A /* Pods-Soliu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8DZ32VLKR;
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = Soliu/Common/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

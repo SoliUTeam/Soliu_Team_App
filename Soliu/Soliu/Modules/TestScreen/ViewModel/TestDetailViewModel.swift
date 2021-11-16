@@ -13,7 +13,7 @@ class TestDetailViewModel {
     private var testQuestion = [TestQuestion]()
     private var currentQuestionCount = 1
     private let db = Firestore.firestore()
-    let instance = FirebaseReferences(ref: firebaseReference)
+    var ref: DatabaseReference = Database.database().reference()
     
     func uploadData(testScore: [Double]) {
         var depression: Double = 0
@@ -38,16 +38,18 @@ class TestDetailViewModel {
         
         let user = Auth.auth().currentUser
         
-            var ref: DatabaseReference
-
-        ref = Database.database().reference()
-//        self.db.collection("users").addDocument(data: ["depression": depression, "anxiety": anxiety, "stress": stress, "uid": user?.uid]) { error in
-//            if error != nil {
-//                print("data store error")
-//            } else {
-//                print("Dennis")
-//            }
-//        }
+        ref.childByAutoId()
+        guard let userID = user?.uid else { return }
+        
+        self.ref.child("newUsers").child(userID).setValue(["depression": depression, "anxiety": anxiety, "stress": stress])
+        
+        //        self.db.collection("users").addDocument(data: ["depression": depression, "anxiety": anxiety, "stress": stress, "uid": user?.uid]) { error in
+        //            if error != nil {
+        //                print("data store error")
+        //            } else {
+        //                print("Dennis")
+        //            }
+        //        }
     }
     
     func getUserScoreData() {
