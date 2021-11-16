@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 class MainViewController: UIViewController {
     
@@ -17,6 +18,10 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        DispatchQueue.main.async {
+            self.setupUI()
+        }
         self.title = "Your Emoji Diary"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
@@ -28,8 +33,8 @@ class MainViewController: UIViewController {
         }
     }
     
-    func setupUI() {
-        if SupportFirebase.supportFirebase.isLoggedIn() {
+    private func setupUI() {
+        if Auth.auth().currentUser != nil {
             signInButton.title = "Sign Out"
         } else {
             signInButton.title = "Sign In"
@@ -57,9 +62,8 @@ class MainViewController: UIViewController {
     }
     
     @IBAction private func signOut() {
-        SupportFirebase.supportFirebase.signOut()
         setupUI()
-
+        SupportFirebase.supportFirebase.signOut()
     }
     
     func openDiarySubView() {

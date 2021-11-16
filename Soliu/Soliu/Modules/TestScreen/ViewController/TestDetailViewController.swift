@@ -29,7 +29,7 @@ class TestDetailViewController: UIViewController {
     var questionDataSource: TestSection?
     var currentCount = 1
     lazy var viewModel = TestDetailViewModel()
-    private var testScore: [Int] = []
+    private var testScore: [Double] = []
     
     override func viewDidLoad() {
         
@@ -51,31 +51,31 @@ class TestDetailViewController: UIViewController {
     
     // upload data to firebase
     @IBAction private func touchAnswer1() {
-        testScore.append(1)
+        testScore.append(1.0)
         increaseProgress()
         uploadScore()
     }
     
     @IBAction private func touchAnswer2() {
-        testScore.append(2)
+        testScore.append(2.0)
         increaseProgress()
         uploadScore()
     }
     
     @IBAction private func touchAnswer3() {
-        testScore.append(3)
+        testScore.append(3.0)
         increaseProgress()
         uploadScore()
     }
     
     @IBAction private func touchAnswer4() {
-        testScore.append(4)
+        testScore.append(4.0)
         increaseProgress()
         uploadScore()
     }
     
     @IBAction private func touchAnswer5() {
-        testScore.append(5)
+        testScore.append(5.0)
         increaseProgress()
         uploadScore()
     }

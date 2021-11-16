@@ -11,6 +11,7 @@ pod 'IQKeyboardManagerSwift'
 pod 'Charts'
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'Firebase/Database'
 pod 'RxSwift'
 pod 'RxCocoa'
 pod ‘FirebaseFirestoreSwift’

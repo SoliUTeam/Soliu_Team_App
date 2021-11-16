@@ -12,12 +12,42 @@ class TestDetailViewModel {
     // testQuestion : contain test question data in testQuestion json file
     private var testQuestion = [TestQuestion]()
     private var currentQuestionCount = 1
+    private let db = Firestore.firestore()
+    let instance = FirebaseReferences(ref: firebaseReference)
     
-    // upload data to firebase
-    func uploadData(testScore: [Int]) {
-        let date = Date()
-        // SupportFirebase.supportFirebase.updateTestScore(testScore: testScore, testDate: date.getDateString(using: "MM-dd HH:MM"))
-        print("uploaded successful!!")
+    func uploadData(testScore: [Double]) {
+        var depression: Double = 0
+        var anxiety: Double = 0
+        var stress: Double = 0
+        
+        for score in testScore[0...4] {
+            depression += score
+        }
+        depression = depression / 3
+        
+        for score in testScore[5...9] {
+            anxiety += score
+        }
+        
+        anxiety = anxiety / 3
+        
+        for score in testScore[10...14] {
+            stress += score
+        }
+        stress = stress / 3
+        
+        let user = Auth.auth().currentUser
+        
+            var ref: DatabaseReference
+
+        ref = Database.database().reference()
+//        self.db.collection("users").addDocument(data: ["depression": depression, "anxiety": anxiety, "stress": stress, "uid": user?.uid]) { error in
+//            if error != nil {
+//                print("data store error")
+//            } else {
+//                print("Dennis")
+//            }
+//        }
     }
     
     func getUserScoreData() {
@@ -51,12 +81,12 @@ class TestDetailViewModel {
     }
     
     func nextQuestion() {
-           if currentQuestionCount + 1 < testQuestion.count + 1 {
+        if currentQuestionCount + 1 < testQuestion.count + 1 {
             currentQuestionCount += 1
-           } else {
+        } else {
             currentQuestionCount = 1
-           }
-       }
+        }
+    }
     
     func getTotalQuestion() -> String {
         "\(testQuestion[0].totalQuestionNumber)"
@@ -66,3 +96,4 @@ class TestDetailViewModel {
         testQuestion[0].totalQuestionNumber
     }
 }
+

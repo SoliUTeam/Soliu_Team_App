@@ -11,10 +11,15 @@
 #endif
 
 #import "GDTCORAssert.h"
+#import "GDTCORClock 2.h"
 #import "GDTCORClock.h"
+#import "GDTCORConsoleLogger 2.h"
 #import "GDTCORConsoleLogger.h"
+#import "GDTCOREvent 2.h"
 #import "GDTCOREvent.h"
+#import "GDTCOREventDataObject 2.h"
 #import "GDTCOREventDataObject.h"
+#import "GDTCOREventTransformer 2.h"
 #import "GDTCOREventTransformer.h"
 #import "GDTCORLifecycle.h"
 #import "GDTCORPlatform.h"
@@ -22,9 +27,12 @@
 #import "GDTCORRegistrar.h"
 #import "GDTCORStorageEventSelector.h"
 #import "GDTCORStorageProtocol.h"
+#import "GDTCORTargets 2.h"
 #import "GDTCORTargets.h"
+#import "GDTCORTransport 2.h"
 #import "GDTCORTransport.h"
 #import "GDTCORUploader.h"
+#import "GoogleDataTransport 2.h"
 #import "GoogleDataTransport.h"
 
 FOUNDATION_EXPORT double GoogleDataTransportVersionNumber;
