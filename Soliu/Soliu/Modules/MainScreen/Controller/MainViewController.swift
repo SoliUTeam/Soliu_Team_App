@@ -14,30 +14,34 @@ class MainViewController: UIViewController {
     // Container for CoreData parts
     var container: NSPersistentContainer!
     lazy var mainViewModel = MainControllerViewModel(tableView: tableView)
-    @IBOutlet var signInButton: UIBarButtonItem!
+    
+    @IBOutlet var signInButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        DispatchQueue.main.async {
-            self.setupUI()
-        }
         self.title = "Your Emoji Diary"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
         openDiarySubView()
-        
-        // stub test result 
-        if SupportFirebase.supportFirebase.isLoggedIn() {
-            SupportFirebase.supportFirebase.updateTestScore(testScore: [1,1,1,1,1,2,2,2,2,2,3,3,3,3,3], testDate: "2021-09-16")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        mainViewModel.getAllItem()
+        setupUI()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "openDiarySubView" {
+            guard let destination = segue.destination as? DiarySubviewController else { return }
+            destination.delegate = self
         }
     }
     
     private func setupUI() {
-        if Auth.auth().currentUser != nil {
-            signInButton.title = "Sign Out"
+        if Auth.auth().currentUser == nil {
+            signInButton.setTitle("Sign In", for: .normal)
         } else {
-            signInButton.title = "Sign In"
+            signInButton.setTitle("Sign Out", for: .normal)
         }
     }
     
@@ -50,25 +54,13 @@ class MainViewController: UIViewController {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        mainViewModel.getAllItem()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "openDiarySubView" {
-            guard let destination = segue.destination as? DiarySubviewController else { return }
-            destination.delegate = self
-        }
-    }
-    
     @IBAction private func signOut() {
-        setupUI()
         SupportFirebase.supportFirebase.signOut()
+        setupUI()
     }
     
     func openDiarySubView() {
         self.performSegue(withIdentifier: "openDiarySubView", sender: nil)
-        print("openDiarySubView")
     }
 }
 
@@ -98,4 +90,3 @@ extension MainViewController: DiarySubviewDelegate {
         self.tableView.reloadData()
     }
 }
-

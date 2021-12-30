@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
                 }
             }
             else {
-                self.dismiss(animated: true, completion: nil)
+                self.performSegue(withIdentifier: "backToProfileViewController", sender: nil)
             }
         }
     }
@@ -41,8 +41,5 @@ class LoginViewController: UIViewController {
         self.performSegue(withIdentifier: "openRegisterView", sender: nil)
     }
     
-    private func openProfileView() {
-        self.performSegue(withIdentifier: "openProfileView", sender: nil)
-    }
     
 }

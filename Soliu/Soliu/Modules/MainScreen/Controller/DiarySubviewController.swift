@@ -53,7 +53,6 @@ class DiarySubviewController: UIViewController {
         let date = Date()
         // Read noteData
         let name = ""
-        let currentTime = Date()
         let selectedMood = moodSegmentedControl.selectedSegmentIndex
         let note = noteTextfield.text ?? ""
         diaryCellViewModel.saveDiaryData(name: name, mood: Int32(selectedMood), date: date.getDateString(using: "MM-DD-yyy HH:MM"), note: note)

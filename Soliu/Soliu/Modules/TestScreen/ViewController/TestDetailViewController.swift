@@ -103,7 +103,6 @@ extension TestDetailViewController: TestDetailViewControllable {
     }
     
     private func loadingSpinner() {
-   
         guard let loadingSpinner = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoadingSpinner") as? LoadingSpinner else { return }
         
         self.navigationController?.pushViewController(loadingSpinner, animated: false)

@@ -36,6 +36,9 @@ class ProfileViewController: UIViewController {
         }
         
         alert.addAction(loginAction)
+    }
+    
+    @IBAction func unwindVC1 (segue: UIStoryboardSegue) {
         
     }
 }

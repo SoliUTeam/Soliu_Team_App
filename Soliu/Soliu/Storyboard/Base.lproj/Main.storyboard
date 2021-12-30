@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6rt-ha-cVo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6rt-ha-cVo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -38,7 +38,7 @@
                                 <rect key="frame" x="302" y="5" width="92" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sign out"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign In"/>
                                 <connections>
                                     <action selector="signOut" destination="BYZ-38-t0r" eventType="touchUpInside" id="2kp-tx-BE4"/>
                                 </connections>
@@ -47,7 +47,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="signInButton" destination="HHF-IM-gHZ" id="iEe-27-wki"/>
+                        <outlet property="signInButton" destination="sp9-rM-vEq" id="da1-4M-QCe"/>
                         <outlet property="tableView" destination="Yya-Q5-Xnj" id="JpK-e8-jVa"/>
                         <segue destination="LA4-Cg-RHj" kind="presentation" identifier="openDiarySubView" id="pGo-HK-ZnJ"/>
                     </connections>
@@ -445,9 +445,11 @@
                         <outlet property="idTextField" destination="zgk-tW-6qq" id="r5O-s0-sxF"/>
                         <outlet property="passwordTextField" destination="gJJ-tR-z25" id="Rr0-a8-Ujf"/>
                         <segue destination="cME-xr-sGU" kind="show" identifier="openRegisterView" id="Ekw-dW-GFP"/>
+                        <segue destination="Qq1-dY-Xuo" kind="unwind" identifier="backToProfileViewController" unwindAction="unwindVC1WithSegue:" id="F5M-tN-xVI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGl-vT-77N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Qq1-dY-Xuo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2623" y="1346"/>
         </scene>
@@ -480,9 +482,11 @@
                     <connections>
                         <outlet property="tableView" destination="h9u-3U-gDd" id="NBc-kV-YaT"/>
                         <segue destination="Qv1-m2-lu8" kind="show" identifier="openLoginViewController" id="Dft-hX-5Od"/>
+                        <segue destination="8AM-AP-6GC" kind="unwind" identifier="backToProfileViewController" unwindAction="unwindVC1WithSegue:" id="16q-MB-rlv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCk-td-UpK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="8AM-AP-6GC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1855" y="1346"/>
         </scene>
@@ -490,12 +494,12 @@
         <scene sceneID="S0b-lE-8wQ">
             <objects>
                 <viewController storyboardIdentifier="RegisterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cME-xr-sGU" customClass="RegisterViewController" customModule="Soliu" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="rTa-bY-cQy">
+                    <view key="view" contentMode="scaleToFill" id="rTa-bY-cQy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hXu-7a-sKp">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXu-7a-sKp">
+                                <rect key="frame" x="0.0" y="88" width="414" height="676"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teN-oD-Tej">
                                         <rect key="frame" x="30" y="50" width="354" height="100"/>
