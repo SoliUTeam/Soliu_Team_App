@@ -1,32 +1,21 @@
-//
-//  ProfileViewController.swift
-//  Soliu
-//
-//  Created by Yoonha Kim on 9/2/21.
-//
-
 import UIKit
+import Charts
+
 
 class ProfileViewController: UIViewController {
     
-    @IBOutlet var tableView: UITableView! {
-        didSet {
-            self.tableView.dataSource = self
-            self.tableView.delegate = self
-            self.tableView.register(UINib(nibName: ProfileChartTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ProfileChartTableViewCell.reuseIdentifier)
-        }
-    }
+    @IBOutlet var charView: BarChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Profile"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationItem.largeTitleDisplayMode = .always
+        populate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let alert = UIAlertController(title: "You are not logged in", message: "Please sign in your account", preferredStyle: .alert)
+        
         if !SupportFirebase.supportFirebase.isLoggedIn() {
             self.present(alert, animated: true)
         }
@@ -34,26 +23,32 @@ class ProfileViewController: UIViewController {
         let loginAction = UIAlertAction(title: "Sign-In", style: .default) { _ in
             self.performSegue(withIdentifier: "openLoginViewController", sender: nil)
         }
-        
         alert.addAction(loginAction)
     }
     
-    @IBAction func unwindVC1 (segue: UIStoryboardSegue) {
-        
-    }
-}
-extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileChartTableViewCell.reuseIdentifier) as? ProfileChartTableViewCell else { return UITableViewCell() }
-        cell.populate()
-        return cell
+    func populate() {
+        let month = ["Jan", "Feb", "March"]
+        let data = [20,30, 31]
+        charView.noDataText = "Please sign in."
+        charView.noDataFont = .systemFont(ofSize: 20)
+        charView.noDataTextColor = .lightGray
+        setChart(month: month, data: data)
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.tableView.deselectRow(at: indexPath, animated: false)
+    func setChart(month: [String], data: [Int]) {
+        var dataEntries: [BarChartDataEntry] = []
+        for i in 0..<data.count {
+            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(data[i]))
+            dataEntries.append(dataEntry)
+        }
+
+        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Score")
+
+        // 차트 컬러
+        chartDataSet.colors = [.systemBlue]
+
+        // 데이터 삽입
+        let chartData = BarChartData(dataSet: chartDataSet)
+        charView.data = chartData
     }
 }

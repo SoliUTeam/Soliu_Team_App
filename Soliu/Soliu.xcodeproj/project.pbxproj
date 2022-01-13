@@ -44,7 +44,6 @@
 		D96441D4267FE740008406FE /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441D3267FE740008406FE /* String+Ext.swift */; };
 		D96441D7267FEA5F008406FE /* DiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441D5267FEA5F008406FE /* DiaryTableViewCell.swift */; };
 		D96441D8267FEA5F008406FE /* DiaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D96441D6267FEA5F008406FE /* DiaryTableViewCell.xib */; };
-		D96441DA267FF03E008406FE /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441D9267FF03E008406FE /* NotificationViewController.swift */; };
 		D96441E12680528F008406FE /* Soliu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D96441DF2680528F008406FE /* Soliu.xcdatamodeld */; };
 		D96441E4268057A9008406FE /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441E3268057A9008406FE /* UIViewController+Ext.swift */; };
 		D96441EE26823C72008406FE /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441ED26823C72008406FE /* CellReusable.swift */; };
@@ -56,6 +55,8 @@
 		D9AAA08B267C65B500135326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9AAA089267C65B500135326 /* LaunchScreen.storyboard */; };
 		D9AAA36C2689134A00EDCDF1 /* DiaryTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAA36B2689134A00EDCDF1 /* DiaryTableViewCellViewModel.swift */; };
 		D9AAA370268925D000EDCDF1 /* AlertProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAA36F268925D000EDCDF1 /* AlertProtocol.swift */; };
+		D9DE3127278FDD3A000BAFAF /* DiaryTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DE3126278FDD3A000BAFAF /* DiaryTableFooterView.swift */; };
+		D9DE3129278FDDB7000BAFAF /* DiaryTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9DE3128278FDDB7000BAFAF /* DiaryTableFooterView.xib */; };
 		D9E68CF82718FF88002CA1CC /* AddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E68CF62718FF88002CA1CC /* AddTableViewCell.swift */; };
 		D9E68CF92718FF88002CA1CC /* AddTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E68CF72718FF88002CA1CC /* AddTableViewCell.xib */; };
 		E22DA1D0093E9F7F42E8E3C0 /* Pods_Soliu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EE2F80F051A9EEB7279A4B /* Pods_Soliu.framework */; };
@@ -101,7 +102,6 @@
 		D96441D3267FE740008406FE /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		D96441D5267FEA5F008406FE /* DiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DiaryTableViewCell.swift; path = "../New Group/DiaryTableViewCell.swift"; sourceTree = "<group>"; };
 		D96441D6267FEA5F008406FE /* DiaryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryTableViewCell.xib; sourceTree = "<group>"; };
-		D96441D9267FF03E008406FE /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		D96441E02680528F008406FE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		D96441E3268057A9008406FE /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		D96441ED26823C72008406FE /* CellReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReusable.swift; sourceTree = "<group>"; };
@@ -115,6 +115,8 @@
 		D9AAA08C267C65B500135326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9AAA36B2689134A00EDCDF1 /* DiaryTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		D9AAA36F268925D000EDCDF1 /* AlertProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertProtocol.swift; sourceTree = "<group>"; };
+		D9DE3126278FDD3A000BAFAF /* DiaryTableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableFooterView.swift; sourceTree = "<group>"; };
+		D9DE3128278FDDB7000BAFAF /* DiaryTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryTableFooterView.xib; sourceTree = "<group>"; };
 		D9E68CF62718FF88002CA1CC /* AddTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewCell.swift; sourceTree = "<group>"; };
 		D9E68CF72718FF88002CA1CC /* AddTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTableViewCell.xib; sourceTree = "<group>"; };
 		DE910C510281786EF09BD496 /* Pods-Soliu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soliu.debug.xcconfig"; path = "Target Support Files/Pods-Soliu/Pods-Soliu.debug.xcconfig"; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 		D96441C8267FD36A008406FE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D9DE3125278FDCEE000BAFAF /* DirayTableFooterView */,
 				D9E68CF52718FF33002CA1CC /* DiaryAddTableViewCell */,
 				D9E68CF42718FF1C002CA1CC /* DiaryTableViewCell */,
 			);
@@ -259,7 +262,6 @@
 			children = (
 				D9AAA082267C65B100135326 /* MainViewController.swift */,
 				D96441CC267FE035008406FE /* DiarySubviewController.swift */,
-				D96441D9267FF03E008406FE /* NotificationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -345,10 +347,10 @@
 		D9AAA093267C65CB00135326 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D9AAA096267C6CB500135326 /* MainScreen */,
 				D9033F8826E9A2F8007756C3 /* Extension + */,
 				D9033F8526E1C61B007756C3 /* ProfileScreen */,
 				D9033F7B26DDB9E5007756C3 /* LoginScreen */,
-				D9AAA096267C6CB500135326 /* MainScreen */,
 				D9033F7A26DDB9D0007756C3 /* RegisterScreen */,
 				D96441D2267FE71F008406FE /* ResusableComponents */,
 				95BA861726D5E8EF00238B9F /* TestScreen */,
@@ -382,6 +384,15 @@
 				D96441C8267FD36A008406FE /* View */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		D9DE3125278FDCEE000BAFAF /* DirayTableFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				D9DE3126278FDD3A000BAFAF /* DiaryTableFooterView.swift */,
+				D9DE3128278FDDB7000BAFAF /* DiaryTableFooterView.xib */,
+			);
+			path = DirayTableFooterView;
 			sourceTree = "<group>";
 		};
 		D9E68CF42718FF1C002CA1CC /* DiaryTableViewCell */ = {
@@ -464,6 +475,7 @@
 			files = (
 				D9AAA08B267C65B500135326 /* LaunchScreen.storyboard in Resources */,
 				D9AAA088267C65B500135326 /* Assets.xcassets in Resources */,
+				D9DE3129278FDDB7000BAFAF /* DiaryTableFooterView.xib in Resources */,
 				95E6A44826D8A743007A2C9B /* testData.json in Resources */,
 				95E6A45726DADFFF007A2C9B /* testQuestion1.json in Resources */,
 				95E6A47D26F04CC3007A2C9B /* testQuestion2.json in Resources */,
@@ -562,7 +574,6 @@
 				954370452704233B007D3223 /* NewStartTestScreenViewController.swift in Sources */,
 				95BA861926D5E90E00238B9F /* TestScreenViewController.swift in Sources */,
 				D9033F7E26DDC45C007756C3 /* LoginViewController.swift in Sources */,
-				D96441DA267FF03E008406FE /* NotificationViewController.swift in Sources */,
 				D96441EE26823C72008406FE /* CellReusable.swift in Sources */,
 				D9AAA36C2689134A00EDCDF1 /* DiaryTableViewCellViewModel.swift in Sources */,
 				D9AAA081267C65B100135326 /* SceneDelegate.swift in Sources */,
@@ -576,6 +587,7 @@
 				D9033F8026DDC95E007756C3 /* RegisterViewController.swift in Sources */,
 				95E6A48926F2EE9D007A2C9B /* TestScreenCoordinator.swift in Sources */,
 				D9E68CF82718FF88002CA1CC /* AddTableViewCell.swift in Sources */,
+				D9DE3127278FDD3A000BAFAF /* DiaryTableFooterView.swift in Sources */,
 				D92F3AD626F9761B00EB7449 /* SupportFirebase.swift in Sources */,
 				95E6A48626F2ED2B007A2C9B /* PopupLoginViewController.swift in Sources */,
 				9543704727042B9F007D3223 /* TestResultViewController.swift in Sources */,

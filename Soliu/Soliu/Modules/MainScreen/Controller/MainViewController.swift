@@ -51,6 +51,7 @@ class MainViewController: UIViewController {
             self.tableView.delegate = self
             self.tableView.dataSource = self
             self.tableView.register(UINib(nibName: DiaryTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: DiaryTableViewCell.reuseIdentifier)
+            self.tableView.register(UINib(nibName: DiaryTableFooterView.reuseIdentifier, bundle: nil), forHeaderFooterViewReuseIdentifier: DiaryTableFooterView.reuseIdentifier)
         }
     }
     
@@ -81,6 +82,15 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.reloadData()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        guard let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: DiaryTableFooterView.reuseIdentifier) else { return UIView() }
+        return footerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 50
     }
 }
 

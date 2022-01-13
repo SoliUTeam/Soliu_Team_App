@@ -10,7 +10,7 @@ import UIKit
 class DiaryTableViewCell: UITableViewCell, CellReusable {
     
     @IBOutlet private weak var dateLabel: UILabel!
-    @IBOutlet private weak var moodLabel: UILabel!
+    @IBOutlet private weak var moodLabel: UIButton!
     @IBOutlet private weak var noteLabel: UILabel!
     @IBOutlet private weak var emotionImageView: UIImageView!
 

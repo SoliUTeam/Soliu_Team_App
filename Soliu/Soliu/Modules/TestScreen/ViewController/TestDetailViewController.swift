@@ -98,6 +98,12 @@ extension TestDetailViewController: TestDetailViewControllable {
             question.text = viewModel.getQuestionText()
             currentQuestion.text = "\(currentCount)"
         } else {
+            
+           let testScoreArray = testScore.map { n in
+                return Int(n)
+            }
+            
+            SupportFirebase.supportFirebase.updateTestScore(testScore: testScoreArray, testDate: Date().getDateString(using: "MM-dd HH:MM"))
             loadingSpinner()
         }
     }

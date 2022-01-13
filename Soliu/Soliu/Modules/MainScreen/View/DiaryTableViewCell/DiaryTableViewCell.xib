@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLg-vl-9Rj">
-                                <rect key="frame" x="132" y="100" width="61" height="31"/>
+                                <rect key="frame" x="132" y="100" width="160" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="mood"/>
                             </button>
@@ -53,6 +53,7 @@
                             <constraint firstAttribute="bottom" secondItem="sot-53-dYS" secondAttribute="bottom" constant="8" id="fqk-AG-SxR"/>
                             <constraint firstAttribute="trailing" secondItem="H4u-Nv-VAE" secondAttribute="trailing" constant="8" id="hSe-Sy-DiG"/>
                             <constraint firstItem="H4u-Nv-VAE" firstAttribute="top" secondItem="H0G-cv-JYg" secondAttribute="bottom" constant="8" symbolic="YES" id="is5-AQ-j1f"/>
+                            <constraint firstAttribute="trailing" secondItem="JLg-vl-9Rj" secondAttribute="trailing" constant="20" symbolic="YES" id="o91-9L-Opa"/>
                             <constraint firstItem="sot-53-dYS" firstAttribute="leading" secondItem="uvE-vA-nFk" secondAttribute="leading" constant="8" id="siw-4p-QWz"/>
                             <constraint firstItem="sot-53-dYS" firstAttribute="top" secondItem="H0G-cv-JYg" secondAttribute="bottom" constant="8" symbolic="YES" id="tQ4-Vb-feX"/>
                             <constraint firstItem="H0G-cv-JYg" firstAttribute="top" secondItem="uvE-vA-nFk" secondAttribute="top" constant="8" id="uhk-HF-W1u"/>
@@ -72,6 +73,7 @@
             <connections>
                 <outlet property="dateLabel" destination="H0G-cv-JYg" id="M2T-rU-shs"/>
                 <outlet property="emotionImageView" destination="sot-53-dYS" id="ePh-o6-nuN"/>
+                <outlet property="moodLabel" destination="JLg-vl-9Rj" id="U04-wm-U3x"/>
                 <outlet property="noteLabel" destination="H4u-Nv-VAE" id="3E8-wE-Bzl"/>
             </connections>
             <point key="canvasLocation" x="63.768115942028992" y="142.96875"/>
