@@ -6,9 +6,7 @@ import FirebaseFirestoreSwift
 
 class SupportFirebase {
     static let supportFirebase = SupportFirebase()
-    private init() {
-        
-    }
+    private init() { }
     let userInfo = "userInfo"
     let db = Firestore.firestore()
     let currentUser = Auth.auth().currentUser?.uid ?? ""
@@ -35,8 +33,9 @@ class SupportFirebase {
         return testInformation
     }
     
-    func updateTestScore(testScore: [Int], testDate: String) {
-        let savedDictionaryArray: [String: Any] = ["testScore": testScore, "testDate": testDate]
+    func updateTestScore(testScore: [Int]) {
+        let dateString = Date().iso8601withFractionalSeconds
+        let savedDictionaryArray: [String: Any] = ["testScore": testScore, "testDate": dateString]
         let ref = db.collection("userInfo").document(currentUser)
         ref.updateData([
             "testResult": FieldValue.arrayUnion([savedDictionaryArray])]
@@ -50,4 +49,23 @@ class SupportFirebase {
             print("Sign Out error \(error.localizedDescription)")
         }
     }
+}
+
+extension ISO8601DateFormatter {
+    convenience init(_ formatOptions: Options) {
+        self.init()
+        self.formatOptions = formatOptions
+    }
+}
+
+extension Date {
+    var iso8601withFractionalSeconds: String { return Formatter.iso8601withFractionalSeconds.string(from: self) }
+}
+
+extension Formatter {
+    static let iso8601withFractionalSeconds = ISO8601DateFormatter([.withInternetDateTime])
+}
+
+extension String {
+    var iso8601withFractionalSeconds: Date? { return Formatter.iso8601withFractionalSeconds.date(from: self)}
 }

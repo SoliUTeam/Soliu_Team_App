@@ -103,7 +103,7 @@ extension TestDetailViewController: TestDetailViewControllable {
                 return Int(n)
             }
             
-            SupportFirebase.supportFirebase.updateTestScore(testScore: testScoreArray, testDate: Date().getDateString(using: "MM-dd HH:MM"))
+            SupportFirebase.supportFirebase.updateTestScore(testScore: testScoreArray)
             loadingSpinner()
         }
     }
