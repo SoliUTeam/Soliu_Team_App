@@ -37,8 +37,7 @@
 		D9033F8A26E9A312007756C3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9033F8926E9A312007756C3 /* String+Extension.swift */; };
 		D91A4DF62684E4350050E519 /* MainControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A4DF52684E4350050E519 /* MainControllerViewModel.swift */; };
 		D92F3AD626F9761B00EB7449 /* SupportFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92F3AD526F9761B00EB7449 /* SupportFirebase.swift */; };
-		D92F3AD926F97AC900EB7449 /* ProfileChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92F3AD726F97AC900EB7449 /* ProfileChartTableViewCell.swift */; };
-		D92F3ADA26F97AC900EB7449 /* ProfileChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92F3AD826F97AC900EB7449 /* ProfileChartTableViewCell.xib */; };
+		D93B3F652799199900826F35 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B3F642799199900826F35 /* ProfileViewModel.swift */; };
 		D96441CD267FE035008406FE /* DiarySubviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441CC267FE035008406FE /* DiarySubviewController.swift */; };
 		D96441CF267FE116008406FE /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441CE267FE116008406FE /* Mood.swift */; };
 		D96441D4267FE740008406FE /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96441D3267FE740008406FE /* String+Ext.swift */; };
@@ -95,8 +94,7 @@
 		D9033F8926E9A312007756C3 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D91A4DF52684E4350050E519 /* MainControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerViewModel.swift; sourceTree = "<group>"; };
 		D92F3AD526F9761B00EB7449 /* SupportFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportFirebase.swift; sourceTree = "<group>"; };
-		D92F3AD726F97AC900EB7449 /* ProfileChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileChartTableViewCell.swift; sourceTree = "<group>"; };
-		D92F3AD826F97AC900EB7449 /* ProfileChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileChartTableViewCell.xib; sourceTree = "<group>"; };
+		D93B3F642799199900826F35 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		D96441CC267FE035008406FE /* DiarySubviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiarySubviewController.swift; sourceTree = "<group>"; };
 		D96441CE267FE116008406FE /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		D96441D3267FE740008406FE /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
@@ -230,9 +228,8 @@
 		D9033F8526E1C61B007756C3 /* ProfileScreen */ = {
 			isa = PBXGroup;
 			children = (
+				D93B3F632799198600826F35 /* ViewModel */,
 				D9033F8626E1C636007756C3 /* ProfileViewController.swift */,
-				D92F3AD726F97AC900EB7449 /* ProfileChartTableViewCell.swift */,
-				D92F3AD826F97AC900EB7449 /* ProfileChartTableViewCell.xib */,
 			);
 			path = ProfileScreen;
 			sourceTree = "<group>";
@@ -245,6 +242,14 @@
 				D92F3AD526F9761B00EB7449 /* SupportFirebase.swift */,
 			);
 			path = "Extension +";
+			sourceTree = "<group>";
+		};
+		D93B3F632799198600826F35 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D93B3F642799199900826F35 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D96441C8267FD36A008406FE /* View */ = {
@@ -483,7 +488,6 @@
 				D9AAA086267C65B100135326 /* Main.storyboard in Resources */,
 				95E6A48026F055EF007A2C9B /* testQuestion0.json in Resources */,
 				D96441D8267FEA5F008406FE /* DiaryTableViewCell.xib in Resources */,
-				D92F3ADA26F97AC900EB7449 /* ProfileChartTableViewCell.xib in Resources */,
 				95B4A39A26F4D7940088B69E /* loadingSpinner.json in Resources */,
 				D9033F8426DDCE5E007756C3 /* GoogleService-Info.plist in Resources */,
 				95E6A48326F06DB6007A2C9B /* testQuestion3.json in Resources */,
@@ -592,8 +596,8 @@
 				95E6A48626F2ED2B007A2C9B /* PopupLoginViewController.swift in Sources */,
 				9543704727042B9F007D3223 /* TestResultViewController.swift in Sources */,
 				95BA862526D5EA6500238B9F /* TestSection.swift in Sources */,
+				D93B3F652799199900826F35 /* ProfileViewModel.swift in Sources */,
 				95E6A45126DADB8F007A2C9B /* TestDetailViewController.swift in Sources */,
-				D92F3AD926F97AC900EB7449 /* ProfileChartTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

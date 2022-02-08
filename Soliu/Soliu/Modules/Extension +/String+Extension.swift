@@ -1,9 +1,3 @@
-//
-//  String+Extension.swift
-//  Soliu
-//
-//  Created by Yoonha Kim on 9/8/21.
-//
 
 import Foundation
 import RxSwift

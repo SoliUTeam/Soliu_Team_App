@@ -40,7 +40,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign In"/>
                                 <connections>
-                                    <action selector="signOut" destination="BYZ-38-t0r" eventType="touchUpInside" id="2kp-tx-BE4"/>
+                                    <action selector="SignInOrOut" destination="BYZ-38-t0r" eventType="touchUpInside" id="GZa-hp-Uyj"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -50,11 +50,12 @@
                         <outlet property="signInButton" destination="sp9-rM-vEq" id="da1-4M-QCe"/>
                         <outlet property="tableView" destination="Yya-Q5-Xnj" id="JpK-e8-jVa"/>
                         <segue destination="LA4-Cg-RHj" kind="presentation" identifier="openDiarySubView" id="pGo-HK-ZnJ"/>
+                        <segue destination="Qv1-m2-lu8" kind="push" identifier="openLoginViewController" id="LlG-jK-RhL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1868" y="-706"/>
+            <point key="canvasLocation" x="1809" y="-108"/>
         </scene>
         <!--Diary Subview Controller-->
         <scene sceneID="1MN-Ox-Obc">
@@ -464,6 +465,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="mEZ-Wh-t20">
+                                <rect key="frame" x="20" y="205" width="374" height="485"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" systemColor="systemTealColor"/>
+                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFr-x1-tKG" customClass="BarChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="88" width="414" height="525"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -1079,9 +1085,9 @@
             <point key="canvasLocation" x="1810" y="631"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="oYM-K6-wwA"/>
-    </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="LlG-jK-RhL"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Great" width="42" height="42"/>
         <image name="book" catalog="system" width="128" height="99"/>

@@ -3,35 +3,21 @@ import Firebase
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-
 class SupportFirebase {
-    static let supportFirebase = SupportFirebase()
+    
     private init() { }
     let userInfo = "userInfo"
     let db = Firestore.firestore()
     let currentUser = Auth.auth().currentUser?.uid ?? ""
-    var testInformation: TestInformation?
+    let decoder = JSONDecoder()
+    static let supportFirebase = SupportFirebase()
+    
+    
     
     func isLoggedIn() -> Bool {
         return Auth.auth().currentUser != nil
     }
     
-    func readTestResult() -> TestInformation? {
-        db.collection("userInfo").document(currentUser).addSnapshotListener { document, error in
-            if error != nil {
-                print("reading error")
-            }
-            if let document = document {
-                do {
-                    self.testInformation = try JSONDecoder().decode(TestInformation.self, from: JSONSerialization.data(withJSONObject: document.data() as Any))
-                    dump(self.testInformation!)
-                }
-                catch {
-                    print("Read error") }
-            }
-        }
-        return testInformation
-    }
     
     func updateTestScore(testScore: [Int]) {
         let dateString = Date().iso8601withFractionalSeconds

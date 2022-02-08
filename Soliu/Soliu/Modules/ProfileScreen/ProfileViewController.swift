@@ -1,10 +1,12 @@
 import UIKit
 import Charts
 
-
 class ProfileViewController: UIViewController {
     
     @IBOutlet var charView: BarChartView!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
+    lazy var profileViewModel = ProfileViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +29,8 @@ class ProfileViewController: UIViewController {
     }
     
     func populate() {
-        let month = ["Jan", "Feb", "March"]
-        let data = [20,30, 31]
+        let month = ["Depression", "Anxiety", "Stress"]
+        let data = profileViewModel.getTestScore()
         charView.noDataText = "Please sign in."
         charView.noDataFont = .systemFont(ofSize: 20)
         charView.noDataTextColor = .lightGray

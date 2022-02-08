@@ -14,7 +14,10 @@ struct TestInformation: Codable {
     var testResult: [TestResult]
 }
 
-struct TestResult:  Codable {
+struct TestResult: Codable {
     var testDate: String
     var testScore: [Int]
+    
 }
+
+

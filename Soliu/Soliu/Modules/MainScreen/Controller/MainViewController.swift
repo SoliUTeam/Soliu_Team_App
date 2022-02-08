@@ -35,6 +35,9 @@ class MainViewController: UIViewController {
             guard let destination = segue.destination as? DiarySubviewController else { return }
             destination.delegate = self
         }
+        else if segue.identifier == "openLoginViewController" {
+            guard let destination = segue.destination as? LoginViewController else { return }
+        }
     }
     
     private func setupUI() {
@@ -55,8 +58,13 @@ class MainViewController: UIViewController {
         }
     }
     
-    @IBAction private func signOut() {
-        SupportFirebase.supportFirebase.signOut()
+    @IBAction private func SignInOrOut() {
+        if Auth.auth().currentUser == nil {
+            self.performSegue(withIdentifier: "openLoginViewController", sender: nil)
+        } else {
+            SupportFirebase.supportFirebase.signOut()
+        }
+        
         setupUI()
     }
     
