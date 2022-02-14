@@ -4,7 +4,7 @@ import Charts
 class ProfileViewController: UIViewController {
     
     @IBOutlet var informationStackView: UIStackView!
-    @IBOutlet var charView: BarChartView!
+    @IBOutlet var chartView: BarChartView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var genderLabel: UILabel!
     @IBOutlet var majorLabel: UILabel!
@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController {
         self.title = "Profile"
         profileViewModel.readTestResult()
         setupInitialUI()
-        chartSetUp()
+     
         activityIndicator.hidesWhenStopped =  true
     }
     
@@ -39,33 +39,47 @@ class ProfileViewController: UIViewController {
             self.performSegue(withIdentifier: "openLoginViewController", sender: nil)
         }
         alert.addAction(loginAction)
+        chartSetUp()
     }
     
     func chartSetUp() {
-        charView.noDataText = "Your data is not read."
-        charView.noDataFont = .systemFont(ofSize: 20)
-        charView.noDataTextColor = .lightGray
+        chartView.noDataText = "Your data is not read."
+        chartView.noDataFont = .systemFont(ofSize: 20)
+        chartView.noDataTextColor = .lightGray
+        
+        // 레이블 포지션
+        chartView.xAxis.labelPosition = .bottom
+        
+        chartView.xAxis.drawGridLinesEnabled = false
+        
+        //왼쪽 눈금
+        chartView.leftAxis.drawGridLinesEnabled = false
+        
+        // 오른쪽 눈금
+        chartView.rightAxis.enabled = false
+
     }
     
-    func setUpChart(dataPoints: [String], values: [Double]) {
+    func setUpChart(dataPoints: [String], testScoreAverageList: [Double]) {
         
-        var dataEntries: [BarChartDataEntry] = []
-                
-        for i in 0..<dataPoints.count {
-            let dataEntry = BarChartDataEntry(x: 0.0, y: values[i])
-            dataEntries.append(dataEntry)
+        
+        var entries = [BarChartDataEntry]()
+         for index in 0..<3 {
+            entries.append(BarChartDataEntry(x: Double(index), y: testScoreAverageList[index]))
         }
-                
-        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Category")
-        let chartData = BarChartData(dataSet: chartDataSet)
-        charView.data = chartData
+        
+        let set = BarChartDataSet(entries: entries, label: "Your Mind-Set Score")
+        set.colors = [NSUIColor.systemGreen,  NSUIColor.systemBlue, NSUIColor.systemPink]
+        let data = BarChartData(dataSet: set)
+        chartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: dataPoints)
+        data.setDrawValues(true)
+        chartView.data = data
         
     }
     
     func populate() {
         let label = ["Depression", "Anxiety", "Stress"]
-        var dataEntries: [BarChartDataEntry] = []
-        setUpChart(dataPoints: label, values: profileViewModel.getTestScore())
+        setUpChart(dataPoints: label, testScoreAverageList: profileViewModel.getTestScore())
     }
 }
 

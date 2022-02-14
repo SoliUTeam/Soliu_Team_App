@@ -104,6 +104,7 @@ extension TestDetailViewController: TestDetailViewControllable {
             }
             
             SupportFirebase.supportFirebase.updateTestScore(testScore: testScoreArray)
+            SupportFirebase.supportFirebase.updateAllTestScore(testScore: testScoreArray)
             loadingSpinner()
         }
     }

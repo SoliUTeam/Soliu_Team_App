@@ -28,6 +28,16 @@ class SupportFirebase {
         )
     }
     
+    func updateAllTestScore(testScore: [Int]) {
+        let dbRef = db.collection("userInfo").document("All_Test_Score")
+        let dateString = Date().iso8601withFractionalSeconds
+        let savedDictionaryArray: [String: Any] = ["testScore": testScore, "testDate": dateString, "testUid": currentUser]
+        dbRef.updateData([
+            "testResult": FieldValue.arrayUnion([savedDictionaryArray])
+        ])
+
+    }
+    
     func signOut() {
         do {
             try Auth.auth().signOut()

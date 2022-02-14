@@ -34,12 +34,13 @@ class ProfileViewModel {
                         self.delegate?.reloadData(testInformation: retrievedTestInformation)
                     }
                     catch {
-                        print("Error")
+                        self.testInformation =  self.defaultTestScore
+                        print("Fails to read Data")
                     }
             }
         }
     }
-    
+        
     func getTestScore() -> [Double] {
         var depressionScore: Double = 0
         var anxietyScore: Double = 0
@@ -65,10 +66,17 @@ class ProfileViewModel {
                 }
             }
         }
-        depressionScore = (Double(depressionScore / 5))
-        anxietyScore = Double(anxietyScore / 5)
-        stressScore = Double(stressScore / 5)
+        depressionScore = (Double(Int(depressionScore) / 5 / testResult.count))
+        anxietyScore = Double(Int(anxietyScore) / 5 /  testResult.count)
+        stressScore = Double(Int(stressScore) / 5 / testResult.count)
 
         return [depressionScore, anxietyScore, stressScore]
+    }
+}
+
+extension ProfileViewModel {
+    var defaultTestScore: TestInformation {
+        return
+        TestInformation(gender: "not provided", grade: "not provided", major: "not major", testResult: [TestResult(testDate: "", testScore: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15])])
     }
 }

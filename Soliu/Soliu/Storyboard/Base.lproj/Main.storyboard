@@ -510,7 +510,7 @@
                     <navigationItem key="navigationItem" title="Profile" id="0Jw-zx-SSS"/>
                     <connections>
                         <outlet property="activityIndicator" destination="Qt7-Yq-UCr" id="Mzf-qi-g4e"/>
-                        <outlet property="charView" destination="aFr-x1-tKG" id="mGK-Da-Qzk"/>
+                        <outlet property="chartView" destination="aFr-x1-tKG" id="hcg-0t-0VH"/>
                         <outlet property="genderLabel" destination="gfg-mh-WQJ" id="OVf-0J-gtB"/>
                         <outlet property="gradeLabel" destination="zRS-KQ-gok" id="5be-ii-csj"/>
                         <outlet property="informationStackView" destination="myY-Sq-wYD" id="2e3-ns-1PI"/>
@@ -528,11 +528,11 @@
         <scene sceneID="S0b-lE-8wQ">
             <objects>
                 <viewController storyboardIdentifier="RegisterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cME-xr-sGU" customClass="RegisterViewController" customModule="Soliu" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rTa-bY-cQy">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="rTa-bY-cQy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXu-7a-sKp">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hXu-7a-sKp">
                                 <rect key="frame" x="0.0" y="88" width="414" height="676"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teN-oD-Tej">
@@ -1112,9 +1112,6 @@
             <point key="canvasLocation" x="1810" y="631"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="oYM-K6-wwA"/>
-    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="Dft-hX-5Od"/>
     </inferredMetricsTieBreakers>

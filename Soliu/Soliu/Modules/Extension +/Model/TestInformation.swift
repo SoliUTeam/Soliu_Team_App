@@ -20,5 +20,3 @@ struct TestResult: Codable {
     var testScore: [Int]
     
 }
-
-
