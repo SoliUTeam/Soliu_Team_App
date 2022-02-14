@@ -12,6 +12,7 @@ struct TestInformation: Codable {
     var grade: String
     var major: String
     var testResult: [TestResult]
+    
 }
 
 struct TestResult: Codable {

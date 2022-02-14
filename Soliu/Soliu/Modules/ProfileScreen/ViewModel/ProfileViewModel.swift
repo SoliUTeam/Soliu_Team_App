@@ -1,61 +1,74 @@
 import Foundation
 import Firebase
+import UIKit
+
+protocol ProfileViewModelDelegate: AnyObject {
+    func reloadData(testInformation: TestInformation?)
+}
 
 class ProfileViewModel {
     
     var testInformation: TestInformation?
     var currentUser: String
     let db = Firestore.firestore()
-    
+    weak var delegate: ProfileViewModelDelegate?
 
-    
-    init() {
+    init(delegate: ProfileViewModelDelegate) {
+        self.delegate = delegate
         currentUser = Auth.auth().currentUser?.uid ?? ""
-        self.readTestResult { }
-
     }
     
-    func readTestResult(_ completion: () -> Void )  {
-        
-        db.collection("userInfo").document(currentUser).addSnapshotListener { [weak self] document, error in
+    
+    func readTestResult() {
+    
+        db.collection("userInfo").document(currentUser).getDocument { [weak self] document, error in
             guard let self = self else { return }
             if error != nil {
-                print("reading error")
+                print("Fails to read error")
             }
+            
             DispatchQueue.main.async {
-                let data = document?.data()
-                guard let majorIn = data?["major"] as? String, let gradeIn = data?["grade"] as? String, let genderIn = data?["gender"] as? String else { return }
-                
-                self.testInformation = TestInformation(gender: genderIn, grade: gradeIn, major: majorIn, testResult: [])
+                    do {
+                        let retrievedTestInformation = try document?.data(as: TestInformation.self)
+                        self.testInformation = retrievedTestInformation
+                        self.delegate?.reloadData(testInformation: retrievedTestInformation)
+                    }
+                    catch {
+                        print("Error")
+                    }
             }
         }
     }
     
-    func getTestScore() -> [Int] {
-        var depressionScore: Int = 0
-        var anxietyScore: Int = 0
-        var stressScore: Int = 0
+    func getTestScore() -> [Double] {
+        var depressionScore: Double = 0
+        var anxietyScore: Double = 0
+        var stressScore: Double = 0
         
         guard let testResult = testInformation?.testResult else { return
             [0,0,0]
         }
         
         for n in testResult {
-            for index in 0...15 {
+            for index in 0...14 {
                 switch index {
                 case 0...4:
-                    depressionScore += n.testScore[index]
+                    depressionScore += Double(n.testScore[index])
                     break
                     
                 case 5...10:
-                    anxietyScore += n.testScore[index]
+                    anxietyScore += Double(n.testScore[index])
                     break
                     
                 default:
-                    stressScore += n.testScore[index]
+                    stressScore += Double(n.testScore[index])
                 }
             }
         }
+        depressionScore = (Double(depressionScore / 5))
+        anxietyScore = Double(anxietyScore / 5)
+        stressScore = Double(stressScore / 5)
+
         return [depressionScore, anxietyScore, stressScore]
     }
 }

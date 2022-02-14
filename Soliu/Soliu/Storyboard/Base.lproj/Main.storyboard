@@ -465,29 +465,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="mEZ-Wh-t20">
-                                <rect key="frame" x="20" y="205" width="374" height="485"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="color" systemColor="systemTealColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="myY-Sq-wYD">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gradeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRS-KQ-gok" userLabel="gradeLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="genderLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfg-mh-WQJ" userLabel="genderLabel">
+                                        <rect key="frame" x="0.0" y="20.5" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="majorLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXH-la-GdV" userLabel="majorLabel">
+                                        <rect key="frame" x="0.0" y="41" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFr-x1-tKG" customClass="BarChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="61.5" width="414" height="611.5"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Qt7-Yq-UCr">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                             </activityIndicatorView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFr-x1-tKG" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="88" width="414" height="525"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pri-5t-DoC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aFr-x1-tKG" firstAttribute="top" secondItem="Pri-5t-DoC" secondAttribute="top" id="TQH-al-Va4"/>
-                            <constraint firstItem="aFr-x1-tKG" firstAttribute="leading" secondItem="Pri-5t-DoC" secondAttribute="leading" id="W0a-M6-MVw"/>
-                            <constraint firstItem="Pri-5t-DoC" firstAttribute="trailing" secondItem="aFr-x1-tKG" secondAttribute="trailing" id="Yv1-aA-UEJ"/>
-                            <constraint firstItem="Pri-5t-DoC" firstAttribute="bottom" secondItem="aFr-x1-tKG" secondAttribute="bottom" constant="200" id="u4K-w7-McS"/>
+                            <constraint firstItem="Pri-5t-DoC" firstAttribute="trailing" secondItem="myY-Sq-wYD" secondAttribute="trailing" id="1U6-Vs-gIo"/>
+                            <constraint firstItem="Qt7-Yq-UCr" firstAttribute="centerX" secondItem="IpN-Ba-QUD" secondAttribute="centerX" id="GHL-tH-LBH"/>
+                            <constraint firstItem="myY-Sq-wYD" firstAttribute="top" secondItem="Pri-5t-DoC" secondAttribute="top" id="HRQ-5b-8pK"/>
+                            <constraint firstItem="Pri-5t-DoC" firstAttribute="bottom" secondItem="myY-Sq-wYD" secondAttribute="bottom" id="Lgu-ZW-ofs"/>
+                            <constraint firstItem="Qt7-Yq-UCr" firstAttribute="centerY" secondItem="IpN-Ba-QUD" secondAttribute="centerY" id="gA8-6R-p8K"/>
+                            <constraint firstItem="myY-Sq-wYD" firstAttribute="leading" secondItem="Pri-5t-DoC" secondAttribute="leading" id="zng-9F-pq2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0Jw-zx-SSS"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationItem key="navigationItem" title="Profile" id="0Jw-zx-SSS"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Qt7-Yq-UCr" id="Mzf-qi-g4e"/>
                         <outlet property="charView" destination="aFr-x1-tKG" id="mGK-Da-Qzk"/>
+                        <outlet property="genderLabel" destination="gfg-mh-WQJ" id="OVf-0J-gtB"/>
+                        <outlet property="gradeLabel" destination="zRS-KQ-gok" id="5be-ii-csj"/>
+                        <outlet property="informationStackView" destination="myY-Sq-wYD" id="2e3-ns-1PI"/>
+                        <outlet property="majorLabel" destination="kXH-la-GdV" id="glZ-j3-0GN"/>
                         <segue destination="Qv1-m2-lu8" kind="show" identifier="openLoginViewController" id="Dft-hX-5Od"/>
                         <segue destination="8AM-AP-6GC" kind="unwind" identifier="backToProfileViewController" unwindAction="unwindVC1WithSegue:" id="16q-MB-rlv"/>
                     </connections>
@@ -1085,8 +1112,11 @@
             <point key="canvasLocation" x="1810" y="631"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="oYM-K6-wwA"/>
+    </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="LlG-jK-RhL"/>
+        <segue reference="Dft-hX-5Od"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Great" width="42" height="42"/>
