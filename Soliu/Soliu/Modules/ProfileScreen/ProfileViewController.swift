@@ -17,17 +17,15 @@ class ProfileViewController: UIViewController {
         self.title = "Profile"
         profileViewModel.readTestResult()
         setupInitialUI()
-     
-        activityIndicator.hidesWhenStopped =  true
+        chartSetUp()
     }
     
     func setupInitialUI() {
-        informationStackView.isHidden = true
         activityIndicator.startAnimating()
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
+        profileViewModel.readTestResult()
         super.viewWillAppear(animated)
         let alert = UIAlertController(title: "You are not logged in", message: "Please sign in your account", preferredStyle: .alert)
         
@@ -39,7 +37,6 @@ class ProfileViewController: UIViewController {
             self.performSegue(withIdentifier: "openLoginViewController", sender: nil)
         }
         alert.addAction(loginAction)
-        chartSetUp()
     }
     
     func chartSetUp() {
@@ -53,43 +50,53 @@ class ProfileViewController: UIViewController {
         chartView.xAxis.drawGridLinesEnabled = false
         
         //왼쪽 눈금
-        chartView.leftAxis.drawGridLinesEnabled = false
+        chartView.leftAxis.drawGridLinesEnabled = true
         
         // 오른쪽 눈금
         chartView.rightAxis.enabled = false
+        
+        chartView.xAxis.labelRotationAngle = -25
+        
+        chartView.pinchZoomEnabled = false
+        chartView.doubleTapToZoomEnabled = false
 
+        chartView.leftAxis.setLabelCount(6, force: true)
+        chartView.leftAxis.axisMinimum = 0
+        chartView.leftAxis.axisMaximum = 10
     }
     
-    func setUpChart(dataPoints: [String], testScoreAverageList: [Double]) {
-        
-        
-        var entries = [BarChartDataEntry]()
-         for index in 0..<3 {
-            entries.append(BarChartDataEntry(x: Double(index), y: testScoreAverageList[index]))
-        }
-        
-        let set = BarChartDataSet(entries: entries, label: "Your Mind-Set Score")
-        set.colors = [NSUIColor.systemGreen,  NSUIColor.systemBlue, NSUIColor.systemPink]
-        let data = BarChartData(dataSet: set)
-        chartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: dataPoints)
-        data.setDrawValues(true)
-        chartView.data = data
-        
-    }
-    
-    func populate() {
-        let label = ["Depression", "Anxiety", "Stress"]
-        setUpChart(dataPoints: label, testScoreAverageList: profileViewModel.getTestScore())
+    func setUpChart(averageTestScore: AverageTestScore) {
+
+        let dataPoints = ["Depression", "Anxiety", "Stress"]
+        let BarChartDataSet1 = BarChartDataSet(entries: [BarChartDataEntry(x: 0, y:     averageTestScore.userAverageDepressionScore),
+                                                         BarChartDataEntry(x: 1, y: averageTestScore.allUserAverageDepressionScore)], label: "Depression")
+        BarChartDataSet1.setColor(.red)
+
+        let BarChartDataSet2: BarChartDataSet = BarChartDataSet(entries:
+                                                                    [BarChartDataEntry(x: 2, y:        averageTestScore.userAverageAnxietyScore),
+                                                                     BarChartDataEntry(x: 3, y: averageTestScore.allUserAverageAnxietyScore)],
+        label: "Anxiety")
+        BarChartDataSet2.setColor(.blue)
+
+        let BarChartDataSet3: BarChartDataSet = BarChartDataSet(entries:
+                                                                    [BarChartDataEntry(x: 4, y: averageTestScore.userAverageStressScore),
+                                                                     BarChartDataEntry(x: 5, y: averageTestScore.allUserAverageStressScore)],
+        label: "Stress")
+        BarChartDataSet3.setColor(.green)
+
+        let barChartData =  BarChartData(dataSets: [BarChartDataSet1, BarChartDataSet2, BarChartDataSet3])
+        barChartData.setDrawValues(true)
+        chartView.data = barChartData
+        chartView.reloadInputViews()
     }
 }
 
 extension ProfileViewController: ProfileViewModelDelegate {
-    func reloadData(testInformation: TestInformation?) {
-        majorLabel.text = testInformation?.major ?? "MajorIn"
-        genderLabel.text = testInformation?.gender ?? "genderIn"
-        gradeLabel.text = testInformation?.grade ?? "gradeLabel"
-        populate()
+    func reloadData(averageScore: AverageTestScore) {
+        print("reload \(averageScore)")
+        setUpChart(averageTestScore: averageScore)
         activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
         informationStackView.isHidden = false
     }
 }

@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
                 }
             }
             else {
-                self.performSegue(withIdentifier: "backToProfileViewController", sender: nil)
+                self.dismiss(animated: true, completion: nil)
             }
         }
     }
