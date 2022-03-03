@@ -12,12 +12,12 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        idTextField.text = "testuser1@gmail.com"
+        passwordTextField.text = "1211asdF!"
     }
     
-    @IBAction func signIn() {
-        guard let id = idTextField.text,
-              let password = passwordTextField.text else { return }
-        Auth.auth().signIn(withEmail: id, password: password) { (result, error) in
+    func signIn(email: String, pass: String, completionBlock: @escaping (_ success: Bool) -> Void) {
+        Auth.auth().signIn(withEmail: email, password: pass) { (result, error) in
             if let error = error as NSError? {
                 switch AuthErrorCode(rawValue: error.code) {
                 case .operationNotAllowed:
@@ -31,15 +31,25 @@ class LoginViewController: UIViewController {
                 default:
                     self.displayMessage(with: "Error", message: "\(error.localizedDescription)")
                 }
-            }
-            else {
-                self.dismiss(animated: true, completion: nil)
+                completionBlock(false)
+            } else {
+                completionBlock(true)
             }
         }
     }
+    
+    @IBAction func signIn() {
+        guard let id = idTextField.text,
+              let password = passwordTextField.text else { return }
+        
+        signIn(email: id, pass: password) { success in
+            if success {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+    }
+    
     @IBAction private func openRegisterView() {
         self.performSegue(withIdentifier: "openRegisterView", sender: nil)
     }
-    
-    
 }
