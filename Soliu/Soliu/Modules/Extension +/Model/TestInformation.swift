@@ -14,17 +14,27 @@ struct TestInformation: Codable {
     var major: String
     var testResult: [TestResult]
     
+    enum CodingKeys: String, CodingKey {
+        case gender
+        case grade
+        case major
+        case testResult
+    }
 }
 
 struct TestResult: Codable {
     var testDate: String
     var testScore: [Int]
     
+    enum CodingKeys: String, CodingKey {
+        case testDate
+        case testScore
+    }
 }
 
 struct AllTestResult: Codable {
     var testResult: [TestResultWithUid]
-
+    
 }
 
 struct TestResultWithUid: Codable {
@@ -47,7 +57,7 @@ struct AverageTestScore {
     var allUserAverageDepressionScore: Double
     var allUserAverageAnxietyScore: Double
     var allUserAverageStressScore: Double
-
+    
     init(scoreList: [Double]) {
         self.userAverageDepressionScore = scoreList[0]
         self.userAverageAnxietyScore = scoreList[1]
