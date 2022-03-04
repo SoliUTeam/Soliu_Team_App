@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     lazy var mainViewModel = MainControllerViewModel(tableView: tableView)
     
     @IBOutlet var signInButton: UIButton!
+    @IBOutlet var composeButton: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,10 @@ class MainViewController: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
         openDiarySubView()
+        
+        let tapGR = UITapGestureRecognizer(target: self, action: #selector(self.openDiarySubView))
+        composeButton.addGestureRecognizer(tapGR)
+        composeButton.isUserInteractionEnabled = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,11 +69,10 @@ class MainViewController: UIViewController {
         } else {
             SupportFirebase.supportFirebase.signOut()
         }
-        
         setupUI()
     }
     
-    func openDiarySubView() {
+    @IBAction private func openDiarySubView() {
         self.performSegue(withIdentifier: "openDiarySubView", sender: nil)
     }
 }
@@ -86,8 +90,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            mainViewModel.deleteContext(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            mainViewModel.deleteContext(at: indexPath.row)
             tableView.reloadData()
         }
     }

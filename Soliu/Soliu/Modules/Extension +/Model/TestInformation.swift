@@ -66,6 +66,5 @@ struct AverageTestScore {
         self.allUserAverageDepressionScore = scoreList[3]
         self.allUserAverageAnxietyScore = scoreList[4]
         self.allUserAverageStressScore = scoreList[5]
-        
     }
 }

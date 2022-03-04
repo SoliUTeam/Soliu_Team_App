@@ -74,19 +74,13 @@ extension TestScreenViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         isLoggedIn(completionHandler: { success in
-//            if !success {
                 viewModel.pushToDetail(viewController: self, index: indexPath.row)
-//            }
-//            else {
-//                print("try register")
-//            }
         })
         
     }
 }
 
 extension TestScreenViewController: TestScreenViewModelDelegate {
-    
     func reload() {
         self.tableView.reloadData()
     }
