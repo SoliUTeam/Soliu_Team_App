@@ -13,9 +13,7 @@ extension Date {
     func getDateString(using format: String) -> String {
         let currentDateTime = Date()
         let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeZone = TimeZone.current
-        formatter.locale = Locale.current
+        formatter.dateStyle = .medium
         return formatter.string(from: currentDateTime)
     }
 }

@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
     
     // Container for CoreData parts
     var container: NSPersistentContainer!
-    lazy var mainViewModel = MainControllerViewModel(tableView: tableView)
+    lazy var mainViewModel = MainControllerViewModel(delegate: self)
     
     @IBOutlet var signInButton: UIButton!
     @IBOutlet var composeButton: UIImageView!
@@ -83,17 +83,18 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: DiaryTableViewCell.reuseIdentifier) as? DiaryTableViewCell else { return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: DiaryTableViewCell.reuseIdentifier) as? DiaryTableViewCell else { return UITableViewCell() }
         cell.configure(diary: mainViewModel.dataForDiary(at: indexPath.row))
         return cell
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            mainViewModel.deleteContext(at: indexPath.row)
-            tableView.reloadData()
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "\nDelete") {_,_,_ in
+            guard self == self else { return }
+            self.mainViewModel.deleteDiary(at: indexPath.row)
         }
+        deleteAction.image = UIImage(systemName: "trash")
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -103,6 +104,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 50
+    }
+}
+
+extension MainViewController: MainControllerViewModelProtocol {
+    func reloadTableView() {
+        self.tableView.reloadData()
     }
 }
 

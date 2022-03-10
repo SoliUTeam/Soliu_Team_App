@@ -24,7 +24,7 @@ class DiarySubviewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let date = Date()
-        currentTimeDate.text = date.getDateString(using: "MM-dd HH:MM")
+        currentTimeDate.text = date.getDateString(using: "MMM d, yyyy")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,7 +55,7 @@ class DiarySubviewController: UIViewController {
         let name = ""
         let selectedMood = moodSegmentedControl.selectedSegmentIndex
         let note = noteTextfield.text ?? ""
-        diaryCellViewModel.saveDiaryData(name: name, mood: Int32(selectedMood), date: date.getDateString(using: "MM-DD-yyy HH:MM"), note: note)
+        diaryCellViewModel.saveDiaryData(name: name, mood: Int32(selectedMood), date: date.getDateString(using: "MMM d, yyyy"), note: note)
         self.delegate?.reloadData()
         self.dismiss(animated: true, completion: nil)
     }

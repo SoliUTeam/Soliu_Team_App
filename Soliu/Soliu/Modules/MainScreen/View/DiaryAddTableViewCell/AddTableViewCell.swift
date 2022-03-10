@@ -1,10 +1,3 @@
-//
-//  AddTableViewCell.swift
-//  Soliu
-//
-//  Created by Yoonha Kim on 10/14/21.
-//
-
 import UIKit
 
 class AddTableViewCell: UITableViewCell, CellReusable {

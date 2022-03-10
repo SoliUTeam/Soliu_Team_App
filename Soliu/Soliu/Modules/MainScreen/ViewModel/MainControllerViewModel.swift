@@ -1,27 +1,20 @@
-//
-//  MainControllerViewModel.swift
-//  Soliu
-//
-//  Created by Yoonha Kim on 6/24/21.
-//
-
 import UIKit
 import CoreData
+
+protocol MainControllerViewModelProtocol: AnyObject {
+    func reloadTableView()
+}
 
 class MainControllerViewModel {
     
     var container: NSPersistentContainer!
-    var tableView: UITableView
-    var dataSource: [Diary] = [] {
-        didSet {
-            self.tableView.reloadData()
-        }
-    }
+    var dataSource: [Diary] = []
+    weak var delegate: MainControllerViewModelProtocol?
     
-    init(tableView: UITableView) {
+    init(delegate: MainControllerViewModelProtocol) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        self.tableView = tableView
         self.container = appDelegate.persistentContainer
+        self.delegate = delegate
     }
     
     func getAllItem() {
@@ -35,22 +28,26 @@ class MainControllerViewModel {
         dataSource.sort { date1, date2 in
             "".checkTheDate(firstDate: date1.date ?? "", secondDate: date2.date ?? "")
         }
+        delegate?.reloadTableView()
     }
     
-    func deleteContext(at index: Int) {
+    func deleteDiary(at index: Int) {
         do {
             guard let items = try container.viewContext.fetch(Diary.fetchRequest()) as? [Diary] else { return }
             
             for item in items {
                 if dataSource[index] == item {
                     container.viewContext.delete(item)
+                    dataSource.remove(at: index)
                 }
             }
             try container.viewContext.save()
+            
         }
         catch {
             print("Delete Errors")
         }
+        delegate?.reloadTableView()
     }
     
     func numberOfRowsInSection() -> Int {

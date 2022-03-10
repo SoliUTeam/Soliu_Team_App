@@ -14,7 +14,7 @@ protocol DiaryTableViewCellViewModelProtocol {
     var date: String { get }
 }
 class DiaryTableViewCellViewModel: DiaryTableViewCellViewModelProtocol {
-
+    
     var diary: Diary?
     
     init(diary: Diary?) {

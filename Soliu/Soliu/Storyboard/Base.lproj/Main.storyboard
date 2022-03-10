@@ -45,7 +45,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qP5-12-ITf">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="HHF-IM-gHZ">
+                        <barButtonItem key="rightBarButtonItem" id="HHF-IM-gHZ">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="sp9-rM-vEq">
                                 <rect key="frame" x="302" y="5" width="92" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
