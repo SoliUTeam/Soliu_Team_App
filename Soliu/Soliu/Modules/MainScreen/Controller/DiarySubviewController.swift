@@ -16,7 +16,7 @@ class DiarySubviewController: UIViewController {
     @IBOutlet private weak var moodImageView: UIImageView!
     @IBOutlet private weak var currentTimeDate: UILabel!
     @IBOutlet private weak var moodSegmentedControl: UISegmentedControl!
-    @IBOutlet private weak var noteTextfield: UITextField!
+    @IBOutlet private weak var noteTextView: UITextView!
     
     lazy var diaryCellViewModel = DiarySubviewModel()
     weak var delegate: DiarySubviewDelegate?
@@ -24,7 +24,10 @@ class DiarySubviewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let date = Date()
+        noteTextView.delegate = self
         currentTimeDate.text = date.getDateString(using: "MMM d, yyyy")
+        noteTextView.text = "Placeholder"
+        noteTextView.textColor = UIColor.lightGray
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,10 +57,26 @@ class DiarySubviewController: UIViewController {
         // Read noteData
         let name = ""
         let selectedMood = moodSegmentedControl.selectedSegmentIndex
-        let note = noteTextfield.text ?? ""
+        let note = noteTextView.text ?? ""
         diaryCellViewModel.saveDiaryData(name: name, mood: Int32(selectedMood), date: date.getDateString(using: "MMM d, yyyy"), note: note)
         self.delegate?.reloadData()
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension DiarySubviewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Placeholder"
+            textView.textColor = UIColor.lightGray
+        }
     }
 }
 

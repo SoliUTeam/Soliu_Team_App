@@ -14,19 +14,19 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Profile"
-        profileViewModel.readTestResult()
+        self.title = "Mental Score"
         setupInitialUI()
-        chartSetUp()
     }
     
     func setupInitialUI() {
         activityIndicator.startAnimating()
+        profileViewModel.readTestResult()
+        chartSetUp()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        profileViewModel.readTestResult()
         super.viewWillAppear(animated)
+        setupInitialUI()
         let alert = UIAlertController(title: "You are not logged in", message: "Please sign in your account", preferredStyle: .alert)
         
         if !SupportFirebase.supportFirebase.isLoggedIn() {
@@ -93,10 +93,13 @@ class ProfileViewController: UIViewController {
 
 extension ProfileViewController: ProfileViewModelDelegate {
     func reloadData(averageScore: AverageTestScore) {
-        print("reload \(averageScore)")
         setUpChart(averageTestScore: averageScore)
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
         informationStackView.isHidden = false
+        
+        genderLabel.text = "Gender: \(averageScore.gender)"
+        majorLabel.text = "Major: \(averageScore.major)"
+        gradeLabel.text = "Grade: \(averageScore.grade)"
     }
 }

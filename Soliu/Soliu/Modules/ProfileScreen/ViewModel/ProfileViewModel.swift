@@ -10,13 +10,11 @@ class ProfileViewModel {
     
     var testInformation: TestInformation?
     var allTestResult: AllTestResult?
-    var currentUser: String
     let db = Firestore.firestore()
     weak var delegate: ProfileViewModelDelegate?
     
     init(delegate: ProfileViewModelDelegate) {
         self.delegate = delegate
-        currentUser = Auth.auth().currentUser?.uid ?? ""
     }
     
     func readTestResult() {
@@ -49,6 +47,7 @@ class ProfileViewModel {
     
     func getUserTestData(completionBlock:
                          @escaping (_ success: Bool, _ testInformation: TestInformation?) -> Void) {
+        var currentUser = Auth.auth().currentUser?.uid ?? "noData"
         db.collection("userInfo").document(currentUser).getDocument { document, error in
             if error != nil {
                 print("Fails to get document userTestData")
@@ -65,6 +64,7 @@ class ProfileViewModel {
     
     func getUserAllData(completionBlock:
                         @escaping (_ success: Bool, _ allTestResult: AllTestResult?) -> Void) {
+        var currentUser = Auth.auth().currentUser?.uid ?? "noData"
         db.collection("userInfo").document("All_Test_Score").getDocument { document, error in
             if error != nil {
                 print("Fails to read document All Test")
@@ -85,7 +85,8 @@ class ProfileViewModel {
         let userAverageScore = calculateUserAverageScore(testInformation: self.testInformation ?? defaultTestScore)
         let allUserAverageScore = calculateAllUserAverageScore(allTestResult: self.allTestResult ?? defaultAllTestScore)
         let testScoreList = userAverageScore + allUserAverageScore
-        self.delegate?.reloadData(averageScore: AverageTestScore(scoreList: testScoreList))
+        var userInfoList = [self.testInformation?.gender, self.testInformation?.grade, self.testInformation?.major]
+        self.delegate?.reloadData(averageScore: AverageTestScore(scoreList: testScoreList, userInformation: userInfoList))
     }
     
     func calculateUserAverageScore(testInformation: TestInformation) -> [Double] {

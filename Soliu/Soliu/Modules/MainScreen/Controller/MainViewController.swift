@@ -96,15 +96,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         deleteAction.image = UIImage(systemName: "trash")
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
-    
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        guard let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: DiaryTableFooterView.reuseIdentifier) else { return UIView() }
-        return footerView
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 50
-    }
 }
 
 extension MainViewController: MainControllerViewModelProtocol {

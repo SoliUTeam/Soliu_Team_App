@@ -9,12 +9,14 @@ class LoginViewController: UIViewController {
             self.passwordTextField.isSecureTextEntry = true
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+//      Test Data
         idTextField.text = "testuser1@gmail.com"
         passwordTextField.text = "1211asdF!"
     }
+    
     
     func signIn(email: String, pass: String, completionBlock: @escaping (_ success: Bool) -> Void) {
         Auth.auth().signIn(withEmail: email, password: pass) { (result, error) in

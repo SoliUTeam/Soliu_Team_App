@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Soliu
-//
-//  Created by Yoonha Kim on 6/18/21.
-//
-
 import UIKit
 import IQKeyboardManagerSwift
 import CoreData

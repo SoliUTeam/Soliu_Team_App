@@ -50,6 +50,10 @@ var stressScore: Double = 0
 
 struct AverageTestScore {
     
+    var gender: String
+    var grade: String
+    var major: String
+        
     var userAverageDepressionScore: Double
     var userAverageAnxietyScore: Double
     var userAverageStressScore: Double
@@ -58,7 +62,8 @@ struct AverageTestScore {
     var allUserAverageAnxietyScore: Double
     var allUserAverageStressScore: Double
     
-    init(scoreList: [Double]) {
+    init(scoreList: [Double], userInformation: [String?]) {
+        
         self.userAverageDepressionScore = scoreList[0]
         self.userAverageAnxietyScore = scoreList[1]
         self.userAverageStressScore = scoreList[2]
@@ -66,5 +71,10 @@ struct AverageTestScore {
         self.allUserAverageDepressionScore = scoreList[3]
         self.allUserAverageAnxietyScore = scoreList[4]
         self.allUserAverageStressScore = scoreList[5]
+        
+        self.gender = userInformation[0] ?? ""
+        self.grade = userInformation[1] ?? ""
+        self.major = userInformation[2] ?? ""
+
     }
 }
