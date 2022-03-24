@@ -33,7 +33,7 @@ class ProfileViewController: UIViewController {
             self.present(alert, animated: true)
         }
         
-        let loginAction = UIAlertAction(title: "Sign-In", style: .default) { _ in
+        let loginAction = UIAlertAction(title: "Sign In", style: .default) { _ in
             self.performSegue(withIdentifier: "openLoginViewController", sender: nil)
         }
         alert.addAction(loginAction)
@@ -43,7 +43,8 @@ class ProfileViewController: UIViewController {
         chartView.noDataText = "Your data is not read."
         chartView.noDataFont = .systemFont(ofSize: 20)
         chartView.noDataTextColor = .lightGray
-        
+        chartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: ["", "avg", "", "avg", "", "avg"])
+
         // 레이블 포지션
         chartView.xAxis.labelPosition = .bottom
         
@@ -54,22 +55,20 @@ class ProfileViewController: UIViewController {
         
         // 오른쪽 눈금
         chartView.rightAxis.enabled = false
-        
-        chartView.xAxis.labelRotationAngle = -25
-        
         chartView.pinchZoomEnabled = false
         chartView.doubleTapToZoomEnabled = false
-
+        
         chartView.leftAxis.setLabelCount(6, force: true)
         chartView.leftAxis.axisMinimum = 0
-        chartView.leftAxis.axisMaximum = 10
+        chartView.leftAxis.axisMaximum = 5
     }
     
     func setUpChart(averageTestScore: AverageTestScore) {
 
         let dataPoints = ["Depression", "Anxiety", "Stress"]
-        let BarChartDataSet1 = BarChartDataSet(entries: [BarChartDataEntry(x: 0, y:     averageTestScore.userAverageDepressionScore),
-                                                         BarChartDataEntry(x: 1, y: averageTestScore.allUserAverageDepressionScore)], label: "Depression")
+        let BarChartDataSet1 = BarChartDataSet(entries:
+                                                [BarChartDataEntry(x: 0, y: averageTestScore.userAverageDepressionScore),
+                                                BarChartDataEntry(x: 1, y: averageTestScore.allUserAverageDepressionScore)], label: "Depression")
         BarChartDataSet1.setColor(.red)
 
         let BarChartDataSet2: BarChartDataSet = BarChartDataSet(entries:
@@ -84,7 +83,7 @@ class ProfileViewController: UIViewController {
         label: "Stress")
         BarChartDataSet3.setColor(.green)
 
-        let barChartData =  BarChartData(dataSets: [BarChartDataSet1, BarChartDataSet2, BarChartDataSet3])
+        let barChartData = BarChartData(dataSets: [BarChartDataSet1, BarChartDataSet2, BarChartDataSet3])
         barChartData.setDrawValues(true)
         chartView.data = barChartData
         chartView.reloadInputViews()

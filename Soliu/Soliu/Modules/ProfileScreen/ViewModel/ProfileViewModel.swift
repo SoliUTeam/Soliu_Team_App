@@ -111,10 +111,9 @@ class ProfileViewModel {
                 }
             }
         }
-        depressionScore = Double(Int(depressionScore) / 5 / testResultList.count)
-        anxietyScore = Double(Int(anxietyScore) / 5 /  testResultList.count)
-        stressScore = Double(Int(stressScore) / 5 / testResultList.count)
-        
+        depressionScore = depressionScore / Double(5) / Double(testResultList.count)
+        anxietyScore =  anxietyScore / Double(5) /  Double(testResultList.count)
+        stressScore = stressScore / Double(5) / Double(testResultList.count)
         return [depressionScore, anxietyScore, stressScore]
     }
     
@@ -140,9 +139,9 @@ class ProfileViewModel {
                 }
             }
         }
-        depressionScore = Double(Int(depressionScore) / allTestResult.count / 5)
-        anxietyScore = Double(Int(anxietyScore) / allTestResult.count / 5)
-        stressScore = Double(Int(stressScore) / allTestResult.count / 5)
+        depressionScore = depressionScore / Double(allTestResult.count) / Double(5)
+        anxietyScore = anxietyScore / Double(allTestResult.count) / Double(5)
+        stressScore = stressScore / Double(allTestResult.count) / Double(5)
         
         return [depressionScore, anxietyScore, stressScore]
     }
